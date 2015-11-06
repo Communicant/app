@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106173554) do
+ActiveRecord::Schema.define(version: 20151106190202) do
 
   create_table "costs", force: :cascade do |t|
     t.string   "title"
-    t.datetime "due_date"
     t.decimal  "amount"
     t.integer  "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date     "due"
   end
 
 end
