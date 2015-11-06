@@ -1,33 +1,37 @@
-<p id="notice"><%= notice %></p>
+<section class="costs-container">
 
-<h1>Listing Costs</h1>
+  <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Due</th>
-      <th>Amount</th>
-      <th>Parent</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1 class="costs-title">Listing Costs</h1>
 
-  <tbody>
-    <% @costs.each do |cost| %>
+  <table class="costs-table">
+    <thead>
       <tr>
-        <td><%= cost.title %></td>
-        <td><%= cost.due %></td>
-        <td><%= cost.amount %></td>
-        <td><%= cost.parent_id %></td>
-        <td><%= link_to 'Show', cost %></td>
-        <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
-        <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Due</th>
+        <th>Amount</th>
+        <th>Parent</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @costs.each do |cost| %>
+        <tr>
+          <td><%= cost.title %></td>
+          <td><%= cost.due %></td>
+          <td><%= cost.amount %></td>
+          <td><%= cost.parent_id %></td>
+          <td><%= link_to 'Show', cost %></td>
+          <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
+          <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><!--.costs-table-->
 
-<%= link_to 'New Cost', new_cost_path %>
+  <br>
+
+  <%= link_to 'New Cost', new_cost_path %>
+
+</section><!--.costs-container-->
