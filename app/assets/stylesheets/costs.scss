@@ -1,3 +1,79 @@
 .costs-container {
   margin: 3%;
 }
+
+.costs-heading {
+  font-family: Gill Sans;
+  font-size: 35pt;
+  font-weight: lighter;
+  color: #004C80;
+  border-bottom: 1.5px solid #636363;
+  padding-bottom: 20px;
+}
+
+.costs-table {
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  padding: 8px;
+  width: 90%;
+  margin-left: 5%; margin-right: 5%;
+}
+
+.costs-col {
+  text-align: left;
+  font-size: 14pt;
+  font-family: Gill Sans;
+  color: #004C80;
+  padding-bottom: 10px;
+}
+
+.costs-data {
+  padding: 5px 5px 8px 5px;
+}
+
+.costs-title {
+  width: 35%;
+}
+
+.costs-amount {
+  width: 15%;
+}
+
+.costs-edit {
+  a {
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #026DC6;
+    padding: 5px;
+  }
+  a:hover {
+    color: white;
+    background-color: #0377DA;
+  }
+}
+
+#costs-destroy {
+  a {
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #026DC6;
+    padding: 5px;
+  }
+  a:hover {
+    background-color: #CC0000;
+  }
+}
+
+.new-costs {
+  a {
+    margin-right: 5%;
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #006300;
+    padding: 5px;
+  }
+}
