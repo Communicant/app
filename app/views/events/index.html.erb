@@ -3,7 +3,7 @@
 <h1 class="events-header">Your Upcoming Events</h1>
 
 <table class="events-table">
-  <thead>
+  <thead class="events-thead">
     <tr class="events-title-row">
       <th>Event</th>
       <th>Description</th>
@@ -17,7 +17,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="events-body-table">
     <% @events.each do |event| %>
       <tr class="events-main-table">
         <td class="title"><%= event.title %></td>
@@ -32,6 +32,8 @@
         <td class="events-edit"><%= link_to 'Update', edit_event_path(event) %></td>
         <!-- <td><%# link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
+
+
     <% end %>
   </tbody>
 </table>
