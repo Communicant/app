@@ -1,0 +1,100 @@
+.main-header {
+  background-color: #004C80;
+  opacity: 0.9;
+  margin-left: -8px; margin-right: -8px;
+  padding-bottom: 1px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 60pt;
+  letter-spacing: 3px;
+  margin-top: -8px; margin-bottom: 5px;
+  padding-top: 10px; padding-bottom: 10px;
+  color: white;
+  font-family: Asenine;
+}
+
+.home-nav {
+  width: 100%;
+  float: right;
+  margin-top: 8px;
+  padding-top: 8px; padding-bottom: 8px;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.tabs {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 5px; margin-right: 10px;
+  float: right;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  position: relative;
+}
+
+.tabs:hover {
+  opacity: 1;
+  color: #242424;
+  background-color: #C9EDFF;
+}
+
+.drop-down-menu {
+  display: none;
+  width: 15%;
+  margin-top: 50px; margin-left: 82%;
+  padding: 5px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  float: right;
+}
+
+.active {
+  display: inherit;
+}
+
+.password {
+  margin-bottom: 5px;
+}
+
+.email {
+  margin-bottom: 5px;
+}
+
+.email, .password {
+  padding: 5px; padding-right: 10px;
+}
+
+.intro {
+  width: 100%;
+}
+
+.intro-text {
+  margin-top: -350px;
+  color: white;
+}
+
+.text-container {
+  width: 80%;
+  margin-left: 10%;
+}
+h2 {
+  font-size: 60pt;
+}
+
+h3 {
+  font-size: 33pt;
+}
+
+h4 {
+  font-size: 25pt;
+}
+
+.back-img {
+  width: 101.3%;
+  margin-top: -57px; margin-left: -8px;
+}

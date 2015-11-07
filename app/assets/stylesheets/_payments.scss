@@ -1,45 +1,46 @@
-.costs-container {
+.payments-container {
   margin: 3%;
+  width: 44%;
 }
 
-.costs-heading {
+.payments-heading {
   font-family: Gill Sans;
   font-size: 35pt;
   font-weight: lighter;
   color: #004C80;
-  border-bottom: 1.5px solid #636363;
+  // border-bottom: 1.5px solid #636363;
   padding-bottom: 20px;
 }
 
-.costs-table {
+.payments-table {
   border: 1.5px solid #636363;
   border-radius: 3px;
+  width: 100%;
   padding: 8px;
-  width: 90%;
-  margin-left: 5%; margin-right: 5%;
 }
 
-.costs-col {
+.payments-col {
   text-align: left;
-  font-size: 14pt;
+  font-size: 10pt;
   font-family: Gill Sans;
   color: #004C80;
   padding-bottom: 10px;
 }
 
-.costs-data {
+.payments-data {
   padding: 5px 5px 8px 5px;
 }
 
-.costs-title {
-  width: 35%;
-}
+// .payments-title {
+//   width: 35%;
+// }
+//
+// .payments-amount {
+//   width: 15%;
+// }
 
-.costs-amount {
-  width: 15%;
-}
-
-.costs-edit {
+.payments-edit {
+  width: 10%;
   a {
     text-decoration: none;
     border-radius: 3px;
@@ -53,7 +54,7 @@
   }
 }
 
-#costs-destroy {
+#payments-destroy {
   a {
     text-decoration: none;
     border-radius: 3px;
@@ -66,14 +67,20 @@
   }
 }
 
-.new-costs {
+.new-payment {
   a {
-    margin-right: 5%;
     float: right;
     text-decoration: none;
     border-radius: 3px;
     color: #F6F6F6;
     background-color: #006300;
     padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 820px){
+  .payments-container {
+    width: 90%;
+    margin-left: 5%; margin-right: 5%;
   }
 }
