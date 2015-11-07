@@ -22,5 +22,11 @@ cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.ne
 
 
 
-event1 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10), time: (6), description: "Jane has softball practice at a new time today.",
+event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: (5), description: "Mike's birthday party.",
           parent_id: "1", child_id: "2")
+event2 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10), time: (6), description: "Jane has softball practice at a new time today.",
+          parent_id: "1", child_id: "1")
+event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: (4), description: "Sarah's soccer game.",
+          parent_id: "1", child_id: "3")
+event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: (3), description: "Charlie doctor's appointment.",
+          parent_id: "1", child_id: "4")
