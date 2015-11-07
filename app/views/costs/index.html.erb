@@ -24,7 +24,6 @@
           <td class="costs-data costs-parent"><%= cost.parent_id %></td>
           <td class="costs-edit"><%= link_to 'Show', cost %></td>
           <td class="costs-edit"><%= link_to 'Edit', edit_cost_path(cost) %></td>
-          <td id="costs-destroy"><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
