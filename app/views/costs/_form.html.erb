@@ -16,8 +16,8 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :due_date %><br>
-    <%= f.datetime_select :due_date %>
+    <%= f.label :due %><br>
+    <%= f.date_select :due %>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
@@ -26,6 +26,10 @@
   <div class="field">
     <%= f.label :parent_id %><br>
     <%= f.number_field :parent_id %>
+  </div>
+  <div class="field">
+      <%= f.label "Paid?" %><br>
+      <%= f.check_box :paid %>
   </div>
   <div class="actions">
     <%= f.submit %>

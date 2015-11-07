@@ -20,5 +20,10 @@
   <%= @cost.parent_id %>
 </p>
 
+<p>
+  <strong>Paid?</strong>
+  <%= @cost.paid %>
+</p>
+
 <%= link_to 'Edit', edit_cost_path(@cost) %> |
 <%= link_to 'Back', costs_path %>
