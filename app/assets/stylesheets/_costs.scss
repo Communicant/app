@@ -67,7 +67,7 @@
   }
 }
 
-.new-costs {
+.new-costs, .new-payments {
   a {
     float: right;
     text-decoration: none;
@@ -78,8 +78,22 @@
   }
 }
 
+.total {
+  width: 97%;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  padding: 8px;
+}
+
 @media only screen and (max-width: 820px){
   .costs-container {
+    width: 90%;
+    margin-left: 5%; margin-right: 5%;
+  }
+}
+
+@media only screen and (max-width: 820px){
+  .payments-container {
     width: 90%;
     margin-left: 5%; margin-right: 5%;
   }
