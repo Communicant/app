@@ -48,6 +48,10 @@ class CostsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @cost.errors, status: :unprocessable_entity }
       end
+      if @cost.paid = true
+          Payment.create!(title: @cost.title, amount: @cost.amount, parent_id: @cost.parent_id, created_at: Time.now, paid_at: Time.now, cost_id: @cost.id)
+        else
+      end
     end
   end
 
