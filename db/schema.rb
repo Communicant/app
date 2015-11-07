@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151107191922) do
+=======
+ActiveRecord::Schema.define(version: 20151107193541) do
+>>>>>>> a29897e0e15b210b55a924c26390a50b64a345d6
 
   create_table "costs", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +27,22 @@ ActiveRecord::Schema.define(version: 20151107191922) do
     t.boolean  "paid"
   end
 
+<<<<<<< HEAD
+=======
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "parent_id"
+    t.integer  "child_id"
+    t.integer  "mediator_id"
+    t.boolean  "pending"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+>>>>>>> a29897e0e15b210b55a924c26390a50b64a345d6
   create_table "payments", force: :cascade do |t|
     t.string   "title"
     t.decimal  "amount"
