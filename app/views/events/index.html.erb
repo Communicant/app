@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Events</h1>
+<h1 class="events-header">Your Upcoming Events</h1>
 
-<table>
+<table class="events-table">
   <thead>
-    <tr>
-      <th>Title</th>
+    <tr class="events-title-row">
+      <th>Event</th>
       <th>Description</th>
       <th>Date</th>
       <th>Time</th>
@@ -19,18 +19,18 @@
 
   <tbody>
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.title %></td>
-        <td><%= event.description %></td>
-        <td><%= event.date %></td>
-        <td><%= event.time %></td>
-        <td><%= event.parent_id %></td>
-        <td><%= event.child_id %></td>
-        <td><%= event.mediator_id %></td>
-        <td><%= event.pending %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <tr class="events-main-table">
+        <td class="title"><%= event.title %></td>
+        <td class="descrip"><%= event.description %></td>
+        <td class="date"><%= event.date %></td>
+        <td class="time"><%= event.time %></td>
+        <td class="parent"><%= event.parent_id %></td>
+        <td class="child"><%= event.child_id %></td>
+        <td class="mediator"><%= event.mediator_id %></td>
+        <td class="pending"><button type="button" name="button">Pending</button></td>
+        <td class="events-show"><%= link_to 'Details', event %></td>
+        <td class="events-edit"><%= link_to 'Update', edit_event_path(event) %></td>
+        <!-- <td><%# link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -38,4 +38,5 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<div class="new-event"><%=link_to 'Add New Event', new_event_path %></div>
+<!-- <%# link_to 'New Event', new_event_path %> -->

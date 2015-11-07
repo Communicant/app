@@ -1,0 +1,77 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1.events-header{
+  font-style: Gill Sans;
+  font-size: 35pt;
+  font-weight: lighter;
+  color: #004C80;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+table.events-table{
+  border: 3px solid #004C80;
+  width: 95%;
+}
+
+tr.events-title-row{
+  //border: 1px solid #004C80;
+  border-bottom: 1px solid #004C80;
+  th{
+    margin-right: 2%;
+  }
+}
+tr.events-main-table{
+  margin-top: 5%;
+  text-align: center;
+
+  td.title{
+    width:10%;
+  }
+  td.descrip{
+    width: 20%;
+  }
+  td.date{
+    width: 10%;
+  }
+  td.time{
+    width: 5%;
+  }
+  td.parent{
+    
+  }
+ td.events-show{
+   a{
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 5%;
+    //margin-right: 1%;
+   }
+ }
+ td.events-edit{
+   a{
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 5%;
+    }
+ }
+}
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;;
+ }
+}
