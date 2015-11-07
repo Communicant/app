@@ -8,7 +8,7 @@
   font-size: 35pt;
   font-weight: lighter;
   color: #004C80;
-  border-bottom: 1.5px solid #636363;
+  // border-bottom: 1.5px solid #636363;
   padding-bottom: 20px;
 }
 
@@ -75,5 +75,12 @@
     color: #F6F6F6;
     background-color: #006300;
     padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 820px){
+  .payments-container {
+    width: 90%;
+    margin-left: 5%; margin-right: 5%;
   }
 }
