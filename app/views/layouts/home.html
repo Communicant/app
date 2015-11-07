@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Communicant</title>
+        <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--bower:css-->
@@ -13,34 +13,34 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-
-      <main class="header-container">
+      <section class="main-header">
         <header>
-          <h2>Communicant</h2>
+          <h1>Communicant</h1>
+          <nav class="home-nav">
+            <a href="#" class="tabs clearfix">Register</a>
+            <a href="#login" class="tabs clearfix">Login</a>
+            <section id="login" class="drop-down-menu animated fadeInDown clearfix">
+              <input type="email" class="email" placeholder="Email"></input><br />
+              <input type="password" class="password" placeholder="Password"></input><br />
+              <button type="submit">Login</button>
+            </section><!--#login-->
+          </nav><!--.home-nav-->
         </header>
-        <nav class="header-navig">
-          <section class="tabs-header">
-              <a href="#">Expenses</a>
-              <a href="#">Inbox</a>
-              <a href="#">Calendar</a>
-              <a href="#">Information</a>
+      </section><!--.main-header-->
 
-            <section class="tabs-right">
-              <a class="header-profile" href="#">Profile</a>
-              <a class="header-log-out" href="#">Log out</a>
-            </section>
-         </section>
+      <section class="intro">
+        <img src="img/divorced-parents.jpg" class="back-img"/>
+        <div class="text-container">
+          <h4 class="intro-text clearfix">There are so many choices in life.  When you make the wrong one, come to us.</h4>
+          <h2 class="intro-text clearfix">Communicant</h2>
+          <h3 class="intro-text clearfix">Introducing</h3>
+        </div><!--.text-container-->
+      </section><!--.intro-->
 
-        </nav>
-
-      </main>
-
-
-
-        <!--bower:js-->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/bower_components/angular/angular.js"></script>
         <script src="/bower_components/angular-route/angular-route.js"></script>
