@@ -10,40 +10,46 @@
       </ul>
     </div>
   <% end %>
+<section class="update-event-container">
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :title, class:"update-title-label" %>
+    <%= f.text_field :title, class:"update-title-field" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.label :description %>
+    <%= f.text_field :description, class:"update-description-field" %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+    <%= f.label :date, class:"update-date-label" %>
+    <%= f.date_select :date, class:"update-date" %>
   </div>
   <div class="field">
-    <%= f.label :time %><br>
-    <%= f.time_select :time %>
+    <%= f.label :time, class:"update-time-label" %>
+    <%= f.time_select :time, class:"update-time" %>
   </div>
   <div class="field">
-    <%= f.label :parent_id %><br>
+    <%= f.label :parent_id %>
     <%= f.number_field :parent_id %>
   </div>
   <div class="field">
-    <%= f.label :child_id %><br>
+    <%= f.label :child_id %>
     <%= f.number_field :child_id %>
   </div>
   <div class="field">
-    <%= f.label :mediator_id %><br>
+    <%= f.label :mediator_id %>
     <%= f.number_field :mediator_id %>
   </div>
   <div class="field">
-    <%= f.label :pending %><br>
+    <%= f.label :pending %>
     <%= f.check_box :pending %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <%= link_to 'Details', @event, class:"update-details" %>
+  <%= link_to 'Back', events_path, class:"update-back" %>
+
 <% end %>
+</section>
