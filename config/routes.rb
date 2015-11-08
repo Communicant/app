@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :profiles
-  root 'layout#index'
+  # root 'layouts' =>'layout#index'
   resources :payments
   resources :costs
   # The priority is based upon order of creation: first created -> highest priority.
