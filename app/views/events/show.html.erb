@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<section class="event-container">
+
+<p class="new-event-title">
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p class="new-event-descrip" >
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p class="new-event-date">
+  <strong>Date:</strong>
+  <%= @event.date %>
+</p>
+
+<p class="new-event-time">
+  <strong>Time:</strong>
+  <%= @event.time %>
+</p>
+
+<p class="new-event-parent">
+  <strong>Parent:</strong>
+  <%= @event.parent_id %>
+</p>
+
+<p>
+  <strong>Child:</strong>
+  <%= @event.child_id %>
+</p>
+
+<p>
+  <strong>Mediator:</strong>
+  <%= @event.mediator_id %>
+</p>
+
+<p>
+  <strong>Pending:</strong>
+  <%= @event.pending %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event), class:"event-edit" %> 
+<%= link_to 'Back', events_path, class:"event-back" %>
+</section>
