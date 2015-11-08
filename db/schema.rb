@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106204142) do
+ActiveRecord::Schema.define(version: 20151107224443) do
 
   create_table "costs", force: :cascade do |t|
     t.string   "title"
@@ -20,7 +20,42 @@ ActiveRecord::Schema.define(version: 20151106204142) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.date     "due"
-    t.boolean  "paid", default: false
+    t.boolean  "paid"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "parent_id"
+    t.integer  "child_id"
+    t.integer  "mediator_id"
+    t.boolean  "pending"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.string   "title"
+    t.decimal  "amount"
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date     "paid_at"
+    t.integer  "cost_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "address"
+    t.integer  "phone_number"
+    t.string   "child_name"
+    t.integer  "case_number"
+    t.string   "mediator_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end

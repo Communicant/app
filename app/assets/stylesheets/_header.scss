@@ -1,7 +1,12 @@
 main.header-container{
   background-color: #004C80;
   opacity: 0.9;
+  width: 101.2%;
+  margin-left: -.6%; margin-top: -8px;
+  padding-top: 15px;
   padding-bottom: 1px;
+  margin-bottom: 5px;
+  height: 10em;
 
 }
 h2{
@@ -16,8 +21,8 @@ h2{
 nav.header-navig{
   width: 100%;
   float: left;
-  margin-top: 8px;
-  padding-top: 8px; padding-bottom: 8px;
+  margin-top: 65px; margin-bottom: 20px;
+  padding-top: 12.5px; padding-bottom: 10px;
   background-color: white;
   opacity: 0.8;
 }
