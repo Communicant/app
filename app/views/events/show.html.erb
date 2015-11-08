@@ -1,26 +1,27 @@
 <p id="notice"><%= notice %></p>
+<section class="event-container">
 
-<p>
+<p class="new-event-title">
   <strong>Title:</strong>
   <%= @event.title %>
 </p>
 
-<p>
+<p class="new-event-descrip" >
   <strong>Description:</strong>
   <%= @event.description %>
 </p>
 
-<p>
+<p class="new-event-date">
   <strong>Date:</strong>
   <%= @event.date %>
 </p>
 
-<p>
+<p class="new-event-time">
   <strong>Time:</strong>
   <%= @event.time %>
 </p>
 
-<p>
+<p class="new-event-parent">
   <strong>Parent:</strong>
   <%= @event.parent_id %>
 </p>
@@ -40,5 +41,6 @@
   <%= @event.pending %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_event_path(@event), class:"event-edit" %> 
+<%= link_to 'Back', events_path, class:"event-back" %>
+</section>
