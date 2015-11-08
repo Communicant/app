@@ -30,22 +30,22 @@
   </div>
   <div class="field">
     <%= f.label :parent_id %>
-    <%= f.number_field :parent_id %>
+    <%= f.number_field :parent_id, class:"update-parent" %>
   </div>
   <div class="field">
     <%= f.label :child_id %>
-    <%= f.number_field :child_id %>
+    <%= f.number_field :child_id, class:"update-child" %>
   </div>
   <div class="field">
     <%= f.label :mediator_id %>
-    <%= f.number_field :mediator_id %>
+    <%= f.number_field :mediator_id, class:"update-mediator" %>
   </div>
   <div class="field">
-    <%= f.label :pending %>
+    <%= f.label :pending, class:"update-pending" %>
     <%= f.check_box :pending %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= (f.submit class:"update-submit") %>
   </div>
 
   <%= link_to 'Details', @event, class:"update-details" %>
