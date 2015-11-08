@@ -92,7 +92,7 @@
           <td class="payments-data payments-cost"><%= payment.cost_id %></td>
           <td class="payments-edit"><%= link_to 'Show', payment %></td>
           <td class="payments-edit"><%= link_to 'Edit', edit_payment_path(payment) %></td>
-          <td id="payments-destroy"><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="payments-edit" id="payments-destroy"><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
