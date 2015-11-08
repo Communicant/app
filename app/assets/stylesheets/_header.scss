@@ -1,15 +1,19 @@
 main.header-container{
   background-color: #004C80;
   opacity: 0.9;
+  padding-top: 5px;
   padding-bottom: 1px;
   margin-bottom: 10px;
+  height: 10em;
+  margin-top: 2%;
 
 }
 h2{
   text-align: center;
   font-size: 60pt;
   letter-spacing: 3px;
-  margin-top: -8px; margin-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 5px;
   padding-top: 10px; padding-bottom: 10px;
   color: white;
   font-family: Asenine;
@@ -17,7 +21,7 @@ h2{
 nav.header-navig{
   width: 100%;
   float: left;
-  margin-top: 8px;
+  margin-top: 5%;
   padding-top: 8px; padding-bottom: 8px;
   background-color: white;
   opacity: 0.8;
