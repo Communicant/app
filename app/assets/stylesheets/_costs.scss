@@ -1,7 +1,19 @@
+.expenses-body {
+  background-color: #EEEEEE;
+}
+
 .costs-container {
   margin-left: 3%;
   width: 45.5%;
   float: left;
+}
+
+.ex-tables {
+  height: 500px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .costs-heading {
@@ -13,11 +25,11 @@
   padding-bottom: 20px;
 }
 
-.costs-table {
-  border: 1.5px solid #636363;
+.costs-table, .payments-table {
   border-radius: 3px;
   width: 100%;
   padding: 8px;
+  background-color: white;
 }
 
 .costs-col {
@@ -84,6 +96,7 @@
   border: 1.5px solid #636363;
   border-radius: 3px;
   padding-top: 5px; padding-bottom: 5px;
+  background-color: white;
 }
 
 @media only screen and (max-width: 1000px){
