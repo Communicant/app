@@ -18,8 +18,7 @@ cost4 = Cost.create!(title: "Sarah Needs A new Softball Bat", amount: "28.49", d
 
 cost5 = Cost.create!(title: "Kids Insurance Payment", amount: "165.00", due: Date.new(2015, 12, 07), parent_id: 1, paid: false)
 
-cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.new(2015, 11, 30), parent_id: 2, paid: false)
-
+cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.new(2015, 11, 30), parent_id: 2, paid: true)
 
 #Events ------------------
 

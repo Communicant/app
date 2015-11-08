@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107193541) do
+ActiveRecord::Schema.define(version: 20151107224443) do
 
   create_table "costs", force: :cascade do |t|
     t.string   "title"
@@ -44,6 +44,18 @@ ActiveRecord::Schema.define(version: 20151107193541) do
     t.datetime "updated_at", null: false
     t.date     "paid_at"
     t.integer  "cost_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "address"
+    t.integer  "phone_number"
+    t.string   "child_name"
+    t.integer  "case_number"
+    t.string   "mediator_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
