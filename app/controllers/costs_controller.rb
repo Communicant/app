@@ -4,7 +4,8 @@ class CostsController < ApplicationController
   # GET /costs
   # GET /costs.json
   def index
-    @costs = Cost.all
+    @costs = Cost.where(paid:false)
+    @payments = Payment.all
   end
 
   # GET /costs/1
