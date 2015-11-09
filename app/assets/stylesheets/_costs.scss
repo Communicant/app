@@ -1,0 +1,107 @@
+.expenses-body {
+  background-color: #EEEEEE;
+}
+
+.costs-container {
+  margin-left: 3%;
+  width: 45.5%;
+  float: left;
+}
+
+.ex-tables {
+  height: 500px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.costs-heading {
+  font-family: Gill Sans;
+  font-size: 35pt;
+  font-weight: lighter;
+  color: #004C80;
+  // border-bottom: 1.5px solid #636363;
+  padding-bottom: 20px;
+}
+
+.costs-table, .payments-table {
+  border-radius: 3px;
+  width: 100%;
+  padding: 8px;
+  background-color: white;
+}
+
+.costs-col {
+  text-align: left;
+  font-size: 14pt;
+  font-family: Gill Sans;
+  color: #004C80;
+  padding-bottom: 10px;
+}
+
+.costs-data {
+  padding: 5px 5px 8px 5px;
+}
+
+.costs-title {
+  width: 35%;
+}
+
+.costs-amount {
+  width: 15%;
+}
+
+.costs-edit {
+  width: 10%;
+  a {
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #026DC6;
+    padding: 5px;
+  }
+  a:hover {
+    color: white;
+    background-color: #0377DA;
+  }
+}
+
+#costs-destroy, #payments-destroy {
+  a {
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #026DC6;
+    padding: 5px;
+  }
+  a:hover {
+    background-color: #CC0000;
+  }
+}
+
+.new-costs, .new-payments {
+  a {
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    color: #F6F6F6;
+    background-color: #006300;
+    padding: 5px;
+  }
+}
+
+.total {
+  width: 100%;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  padding-top: 5px; padding-bottom: 5px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1000px){
+  .costs-container {
+    width: 90%;
+    margin-left: 5%; margin-right: 5%;
+  }
+}

@@ -1,0 +1,32 @@
+
+section.event-container{
+  border: 2px solid #004C80;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  p{
+    margin-top: 2%;
+    margin-left: 10%;
+    color: #004C80;
+  }
+  .event-edit{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 45%;
+    text-decoration: none;
+  }
+  .event-back{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+  }
+}
