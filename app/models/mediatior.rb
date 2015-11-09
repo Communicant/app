@@ -1,2 +1,0 @@
-class Mediator < User
-end
