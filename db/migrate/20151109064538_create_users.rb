@@ -9,10 +9,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.text :address
       t.integer :phone_number
-      t.integer :case_number
-      t.integer :case_id
-
-      t.timestamps null: false
     end
   end
 end
