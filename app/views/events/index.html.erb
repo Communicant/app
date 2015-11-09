@@ -41,7 +41,7 @@
         <td class="title"><%= event.title %></td>
         <td class="descrip"><%= event.description %></td>
         <td class="date"><%= event.date %></td>
-        <td class="time"><%= event.time %></td>
+        <td class="time"><%= event.time.strftime("%I:%M%p") %></td>
         <td class="parent"><%= event.parent_id %></td>
         <td class="child"><%= event.child_id %></td>
         <td class="mediator"><%= event.mediator_id %></td>
