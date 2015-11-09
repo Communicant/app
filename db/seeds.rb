@@ -39,3 +39,16 @@ payment3 = Payment.create!(title: "Sneakers for Billy", amount: "28.00", paid_at
 payment4 = Payment.create!(title: "Sarah's Birthday Party!", amount: "105.00", paid_at: Date.new(2015, 11, 01), parent_id: 2, cost_id: 1)
 
 payment5 = Payment.create!(title: "Kids Insurance Payment", amount: "100.00", paid_at: Date.new(2015, 11, 05), parent_id: 1, cost_id: 5)
+
+
+# Messages
+
+message1 = Message.create!(user_id: 1, body: "Billy thinks he left his toy car at your house. It's his favorite car. Can you look for it, and if you find it, let me know?", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 32, 56))
+
+message2 = Message.create!(user_id: 2, body: "Yeah, I found it. He dropped it outside on his way to the car. I put it on my nightstand. I'll make sure to give it to him.", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 45, 41))
+
+message3 = Message.create!(user_id: 1, body: "Thanks. Billy would be heartbroken if he couldn't find that.", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
+
+message4 = Message.create!(user_id: 1, body: "I get off of work at 7. I'll bring the kids once I get off.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
+
+message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 32, 56))
