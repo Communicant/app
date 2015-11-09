@@ -1,0 +1,74 @@
+section.user-update-container{
+  border: 2px solid #004C80;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  color: #004C80;
+
+  div.field{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .user-update-type{
+    margin-left: 14%;
+    width: 75%;
+  }
+  .user-update-password{
+    width: 75%;
+    margin-left: 8%;
+  }
+  .user-update-email{
+    margin-left: 13.5%;
+    width: 75%;
+  }
+  .user-update-first{
+    margin-left: 6.6%;
+    width: 75%;
+  }
+  .user-update-last{
+    width: 75%;
+    margin-left: 7%;
+  }
+  .user-update-address{
+    width: 75%;
+    margin-left: 10.3%;
+  }
+  .user-update-phone{
+    width: 75%;
+    margin-left: 1.8%;
+  }
+  .user-update-case{
+    margin-right: 4%;
+  }
+  .user-update-submit{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 19.7%;
+    font-size: 1em;
+    margin-top: -0.4%;
+    position: absolute;
+  }
+.user-update-details{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 55%;
+  text-decoration: none;
+}
+.user-update-back{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+}

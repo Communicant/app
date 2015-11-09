@@ -1,5 +1,19 @@
+.expenses-body {
+  background-color: #EEEEEE;
+}
+
 .costs-container {
-  margin: 3%;
+  margin-left: 3%;
+  width: 45.5%;
+  float: left;
+}
+
+.ex-tables {
+  height: 500px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .costs-heading {
@@ -7,16 +21,15 @@
   font-size: 35pt;
   font-weight: lighter;
   color: #004C80;
-  border-bottom: 1.5px solid #636363;
+  // border-bottom: 1.5px solid #636363;
   padding-bottom: 20px;
 }
 
-.costs-table {
-  border: 1.5px solid #636363;
+.costs-table, .payments-table {
   border-radius: 3px;
+  width: 100%;
   padding: 8px;
-  width: 90%;
-  margin-left: 5%; margin-right: 5%;
+  background-color: white;
 }
 
 .costs-col {
@@ -54,7 +67,7 @@
   }
 }
 
-#costs-destroy {
+#costs-destroy, #payments-destroy {
   a {
     text-decoration: none;
     border-radius: 3px;
@@ -67,14 +80,28 @@
   }
 }
 
-.new-costs {
+.new-costs, .new-payments {
   a {
-    margin-right: 5%;
     float: right;
     text-decoration: none;
     border-radius: 3px;
     color: #F6F6F6;
     background-color: #006300;
     padding: 5px;
+  }
+}
+
+.total {
+  width: 100%;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+  padding-top: 5px; padding-bottom: 5px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 1000px){
+  .costs-container {
+    width: 90%;
+    margin-left: 5%; margin-right: 5%;
   }
 }
