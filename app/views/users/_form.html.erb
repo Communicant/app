@@ -11,47 +11,77 @@
     </div>
   <% end %>
 
+  <main class="header-container">
+    <header>
+      <h2>Communicant</h2>
+    </header>
+    <nav class="header-navig">
+      <section class="tabs-header">
+          <a href="#">Expenses</a>
+          <a href="#">Inbox</a>
+          <a href="#">Calendar</a>
+          <a href="#">Information</a>
+
+        <section class="tabs-right">
+          <a class="header-profile" href="#">Profile</a>
+          <a class="header-log-out" href="#">Log out</a>
+        </section>
+     </section>
+
+    </nav>
+
+  </main>
+
+
+
+<section class="user-update-container">
+
   <div class="field">
-    <%= f.label :type %><br>
-    <%= f.text_field :type %>
+    <%= f.label :type %>
+    <%= f.text_field :type, class:"user-update-type" %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :username %><br>
     <%= f.text_field :username %>
+  </div> -->
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password_digest, class:"user-update-password" %>
   </div>
   <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class:"user-update-email" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class:"user-update-first" %>
   </div>
   <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class:"user-update-last" %>
   </div>
   <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.label :address %>
+    <%= f.text_field :address, class:"user-update-address" %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
+    <%= f.label :phone_number %>
+    <%= f.number_field :phone_number, class:"user-update-phone" %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.number_field :phone_number %>
-  </div>
-  <div class="field">
-    <%= f.label :case_number %><br>
+    <%= f.label :case_number, class:"user-update-case" %>
     <%= f.number_field :case_number %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :case_id %><br>
     <%= f.number_field :case_id %>
-  </div>
+  </div> -->
   <div class="actions">
-    <%= f.submit %>
+    <%= (f.submit class:"user-update-submit") %>
   </div>
 <% end %>
+
+<%= link_to 'Details', @user, class:"user-update-details" %>
+<%= link_to 'Back', users_path, class:"user-update-back" %>
+
+</section>

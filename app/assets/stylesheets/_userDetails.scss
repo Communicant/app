@@ -1,4 +1,4 @@
-section.event-container{
+section.user-container-details{
   border: 2px solid #004C80;
   border-radius: 5px;
   width: 50%;
@@ -6,12 +6,13 @@ section.event-container{
   margin-left: 25%;
   padding-bottom: 3%;
   padding-top: 2%;
+
   p{
     margin-top: 2%;
     margin-left: 10%;
     color: #004C80;
   }
-  .event-edit{
+  .user-edit{
     border: 1px solid #004C80;
     background-color: #004C80;
     color: white;
@@ -20,7 +21,7 @@ section.event-container{
     margin-left: 45%;
     text-decoration: none;
   }
-  .event-back{
+  .user-back{
     border: 1px solid #004C80;
     background-color: #004C80;
     color: white;
