@@ -13,7 +13,6 @@ class MessagesController < ApplicationController
 
   # GET /messages/1
   def show
-    @message.as_json.merge(name: User.find(params[:user_id]).first_name)
   end
 
   # GET /messages/new
