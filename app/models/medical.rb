@@ -1,0 +1,2 @@
+class Medical < Expense
+end

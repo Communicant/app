@@ -2,13 +2,14 @@ Rails.application.routes.draw do
 
 
 
+
+  resources :expenses
   resources :messages
   root 'home#index'
 
   resources :users
   resources :profiles
   resources :payments
-  resources :costs
   resources :events
   resources :home
 
