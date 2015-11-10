@@ -80,7 +80,7 @@ class EventsController < ApplicationController
       approvals.each do |approval|
         if approval.parent_approval
           user = User.find(approval[:parent_id])
-          approved_parents.push({user: user, approved_by: approval.updated_at})
+          approved_parents.push({user: user, approved_at: approval.updated_at})
         end
       end
       approved_parents

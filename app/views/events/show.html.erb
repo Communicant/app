@@ -33,12 +33,12 @@
 
 <p class="new-event-date">
   <strong>Date:</strong>
-  <%= @event.date %>
+  <%= @event.date.strftime("%m-%e-%y") %>
 </p>
 
 <p class="new-event-time">
   <strong>Time:</strong>
-  <%= @event.time %>
+  <%= @event.time.strftime("%l:%M%p") %>
 </p>
 
 <p class="new-event-parent">
@@ -58,7 +58,10 @@
 
 <p>
   <strong>Confirmed by:</strong>
-  <%= @approved_parents %>
+  <%= @approved_parents[0][:user][:first_name] %>
+  <strong> At:</strong>
+  <%= @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %>
+
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event), class:"event-edit" %>
