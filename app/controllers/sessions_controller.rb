@@ -1,13 +1,14 @@
 class SessionsController < ApplicationController
-  before_action :require_login
 
-  def new
-    # redirect_to dashboard_path if logged_in?
-  end
 
   def create
-    User.where(type: params[:sessions][:type], email: set_params[:email])
-    # send("#{user.type.downcase}"_path)
+    user = User.find_by_email(params[:email])
+      if user && user.authenticate(params[:password])
+        session[:user_id] = user.id
+        redirect_to dashboard_index_path, notice: "You have been successfully logged in."
+      else
+        render root
+      end
   end
 
   # def create
