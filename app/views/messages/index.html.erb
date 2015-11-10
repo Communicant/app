@@ -60,7 +60,7 @@
 <div class="chatbox-scroll">
   <section class="chatbox">
     <% @messages.each do |message| %>
-    <ul class="messaging-list">
+    <ul class="messaging-list" ng-controller="ListOfMessagesController">
       <li class="message">
         <div class="message-name">{{message.name}}</div>
         <div class="message-date">{{message.date}}<%= message.date %></div>
