@@ -77,7 +77,7 @@
   </ul>
   </section>
 </div>
-  <form class="add-message" method="post">
+  <form class="add-message" ng-controller="NewMessageController" ng-submit="submit()">
     <textarea class="add-message-body" placeholder="Type your message here..."></textarea>
     <button type="submit" name="submit-message">Send</button>
     <%= link_to 'New Message', new_message_path %>
