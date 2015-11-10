@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109064538) do
+ActiveRecord::Schema.define(version: 20151109220613) do
 
   create_table "cases", force: :cascade do |t|
     t.integer  "case_number"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20151109064538) do
     t.boolean  "pending"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.date     "date"
+    t.time     "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "payments", force: :cascade do |t|

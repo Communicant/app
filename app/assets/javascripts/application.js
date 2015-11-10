@@ -20,7 +20,7 @@
 //home page login for the drop down login option
 ;(function(){
   $('a[href="#login"]').on('click', function (){
-  $('#login').toggleClass('active').siblings().removeClass('active');
+    $('#login').toggleClass('active').siblings().removeClass('active');
   });
 })();
 // END of IIFE JS
