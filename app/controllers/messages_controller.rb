@@ -3,7 +3,9 @@ class MessagesController < ApplicationController
 
   # GET /messages
   def index
-    @messages = Message.all
+    messages = Message.all
+    messages = messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
+      render json: messages
   end
 
   # GET /messages/1
