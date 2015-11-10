@@ -59,16 +59,18 @@
 
 <div class="chatbox-scroll">
   <section class="chatbox">
-    <% @messages.each do |message| %>
     <ul class="messaging-list" ng-controller="ListOfMessagesController">
+    <% @messages.each do |message| %>
       <li class="message">
-        <div class="message-name">{{message.name}}</div>
-        <div class="message-date">{{message.date}}<%= message.date %></div>
-        <div class="message-time">{{message.time}}<%= message.time %></div>
-        <div class="message-body">{{message.body}}<%= message.body %></div>
+        <div class="message-name"></div>
+        <div class="message-date"><%= message.date %></div>
+        <div class="message-time"><%= message.time %></div>
+        <div class="message-body"><%= message.body %></div>
       </li>
-    </ul>
     <% end %>
+    <li class="message-angular" ng-repeat="">
+    </li>
+  </ul>
   </section>
 </div>
   <form class="add-message" method="post">

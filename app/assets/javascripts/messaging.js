@@ -1,7 +1,7 @@
 ;(function(){
   var app = angular.module('Communicant', []);
    app.controller('ListOfMessagesController', ['$scope', '$http', function($scope, $http){
-     $http.get("fakemessages.json")
+     $http.get("/messages")
      .then(function(response){
       $scope.messages = response.data
        console.log("inside ListOfMessagesController")
