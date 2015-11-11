@@ -30,7 +30,7 @@ event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9
 
 #Payments ----------------
 
-payment1 = Payment.create!(title: "Sarah's Doctor's Appoitnment", amount: "60.00", paid_at: Date.new(2015, 12, 17), parent_id: 2)
+payment1 = Payment.create!(title: "Sarah's Doctor's Appointment", amount: "60.00", paid_at: Date.new(2015, 12, 17), parent_id: 2)
 
 payment2 = Payment.create!(title: "Child Support Due!", amount: "111.00", paid_at: Date.new(2015, 11, 07), parent_id: 1, cost_id: 6)
 
@@ -56,6 +56,6 @@ message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Dat
 
 # User
 
-user1 = User.create!(type: "Parent", email: "email1@email.com", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
-
-user1 = User.create!(type: "Parent", email: "email2@email.com", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Parent.create!(email: "email1@email.com", password: "123456", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Parent.create!(email: "email2@email.com", password: "123456", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")

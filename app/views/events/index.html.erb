@@ -42,9 +42,9 @@
         <td class="descrip"><%= event.description %></td>
         <td class="date"><%= event.date %></td>
         <td class="time"><%= event.time.strftime("%I:%M%p") %></td>
-        <td class="parent"><%= event.parent_id %></td>
+        <td class="parent"><%= event.parents[0][:first_name] %></td>
         <td class="child"><%= event.child_id %></td>
-        <td class="mediator"><%= event.mediator_id %></td>
+        <td class="mediator"><%= event.mediator %></td>
         <td class="pending"><button type="button" name="button">Pending</button></td>
         <td class="events-show"><%= link_to 'Details', event %></td>
         <td class="events-edit"><%= link_to 'Update', edit_event_path(event) %></td>

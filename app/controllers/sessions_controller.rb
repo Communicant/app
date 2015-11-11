@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to dashboard_index_path, notice: "You have been successfully logged in."
       else
-        render root
+
       end
   end
 
