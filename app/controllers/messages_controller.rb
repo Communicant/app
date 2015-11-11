@@ -1,17 +1,8 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
-  # GET /messages
-  #def index
-    # this is the code to get the users name in the messages but I can't get the info from the json
-    # @messages = Message.all
-    # respond_to do |format|
-    # @messages = @messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
-    #  render json: @messages
-    # format.json { @messages = @messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
-    # render json: @messages }
 
-    def index
+  def index
     @messages = Message.all
     respond_to do |format|
       format.html
