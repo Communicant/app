@@ -1,3 +1,21 @@
-.messaging-container {
-  background-color: lightgray;
+
+h3.message-title{
+  font-style: Gill Sans;
+  font-size: 35pt;
+  font-weight: lighter;
+  color: #004C80;
+  margin-top: 10%;
+  margin-left: 35%
+}
+section.chatbox {
+  width: 80%;
+  border: 3px solid #004C80;
+  border-radius: 5px;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+li.message-display{
+  border-bottom: 2px solid #004C80;
+  list-style-type: none;
+  width: 100%;
 }
