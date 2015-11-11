@@ -71,7 +71,9 @@
         <div class="message-body"><%# message.body %></div>
       </li> -->
     <!-- <% end %> -->
-    <li class="message-display" ng-repeat="message in messages">
+
+
+    <li class="message-display" ng-repeat="message in messages| orderBy:'-date'"><!-- '-date' is reverse for 'date' or 'date':true -->
       <div class="message-name">{{message.name}}</div>
       <div class="message-date">{{message.date}}</div>
       <div class="message-time">{{message.time}}</div>
