@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 
 
   resources :messages
-  root 'home#index'
 
+  root 'home#index'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :dashboards 
   resources :users
-  resources :profiles
+  # resources :profiles
   resources :payments
   resources :costs
   resources :events
