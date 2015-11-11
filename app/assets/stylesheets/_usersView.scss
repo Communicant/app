@@ -1,0 +1,76 @@
+main.users-container{
+  margin-top: 15%;
+  h3.users-title{
+    font-style: Gill Sans;
+    font-size: 35pt;
+    font-weight: lighter;
+    color: #004C80;
+    margin-bottom: 5%;
+    margin-left: 40%;
+    margin-top: -5%;
+  }
+}
+table.users-table{
+  border: 3px solid #004C80;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 2.5%;
+  tr.users-first-row{
+    //border-bottom: 1px solid #004C80;
+    th{
+      text-align: center;
+      padding-top: 2%;
+      padding-bottom: 1%;
+      font-size: 1.3em;
+      margin-right: 2%;
+      color: #004C80;
+    }
+
+  }
+  tbody.users-body{
+    tr.users-row{
+      margin-top: 5%;
+      text-align: center;
+      margin-bottom: 5%;
+      border-bottom: 1px solid #004C80;
+      td{
+        text-align: center;
+      }
+      td.users-details{
+        a{
+          text-decoration: none;
+          border: 1px solid #004C80;
+          background-color: #004C80;
+          border-radius: 5px;
+          color: white;
+          text-align: center;
+          padding: 5%;
+        }
+      }
+      td.users-update{
+        a{
+          text-decoration: none;
+          border: 1px solid #004C80;
+          background-color: #004C80;
+          border-radius: 5px;
+          color: white;
+          text-align: center;
+          padding: 5%;
+        }
+      }
+    }//end of users-row
+  }//end of tbody
+}//end of table
+div.users-new{
+  a{
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 5px;;
+    margin-left: 83.9%;
+  }
+}

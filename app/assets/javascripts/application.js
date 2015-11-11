@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require angular/angular
+//= require angular-route
+//= require angular-ui-router/release/angular-ui-router
 //= require_tree .
+
+
+//home page login for the drop down login option
+;(function(){
+  $('a[href="#login"]').on('click', function (){
+    $('#login').toggleClass('active').siblings().removeClass('active');
+  });
+})();
+// END of IIFE JS

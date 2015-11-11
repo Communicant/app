@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  phone_number: 
+  child_name: MyString
+  case_number: 1
+  mediator_name: MyString
+
+two:
+  name: MyString
+  email: MyString
+  phone_number: 
+  child_name: MyString
+  case_number: 1
+  mediator_name: MyString
