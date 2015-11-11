@@ -22,6 +22,19 @@
     })
   }]); // END SendMessageController
 
+  function dataCtrl($scope, $timeout, Data) {
+      $scope.data = [];
+
+      (function tick() {
+          $scope.data = Data.query(function(){
+              $timeout(tick, 2000);
+          });
+      })();
+  }; // END timeout function
+
+
 // $timeout([fn], [2000], [invokeApply], [Pass]);
 
 })(); // END IIFE
+
+// SOURCE for $timeout function: http://stackoverflow.com/questions/13671031/server-polling-with-angularjs
