@@ -2,12 +2,22 @@
   var app = angular.module('Communicant', []);
   console.log("inside angular")
    app.controller('ListOfMessagesController', ['$scope', '$http', '$timeout', '$interval', function($scope, $http, $timeout, $interval){
-     $timeout(function(){$interval}, 2000)
+     //$timeout(function(){$interval}, 2000)
      $http.get("/messages.json")
      .then(function(response){
       $scope.messages = response.data
        console.log("inside ListOfMessagesController")
      })
+
+     $timeout(function(){
+        $http.get("/messages.json")
+        .then(function(response){
+        $scope.messages = response.data;
+        console.log("inside the timeout in the ListOfMessagesController")
+        //console.log("inside the get after the post, just trying to update the list of messages")
+        })
+      }, 2000)
+
    }]);//END of ListOfMessagesController
   app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
     console.log("inside NewMessageController")
@@ -18,13 +28,17 @@
       $http.post("/messages.json", $scope.newMessage)
       .then(function(response){
         $scope.newMessage = { };
-        $timeout(function(){$interval}, 2000)
+        // TODO: What's in response? do i need that?
        });
-     $http.get("/messages.json")
-      .then(function(response){
-        $scope.messages = response.data;
-      })
 
+       $timeout(function(){
+          $http.get("/messages.json")
+          .then(function(response){
+          $scope.messages = response.data;
+          console.log("inside the timeout")
+          //console.log("inside the get after the post, just trying to update the list of messages")
+          })
+        }, 2000)
     };
 
   }]);//END of NewMessageController
