@@ -1,0 +1,40 @@
+<main class="header-container">
+  <header>
+    <h2>Communicant</h2>
+  </header>
+  <nav class="header-navig">
+    <section class="tabs-header">
+        <a href="#">Expenses</a>
+        <a href="#">Inbox</a>
+        <a href="#">Calendar</a>
+        <a href="#">Information</a>
+
+      <section class="tabs-right">
+        <a class="header-profile" href="#">Profile</a>
+        <a class="header-log-out" href="#">Log out</a>
+      </section>
+   </section>
+
+  </nav>
+
+</main>
+
+<main class="messaging-container" ng-app="Communicant">
+
+
+<h3 class="message-label">Messages</h3>
+<div class="chatbox-scroll">
+    <ul class="messaging-list" ng-controller="ListOfMessagesController">
+      <li class="messages-all" ng-repeat="message in messages">
+        <aside class="messages-name">{{message.name}}</aside>
+        <aside class="messages-body">{{message.body}}</aside>
+        <aside class="messages-time">{{message.time}}</aside>
+        <aside class="messages-sent">created on {{message.created_at | date : medium : timezone}}</aside>
+      </li>
+    </ul>
+</div>
+  <form class="add-message" method="post" ng-controller="SendMessageController" ng-submit="submit()">
+    <textarea class="add-message-body" placeholder="Type your message here..." ng-model="newMessage.body"></textarea>
+    <button type="submit" name="submit-message" class="submit-button">Send</button>
+  </form>
+</main><!--.messaging-container-->
