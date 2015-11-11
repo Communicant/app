@@ -4,6 +4,13 @@ class ExpensesController < ApplicationController
   # GET /expenses
   def index
     @expenses = Expense.all
+    respond_to do |format|
+      format.html
+      format.json do
+      @expenses = @expenses.map { |e| e.as_json.merge({payments: e.payments.to_a.map(&:serializable_hash)})}
+       render json: @expenses
+       end
+     end
   end
 
   # GET /expenses/1
