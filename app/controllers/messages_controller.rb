@@ -3,11 +3,19 @@ class MessagesController < ApplicationController
 
   # GET /messages
   def index
+
     messages = Message.all
     messages = messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
      render json: messages
-  end
+    #This is what I have before I merged messages-anthony that I think it caused the problem with the json
+    # @messages = Message.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json { @messages = @messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
+    #    render json: @messages }
+    #  end
 
+  end
   # GET /messages/1
   def show
   end

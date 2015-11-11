@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <h1>Listing Messages</h1>
 
@@ -16,18 +16,74 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.user_id %></td>
-        <td><%= message.body %></td>
-        <td><%= message.date %></td>
-        <td><%= message.time.strftime("%I:%M%p")%></td>
-        <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+        <td><%# message.user_id %></td>
+        <td><%# message.body %></td>
+        <td><%# message.date %></td>
+        <td><%# message.time %></td>
+        <td><%# link_to 'Show', message %></td>
+        <td><%# link_to 'Edit', edit_message_path(message) %></td>
+        <td><%# link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
+<br> -->
 
-<%= link_to 'New Message', new_message_path %>
+<!-- <%= link_to 'New Message', new_message_path %> -->
+
+<p id="notice"><%= notice %></p>
+
+<main class="header-container">
+  <header>
+    <h2>Communicant</h2>
+  </header>
+  <nav class="header-navig">
+    <section class="tabs-header">
+        <a href="#">Expenses</a>
+        <a href="#">Inbox</a>
+        <a href="#">Calendar</a>
+        <a href="#">Information</a>
+
+      <section class="tabs-right">
+        <a class="header-profile" href="#">Profile</a>
+        <a class="header-log-out" href="#">Log out</a>
+      </section>
+   </section>
+
+  </nav>
+
+</main>
+
+<main class="messaging-container" ng-app="Communicant">
+  <h3 class="message-title">Messages</h3>
+
+<div class="chatbox-scroll">
+  <section class="chatbox">
+    <ul class="messaging-list" ng-controller="ListOfMessagesController">
+    <!-- <% @messages.each do |message| %>
+      <li class="message">
+        <!-- <div class="message-name"><%# message.name %></div> -->
+        <!-- <div class="message-date"><%# message.date %></div>
+        <div class="message-time"><%# message.time %></div>
+        <div class="message-body"><%# message.body %></div>
+      </li> -->
+    <!-- <% end %> -->
+    <li class="message-display" ng-repeat="message in messages">
+      <!-- <div class="message-name">{{message.message.name}}</div> -->
+      <div class="message-date">{{message.date}}</div>
+      <div class="message-time">{{message.time}}</div>
+      <div class="message-body">{{message.body}}</div>
+    </li>
+  </ul>
+  </section>
+</div>
+  <form class="add-message" ng-controller="NewMessageController" ng-submit="submit()">
+    <textarea class="add-message-body" ng-model="newMessage.body" placeholder="Type your message here..."></textarea>
+    <button type="submit" name="submit-message">Send</button>
+  </form>
+  <!-- <%# link_to 'New Message', new_message_path %> -->
+
+</main><!--.messaging-container-->
