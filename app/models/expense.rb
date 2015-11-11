@@ -10,6 +10,10 @@ class Expense < ActiveRecord::Base
     (self.amount - payments_total).to_f
   end
 
+  def self.total_amount
+    self.sum(:amount).to_f
+  end
+
 end
 
 class Medical < Expense; end
