@@ -1,3 +1,39 @@
 .messaging-container {
-  background-color: lightgray;
+  width: 80%;
+  margin-left: 10%; margin-right: 10%;
+}
+
+.message-label {
+  font-family: Gill Sans;
+  font-weight: lighter;
+  font-size: 35pt;
+  text-align: center;
+}
+
+.messages-all {
+  list-style: none;
+  padding: 5px;
+}
+
+.chatbox-scroll {
+  margin-top: 50px; margin-bottom: 5%;
+  position: relative;
+  height: 400px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+}
+
+.add-message {
+  position: relative;
+  width: 80%;
+}
+
+.add-message-body {
+  width: 124%;
+  height: 100px;
+}
+
+.messages-name {
+  color: darkblue;
 }
