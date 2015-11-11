@@ -1,14 +1,13 @@
 ;(function(){
-  var app = angular.module('Communicant', []);
+  var app = angular.module('Communicant', ['ngRoute']);
   console.log("inside angular")
-  app.controller('ListOfMessagesController', ['$scope', '$http', '$timeout', '$interval', function($scope, $http, $timeout, $interval){
-     //$timeout(function(){$interval}, 2000)
-     //var Id = $routeParams.id - 1; //Id to make a difference with id
+  app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$timeout', '$interval', function($scope, $http, $routeParams, $timeout, $interval){
+     var Id = $routeParams.id - 1; //Id to make a difference with id
      $http.get("/messages.json")
      .then(function(response){
       $scope.messages = response.data
        console.log("inside ListOfMessagesController")
-       //console.log(response.data.[Id].length)
+       console.log(response.data.length)
 
      })
 
