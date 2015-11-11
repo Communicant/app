@@ -1,12 +1,15 @@
 ;(function(){
   var app = angular.module('Communicant', []);
   console.log("inside angular")
-   app.controller('ListOfMessagesController', ['$scope', '$http', '$timeout', '$interval', function($scope, $http, $timeout, $interval){
+  app.controller('ListOfMessagesController', ['$scope', '$http', '$timeout', '$interval', function($scope, $http, $timeout, $interval){
      //$timeout(function(){$interval}, 2000)
+     //var Id = $routeParams.id - 1; //Id to make a difference with id
      $http.get("/messages.json")
      .then(function(response){
       $scope.messages = response.data
        console.log("inside ListOfMessagesController")
+       //console.log(response.data.[Id].length)
+
      })
 
      $interval(function(){
@@ -16,7 +19,7 @@
         console.log("probando timeout")
         //console.log("inside the get after the post, just trying to update the list of messages")
         })
-      }, 5000)
+      }, 5000);
 
    }]);//END of ListOfMessagesController
   app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
