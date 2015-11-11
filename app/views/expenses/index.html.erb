@@ -19,22 +19,27 @@
 
 </main>
 
-<main class="messaging-container" ng-app="Communicant">
+<main class="expenses-container" ng-app="Communicant">
 
 
-<h3 class="message-label">Messages</h3>
+<h3 class="expenses-label">Expenses</h3>
 <div class="chatbox-scroll">
-    <ul class="messaging-list" ng-controller="ListOfMessagesController">
-      <li class="messages-all" ng-repeat="message in messages">
-        <aside class="messages-name">{{message.name}}</aside>
-        <aside class="messages-body">{{message.body}}</aside>
-        <aside class="messages-time">{{message.time}}</aside>
-        <aside class="messages-sent">created on {{message.created_at | date : medium : timezone}}</aside>
+    <ul class="expense-list" ng-controller="ListMessagesController">
+      <li class="expense-item" ng-repeat="message in messages">
+        <div>{{expenses.type}} : Due( {{expenses.due_at}} )</div>
+        <div>{{expenses.amount}}</div>
+          <!-- <ul class="payments-made">
+            <li class="single-payment" ng-repeat="payment in payments">
+              <div>{{payment.paid_by}}</div>
+              <div>{{payment.amount}}</div>
+              <div>{{payment.created_at}}</div>
+              <div>{{payment.updated_at}}</div>
+            </li>
+          <ul>-->
       </li>
     </ul>
 </div>
-  <form class="add-message" method="post" ng-controller="SendMessageController" ng-submit="submit()">
-    <textarea class="add-message-body" placeholder="Type your message here..." ng-model="newMessage.body"></textarea>
-    <button type="submit" name="submit-message" class="submit-button">Send</button>
-  </form>
+<!-- <form class="new-expense">
+  <input
+</form> -->
 </main><!--.messaging-container-->
