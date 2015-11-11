@@ -57,23 +57,28 @@
 
 <main class="messaging-container" ng-app="Communicant">
 
+
+<h3 class="message-label">Messages</h3>
 <div class="chatbox-scroll">
   <section class="chatbox">
-    <% @messages.each do |message| %>
-    <ul class="messaging-list">
-      <li class="message">
-        <div class="message-name">{{message.name}}</div>
-        <div class="message-date">{{message.date}}<%= message.date %></div>
-        <div class="message-time">{{message.time}}<%= message.time %></div>
-        <div class="message-body">{{message.body}}<%= message.body %></div>
+    <ul class="messaging-list" ng-controller="ListOfMessagesController">
+      <li class="messages-all" ng-repeat="message in messages">
+        <aside class="messages-name">{{message.name}}</aside>
+        <aside class="messages-body">{{message.body}}</aside>
+        <aside class="messages-time">{{message.time | date : medium : timezone}}</aside>
+        <aside class="messages-sent">created on {{message.created_at | date : medium : timezone}}</aside>
       </li>
     </ul>
-    <% end %>
+      <!-- <li class="message" ng-controller="ListOfMessagesController as messages">
+        <div class="message-name">{{messages.name}}</div>
+        <div class="message-date">{{messages.date}}<%# message.date %></div>
+        <div class="message-time">{{messages.time}}<%# message.time %></div>
+        <div class="message-body">{{messages.body}}<%# message.body %></div>
+      </li> -->
   </section>
 </div>
-  <form class="add-message" method="post">
-    <textarea class="add-message-body" placeholder="Type your message here..."></textarea>
+  <form class="add-message" method="post" ng-controller="SendMessageController" ng-submit="submit()">
+    <textarea class="add-message-body" placeholder="Type your message here..." ng-model="newMessage.body"></textarea>
     <button type="submit" name="submit-message">Send</button>
-    <%= link_to 'New Message', new_message_path %>
   </form>
 </main><!--.messaging-container-->
