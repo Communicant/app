@@ -11,7 +11,7 @@ class ExpensesController < ApplicationController
         payments = e.payments.to_a.map do |payment|
           payment.as_json.merge(paid_by: User.find(payment.paid_by).first_name)
         end
-        e.as_json.merge({payments: payments})
+        e.as_json.merge({payments: payments, payments_total: e.payments_total, amount_still_owed: e.amount_still_owed})
       end
        render json: @expenses
        end
