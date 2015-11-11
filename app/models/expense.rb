@@ -1,4 +1,4 @@
-class Expense < ActiveRecord::Base; end
+class Expense < ActiveRecord::Base; has_many :payments; end
 
 class Medical < Expense; end
 

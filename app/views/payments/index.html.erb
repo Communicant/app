@@ -22,6 +22,7 @@
       <% @payments.each do |payment| %>
         <tr>
           <td class="payments-data"><%= payment.amount %></td>
+          <td class="payments-data"><%= payment.created_by %></td>
           <td class="payments-data"><%= payment.created_at %></td>
           <td class="payments-data"><%= payment.updated_at %></td>
           <td class="payments-data"><%= payment.paid_at %></td>
