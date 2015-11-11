@@ -49,7 +49,7 @@
 }
 
 .messages-time, .messages-sent {
-  width: 35%;
+  width: 40%;
   display: inline-block;
   color: gray;
 }
@@ -64,4 +64,8 @@
   padding: 5px;
   color: white;
   background-color: #006300;
+}
+
+.blue {
+  background-color: aliceblue;
 }

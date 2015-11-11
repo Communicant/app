@@ -14,6 +14,8 @@
     $scope.newMessage = { };
     $scope.submit = function(){
       $http.post("/messages.json", $scope.newMessage);
+
+      $scope.newMessage = { };
     };
 
     $http.get("/messages.json")
@@ -22,15 +24,18 @@
     })
   }]); // END SendMessageController
 
-  function dataCtrl($scope, $timeout, Data) {
-      $scope.data = [];
-
-      (function tick() {
-          $scope.data = Data.query(function(){
-              $timeout(tick, 2000);
-          });
-      })();
-  }; // END timeout function
+//   app.controller('GiveNewMessageController', ['$scope', '$http', function dataCtrl($scope, $http, $timeout){
+//
+//     $scope.data = [];
+//
+//     (function tick() {
+//         $http.get("/messages.json").success(function (data) {
+//           console.log("Where are you $timeout???")
+//             $scope.data = data;
+//             $timeout(tick, 2000);
+//         });
+//     })();
+// }); // END timeout function
 
 
 // $timeout([fn], [2000], [invokeApply], [Pass]);
