@@ -7,7 +7,12 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-      @expenses = @expenses.map { |e| e.as_json.merge({payments: e.payments.to_a.map(&:serializable_hash)})}
+      @expenses = @expenses.map.each do |e|
+        payments = e.payments.to_a.map do |payment|
+          payment.as_json.merge(paid_by: User.find(payment.paid_by).first_name)
+        end
+        e.as_json.merge({payments: payments})
+      end
        render json: @expenses
        end
      end
