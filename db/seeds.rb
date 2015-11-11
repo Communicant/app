@@ -27,19 +27,24 @@ event2 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10),
 event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", parent_id: "1", child_id: "3")
 event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.",   parent_id: "1", child_id: "4")
 
+# Expenses -------------------------
+
+expense1 = Expense.create!(type: "School", amount: 450.00, due_at: Time.now + 5.days)
+
+expense2 = Expense.create!(type: "Medical", amount: 110.00, due_at: Time.now + 4.days)
+
 
 #Payments ----------------
 
-payment1 = Payment.create!(title: "Sarah's Doctor's Appoitnment", amount: "60.00", paid_at: Date.new(2015, 12, 17), parent_id: 2)
+payment1 = Payment.create!(amount: "60.00", paid_at: Date.new(2015, 11, 8), paid_by: 2, expense_id: 1)
 
-payment2 = Payment.create!(title: "Child Support Due!", amount: "111.00", paid_at: Date.new(2015, 11, 07), parent_id: 1, cost_id: 6)
+payment2 = Payment.create!(amount: "40.00", paid_at: Date.new(2015, 10, 29), paid_by: 1, expense_id: 2)
 
-payment3 = Payment.create!(title: "Sneakers for Billy", amount: "28.00", paid_at: Date.new(2015, 10, 17), parent_id: 2)
+payment3 = Payment.create!(amount: "30.00", paid_at: Date.new(2015, 10, 30), paid_by: 2, expense_id: 1)
 
-payment4 = Payment.create!(title: "Sarah's Birthday Party!", amount: "105.00", paid_at: Date.new(2015, 11, 01), parent_id: 2, cost_id: 1)
+payment4 = Payment.create!(amount: "25.00", paid_at: Date.new(2015, 11, 1), paid_by: 2, expense_id: 2)
 
-payment5 = Payment.create!(title: "Kids Insurance Payment", amount: "100.00", paid_at: Date.new(2015, 11, 05), parent_id: 1, cost_id: 5)
-
+payment5 = Payment.create!(amount: "35.00", paid_at: Date.new(2015, 11, 6), paid_by: 1, expense_id: 1)
 
 # Messages
 
@@ -54,15 +59,8 @@ message4 = Message.create!(user_id: 1, body: "I get off of work at 7. I'll bring
 message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 32, 56))
 
 
-# User
+# User ---------------------
 
 user1 = User.create!(type: "Parent", email: "email1@email.com", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
 
 user1 = User.create!(type: "Parent", email: "email2@email.com", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
-
-
- # Expenses
-
-expense1 = School.create!(amount: 450.00, due_at: Time.now + 5.days)
-
-expense2 = Medical.create!(amount: 110.00, due_at: Time.now + 4.days)
