@@ -11,23 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151109220613) do
+ActiveRecord::Schema.define(version: 20151111151342) do
 
   create_table "cases", force: :cascade do |t|
     t.integer  "case_number"
     t.integer  "mediator_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "costs", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "amount"
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date     "due"
-    t.boolean  "paid"
   end
 
   create_table "events", force: :cascade do |t|
@@ -43,6 +33,14 @@ ActiveRecord::Schema.define(version: 20151109220613) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "expenses", force: :cascade do |t|
+    t.string   "type"
+    t.datetime "due_at"
+    t.decimal  "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "body"
@@ -52,15 +50,8 @@ ActiveRecord::Schema.define(version: 20151109220613) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "payments", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "amount"
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date     "paid_at"
-    t.integer  "cost_id"
-  end
+# Could not dump table "payments" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
