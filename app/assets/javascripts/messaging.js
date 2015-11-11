@@ -13,8 +13,8 @@
     $scope.newMessage = { };
     $scope.submit = function(){
       console.log("after submit")
-      // $scope.messages.push({body:})
-      $http.post("/messages.json", $scope.newMessage); //I know it is not going to work for now
+      // $scope.messages.push({body:}) if I don't have json I can play with this.
+      $http.post("/messages.json", $scope.newMessage);
     };
     $http.get("/messages.json")
      .then(function(response){
