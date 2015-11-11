@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110215658) do
+ActiveRecord::Schema.define(version: 20151111151342) do
 
   create_table "cases", force: :cascade do |t|
     t.integer  "case_number"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20151110215658) do
 
   create_table "expenses", force: :cascade do |t|
     t.string   "type"
-    t.datetime "due_at", null: false
-    t.decimal  "amount", null: false
+    t.datetime "due_at"
+    t.decimal  "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,15 +50,8 @@ ActiveRecord::Schema.define(version: 20151110215658) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "payments", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "amount"
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date     "paid_at"
-    t.integer  "cost_id"
-  end
+# Could not dump table "payments" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"

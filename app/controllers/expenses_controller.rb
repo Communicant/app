@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = Expense.new
-    @expense_types = ["School", "Medical"]
+    @expense_types = ["School", "Medical", "Personal", "Other"]
   end
 
   # GET /expenses/1/edit

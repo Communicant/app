@@ -1,2 +1,0 @@
-class Medical < Expense
-end
