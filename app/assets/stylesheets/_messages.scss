@@ -8,11 +8,13 @@
   font-weight: lighter;
   font-size: 35pt;
   text-align: center;
+  margin-bottom: -5px;
 }
 
 .messages-all {
   list-style: none;
   padding: 5px;
+  margin-right: 6%;
 }
 
 .chatbox-scroll {
@@ -36,4 +38,19 @@
 
 .messages-name {
   color: darkblue;
+  padding-bottom: 3px;
+}
+
+.messages-body {
+  padding-bottom: 3px;
+}
+
+.messages-time, .messages-sent {
+  width: 35%;
+  display: inline-block;
+}
+
+.messages-sent {
+  float: right;
+  text-align: right;
 }

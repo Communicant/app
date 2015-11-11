@@ -65,7 +65,7 @@
       <li class="messages-all" ng-repeat="message in messages">
         <aside class="messages-name">{{message.name}}</aside>
         <aside class="messages-body">{{message.body}}</aside>
-        <aside class="messages-time">{{message.time | date : medium : timezone}}</aside>
+        <aside class="messages-time">{{message.time}}</aside>
         <aside class="messages-sent">created on {{message.created_at | date : medium : timezone}}</aside>
       </li>
     </ul>
