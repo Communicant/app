@@ -34,6 +34,7 @@
 .add-message-body {
   width: 124%;
   height: 100px;
+  border-radius: 3px;
 }
 
 .messages-name {
@@ -43,14 +44,24 @@
 
 .messages-body {
   padding-bottom: 3px;
+  font-family: Helvetica;
+  font-size: 12pt;
 }
 
 .messages-time, .messages-sent {
   width: 35%;
   display: inline-block;
+  color: gray;
 }
 
 .messages-sent {
   float: right;
   text-align: right;
+}
+
+.submit-button {
+  font-size: 10pt;
+  padding: 5px;
+  color: white;
+  background-color: #006300;
 }
