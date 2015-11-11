@@ -1,1 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 10.00
+  paid_by: 1
+  created_by: 1
+  created_at: 2015-11-07 14:19:22
+  updated_at: 2015-11-07 14:19:22
+  paid_at: 2015-11-07
+  expense_id: 1
+
+
+two:
+  amount: 10.00
+  paid_by: 1
+  created_by: 1
+  created_at: 2015-11-07 14:19:22
+  updated_at: 2015-11-07 14:19:22
+  paid_at: 2015-11-07
+  expense_id: 1
