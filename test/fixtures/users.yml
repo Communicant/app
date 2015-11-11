@@ -1,25 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-# one:
-#   type:
-#   username: MyString
-#   password_digest: MyString
-#   email: MyString
-#   first_name: MyString
-#   last_name: MyString
-#   address: MyText
-#   phone_number: 1
-#   case_number: 1
-#   case_id: 1
-#
-# two:
-#   type:
-#   username: MyString
-#   password_digest: MyString
-#   email: MyString
-#   first_name: MyString
-#   last_name: MyString
-#   address: MyText
-#   phone_number: 1
-#   case_number: 1
-#   case_id: 1
+one:
+  type: "Parent"
+  username: MyString
+  password_digest: MyString
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  address: MyText
+  phone_number: 1
+
+
+two:
+  type: "Mediator"
+  username: MyString
+  password_digest: MyString
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  address: MyText
+  phone_number: 1

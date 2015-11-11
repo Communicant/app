@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111211744) do
+ActiveRecord::Schema.define(version: 20151111224850) do
 
   create_table "cases", force: :cascade do |t|
     t.integer  "case_number"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20151111211744) do
   end
 
   create_table "expenses", force: :cascade do |t|
-    t.string   "type"
+    t.string   "type",       null: false
     t.datetime "due_at"
     t.decimal  "amount"
     t.datetime "created_at", null: false
