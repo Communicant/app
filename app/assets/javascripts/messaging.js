@@ -9,14 +9,14 @@
        console.log("inside ListOfMessagesController")
      })
 
-     $timeout(function(){
+     $interval(function(){
         $http.get("/messages.json")
         .then(function(response){
         $scope.messages = response.data;
-        console.log("inside the timeout in the ListOfMessagesController")
+        console.log("probando timeout")
         //console.log("inside the get after the post, just trying to update the list of messages")
         })
-      }, 2000)
+      }, 5000)
 
    }]);//END of ListOfMessagesController
   app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
@@ -28,17 +28,17 @@
       $http.post("/messages.json", $scope.newMessage)
       .then(function(response){
         $scope.newMessage = { };
+        console.log(response)
         // TODO: What's in response? do i need that?
        });
 
        $timeout(function(){
-          $http.get("/messages.json")
-          .then(function(response){
-          $scope.messages = response.data;
-          console.log("inside the timeout")
+          $http.get("/messages.json").then(function(response){
+           $scope.messages = response.data;
+           console.log("inside the timeout")
           //console.log("inside the get after the post, just trying to update the list of messages")
           })
-        }, 2000)
+        }, 5000)
     };
 
   }]);//END of NewMessageController
