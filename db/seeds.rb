@@ -52,3 +52,10 @@ message3 = Message.create!(user_id: 1, body: "Thanks. Billy would be heartbroken
 message4 = Message.create!(user_id: 1, body: "I get off of work at 7. I'll bring the kids once I get off.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
 
 message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 32, 56))
+
+
+# User
+
+user1 = User.create!(type: "Parent", email: "email1@email.com", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+
+user1 = User.create!(type: "Parent", email: "email2@email.com", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
