@@ -40,6 +40,51 @@
 
 // $timeout([fn], [2000], [invokeApply], [Pass]);
 
+  app.controller('ListExpensesController', ['$scope', '$http', function($scope, $http){
+    $http.get("/expenses.json")
+    .then(function(response){
+      $scope.expenses = response.data;
+    })
+  }]); // END ListExpensesController
+
+  // app.controller('ListPaymentsController', ['$scope', '$http', function($scope, $http){
+  //   // console.log('Yo');
+  //   $http.get("/expenses.json")
+  //   .then(function(response){
+  //     $scope.expenses.payments = response.data;
+  //   })
+  // }]); // END ListPaymentsController
+
+  app.controller('NewExpenseController', ['$scope', '$http', function($scope, $http){
+    // console.log("Hello?");
+    $scope.newExpense = { };
+    $scope.submit = function(){
+      $http.post("/expenses.json", $scope.newExpense);
+
+      $scope.newExpense = { };
+    };
+
+    $http.get("/expenses.json")
+    .then(function(response){
+      $scope.expenses = response.data;
+    })
+  }]); // END NewExpenseController
+
+  app.controller('NewPaymentController', ['$scope', '$http', function($scope, $http){
+
+    $scope.newPayment = { };
+    $scope.submit = function(){
+      $http.post("/payments.json", $scope.newPayment);
+
+      $scope.newPayment = { };
+    };
+
+    $http.get("/payments.json")
+    .then(function(response){
+      $scope.expenses = response.data;
+    })
+  }]); // END NewPaymentController
+
 })(); // END IIFE
 
 // SOURCE for $timeout function: http://stackoverflow.com/questions/13671031/server-polling-with-angularjs
