@@ -1,11 +1,31 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Communicant</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+  <main class="header-container">
+    <header>
+      <h2>Communicant</h2>
+    </header>
+    <nav class="header-navig">
+      <section class="tabs-header">
+
+          <%= link_to 'Expenses', expenses_path, class: "header-profile" %>
+          <%= link_to 'Inbox', messages_path, class: "header-profile" %>
+          <%= link_to 'Events', events_path %>
+          <!-- <%= link_to 'Information', '#' %> This page still needs to be done.   -->
+        <section class="tabs-right">
+          <%= link_to 'Profile', profiles_path, class: "header-profile" %>
+          <%= link_to 'Log out', root_path, class: "header-log-out" %>
+        </section>
+     </section>
+    </nav>
+  </main>
 
 <%= yield %>
 <%= javascript_include_tag 'application' %>
