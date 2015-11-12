@@ -4,16 +4,19 @@ h3.message-title{
   font-size: 35pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 10%;
+  margin-top: 1%;
   margin-left: 35%
 }
 section.chatbox {
   width: 80%;
+  height: 300px;
   border: 3px solid #004C80;
   border-radius: 5px;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-left: 10%;
+  overflow: auto;
 }
+
 ul.messaging-list{
   li.message-display{
     border-bottom: 2px solid #004C80;
@@ -23,6 +26,14 @@ ul.messaging-list{
   }
   li:last-child{
     border-bottom: white;
+  }
+  div.message-name{
+    color: #004C80;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  div.message-date{
+    
   }
 }
 form.add-message{
