@@ -52,3 +52,17 @@ section.tabs-header{
     background-color: #D2691E;
   }
 }
+@media screen and (max-width: 70em) {           //MOBILE
+  main.header-container{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+
+}
+
+
+@media (min-width: 1025px) {            //DESKTOP
+
+}
