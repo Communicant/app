@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
-    @payment = Payment.new()
+    @payment = Payment.new
   end
 
   # GET /payments/1/edit
@@ -25,10 +25,14 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
-    @payment = Payment.new(paid_at: Date.today, paid_by: 1, expense_id: params[:payment][:expense_id],  amount: (params[:payment][:amount])
+    @payment = Payment.new(payment_params)
+
+    respond_to do |format|
       if @payment.save
+        format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
         format.json { render :show, status: :created, location: @payment }
       else
+        format.html { render :new }
         format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
     end
