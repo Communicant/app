@@ -14,8 +14,9 @@ section.chatbox {
   border-radius: 5px;
   margin-top: 1%;
   margin-left: 10%;
-  overflow: scroll;
+  overflow: auto;
 }
+
 ul.messaging-list{
   li.message-display{
     border-bottom: 2px solid #004C80;
@@ -25,6 +26,14 @@ ul.messaging-list{
   }
   li:last-child{
     border-bottom: white;
+  }
+  div.message-name{
+    color: #004C80;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  div.message-date{
+    
   }
 }
 form.add-message{

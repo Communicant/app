@@ -30,9 +30,9 @@
   <h3 class="message-title">Messages</h3>
 
   <section class="chatbox">
-    <div class="chatbox-scroll" id="scroll-bottom">
+    <!-- <div class="chatbox-scroll"> -->
 
-     <ul class="messaging-list" ng-controller="ListOfMessagesController">
+     <ul class="messaging-list" id="scroll-bottom" ng-controller="ListOfMessagesController">
     <!-- <% @messages.each do |message| %>
       <li class="message">
         <!-- <div class="message-name"><%# message.name %></div> -->
@@ -43,14 +43,14 @@
     <!-- <% end %> -->
 
 
-        <li class="message-display" ng-repeat="message in messages"><!-- '-date' is reverse for 'date' or 'date':true -->
+        <li class="message-display" ng-repeat="message in messages| orderBy: '-date'"><!-- '-date' is reverse for 'date' or 'date':true -->
           <div class="message-name">{{message.name}}</div>
-          <div class="message-date">{{message.date}}</div>
-          <div class="message-time">{{message.time}}</div>
+          <div class="message-date">{{message.date | date : format : medium}}</div>
+        <div class="message-time">{{message.time | date : medium}}</div>
           <div class="message-body">{{message.body}}</div>
         </li>
      </ul>
-   </div>
+   <!-- </div> -->
 
  </section>
   <form class="add-message" ng-controller="NewMessageController" ng-submit="submit()">
