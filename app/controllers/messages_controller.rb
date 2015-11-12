@@ -10,14 +10,7 @@ class MessagesController < ApplicationController
        render json: @messages }
      end
   end
-
-    # @messages = Message.all
-    # respond_to do |format|
-    #   format.html
-    #   format.json { render json: @messages } #like that I have the json without the names
-    # end
-
-  #end
+  
   # GET /messages/1
   def show
   end
