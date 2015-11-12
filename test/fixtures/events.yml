@@ -8,7 +8,7 @@ one:
   parent_id: 1
   child_id: 1
   mediator_id: 1
-  pending: false
+  case_id: 1
 
 two:
   title: MyString
@@ -18,4 +18,4 @@ two:
   parent_id: 1
   child_id: 1
   mediator_id: 1
-  pending: false
+  case_id: 1

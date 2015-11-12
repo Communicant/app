@@ -1,6 +1,8 @@
-<!-- <%# form_tag  %>
-<%# label_tag :email %>
-<%# email_field_tag :email, class: 'email', placeholder: 'Email' %>
-<%# label_tag :password %>
-<%# password_field_tag :password, class: 'form-control', placeholder: 'Password' %>
-<%# submit_tag "Log in", class: "btn btn-primary" %> -->
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an expense. Please check the Expense page.</input>
+<!-- NOTE: Maybe link to expenses? -->
+<input type="radio" name="yesno" value=1> I will not be able to attend the scheduled event for
+<%= f.collection_select :parent_id, Event.parents(:title),:id,:name, include_blank: true %>
+Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>
