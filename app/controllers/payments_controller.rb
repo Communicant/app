@@ -25,7 +25,7 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
-    @payment = Payment.new(payment_params)
+    @payment = Payment.new(user_id: 1, created_by: 1, paid_by: 1  amount: (params[:payment][:amount]))
 
     respond_to do |format|
       if @payment.save
