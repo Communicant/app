@@ -1,3 +1,21 @@
+<main class="header-container">
+  <header>
+    <h2>Communicant</h2>
+  </header>
+  <nav class="header-navig">
+    <section class="tabs-header">
+        <a href="#">Expenses</a>
+        <a href="#">Inbox</a>
+        <a href="#">Calendar</a>
+        <a href="#">Information</a>
+      <section class="tabs-right">
+        <a class="header-profile" href="#">Profile</a>
+        <a class="header-log-out" href="#">Log out</a>
+      </section>
+   </section>
+  </nav>
+</main>
+
 <%= form_for(@profile) do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
@@ -11,31 +29,39 @@
     </div>
   <% end %>
 
+  <section class="update-profile-container">
+
+
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, class:"update-profile-n" %>
+    <%= f.text_field :name, class:"update-profile-name" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :email %>
+    <%= f.text_field :email, class:"update-profile-email" %>
   </div>
   <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.text_field :phone_number %>
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, class:"update-profile-phone" %>
   </div>
   <div class="field">
-    <%= f.label :child_name %><br>
-    <%= f.text_field :child_name %>
+    <%= f.label :child_name %>
+    <%= f.text_field :child_name, class:"update-profile-child" %>
   </div>
   <div class="field">
-    <%= f.label :case_number %><br>
-    <%= f.number_field :case_number %>
+    <%= f.label :case_number %>
+    <%= f.number_field :case_number, class:"update-profile-case" %>
   </div>
   <div class="field">
-    <%= f.label :mediator_name %><br>
-    <%= f.text_field :mediator_name %>
+    <%= f.label :mediator_name %>
+    <%= f.text_field :mediator_name, class:"update-profile-med" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= (f.submit class:"update-profile-submit") %>
   </div>
+
+  <%= link_to 'Details', @profile, class:"update-profile-details" %>
+  <%= link_to 'Back', profiles_path, class:"update-profile-back" %>
+
 <% end %>
+</section>

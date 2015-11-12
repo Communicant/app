@@ -1,34 +1,56 @@
+<main class="header-container">
+  <header>
+    <h2>Communicant</h2>
+  </header>
+  <nav class="header-navig">
+    <section class="tabs-header">
+        <a href="#">Expenses</a>
+        <a href="#">Inbox</a>
+        <a href="#">Calendar</a>
+        <a href="#">Information</a>
+      <section class="tabs-right">
+        <a class="header-profile" href="#">Profile</a>
+        <a class="header-log-out" href="#">Log out</a>
+      </section>
+   </section>
+  </nav>
+</main>
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<section class="profile-m-container">
+
+<p class="profile-details-name">
   <strong>Name:</strong>
   <%= @profile.name %>
 </p>
 
-<p>
+<p class="profile-details-email">
   <strong>Email:</strong>
   <%= @profile.email %>
 </p>
 
-<p>
+<p class="profile-details-phone">
   <strong>Phone number:</strong>
   <%= @profile.phone_number %>
 </p>
 
-<p>
+<p class="profile-details-child">
   <strong>Child name:</strong>
   <%= @profile.child_name %>
 </p>
 
-<p>
+<p class="profile-details-case">
   <strong>Case number:</strong>
   <%= @profile.case_number %>
 </p>
 
-<p>
+<p class="profile-details-mediator">
   <strong>Mediator name:</strong>
   <%= @profile.mediator_name %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Edit', edit_profile_path(@profile), class:"profile-edit" %> 
+<%= link_to 'Back', profiles_path, class:"profile-back" %>
+<!-- <%# link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+</section>

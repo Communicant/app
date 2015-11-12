@@ -1,10 +1,10 @@
 require 'test_helper'
 class CasesEventsMediatorsTest < ActionController::TestCase
 
-  before_setup do
-    Case.delete_all
-    Event.delete_all
-  end
+
+  Case.delete_all
+  Event.delete_all
+
 
   test "events should have a mediator" do
     assert_not_nil Mediator.first

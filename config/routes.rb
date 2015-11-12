@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+
+  resources :expenses
   resources :messages
 
   root 'home#index'
@@ -10,9 +12,8 @@ Rails.application.routes.draw do
 
   resources :dashboards
   resources :users
-  #resources :profiles
+  resources :profiles
   resources :payments
-  resources :costs
   resources :events
   resources :home
 

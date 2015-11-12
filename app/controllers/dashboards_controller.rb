@@ -3,8 +3,7 @@ class DashboardsController < ApplicationController
 
   # GET /dashboards
   def index
-    @dashboards = Dashboard.all
-    #TODO: Get dashboards for Mediator and for Parent
+    # @dashboards = Dashboard.all
   end
 
   # GET /dashboards/1
