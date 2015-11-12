@@ -52,3 +52,28 @@ section.tabs-header{
     background-color: #D2691E;
   }
 }
+
+@media (max-width: 567px) {           //MOBILE
+
+  section.tabs-right{
+    margin-top: 30%;
+    float: left;
+  }
+
+}
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+  section.tabs-right{
+  float: right;
+  }
+
+}
+
+
+@media (min-width: 1025px) {            //DESKTOP
+  section.tabs-right{
+  float: right;
+  }
+
+
+}
