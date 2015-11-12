@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Profile</h1>
+<h1>Dashboard</h1>
 
 <table>
   <thead>
@@ -16,17 +16,17 @@
   </thead>
 
   <tbody>
-    <% @profiles.each do |profile| %>
+    <% @dashboards.each do |profile| %>
       <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.email %></td>
-        <td><%= profile.phone_number %></td>
-        <td><%= profile.child_name %></td>
-        <td><%= profile.case_number %></td>
-        <td><%= profile.mediator_name %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= dashboard.name %></td>
+        <td><%= dashboard.email %></td>
+        <td><%= dashboard.phone_number %></td>
+        <td><%= dashboard.child_name %></td>
+        <td><%= dashboard.case_number %></td>
+        <td><%= dashboard.mediator_name %></td>
+        <td><%= link_to 'Show', dashboard %></td>
+        <td><%= link_to 'Edit', edit_dashboard_path(dashboard) %></td>
+        <td><%= link_to 'Destroy', dashboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
