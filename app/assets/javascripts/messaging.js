@@ -1,6 +1,7 @@
 ;(function(){
   $("#scroll-bottom").scrollTop($("#scroll-bottom").scrollHeight);
   //$("#scroll-bottom").scrollTop(200);
+  console.log("inside ")
 
 })();
 
