@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Dashboards</h1>
+
+<h1>Dashboard</h1>
 
 <table>
   <thead>
@@ -12,6 +13,7 @@
   <tbody>
     <% @dashboards.each do |dashboard| %>
       <tr>
+
         <td><%= link_to 'Show', dashboard %></td>
         <td><%= link_to 'Edit', edit_dashboard_path(dashboard) %></td>
         <td><%= link_to 'Destroy', dashboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>

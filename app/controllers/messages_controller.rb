@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
-  # GET /messages
+
   def index
     @messages = Message.all
     respond_to do |format|
@@ -11,6 +11,13 @@ class MessagesController < ApplicationController
      end
   end
 
+    # @messages = Message.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: @messages } #like that I have the json without the names
+    # end
+
+  #end
   # GET /messages/1
   def show
   end

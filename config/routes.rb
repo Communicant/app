@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
   resources :messages
 
   root 'home#index'
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
   resources :costs
   resources :events
   resources :home
+
 
 
 
