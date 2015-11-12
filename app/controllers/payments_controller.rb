@@ -5,6 +5,7 @@ class PaymentsController < ApplicationController
   # GET /payments.json
   def index
     @payments = Payment.all
+    render json: @payments
   end
 
   # GET /payments/1
@@ -29,7 +30,7 @@ class PaymentsController < ApplicationController
     respond_to do |format|
       if @payment.save
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
-        format.json { render :show, status: :created, location: @payment }
+        format.json { render json: :show, status: :created, location: @payment }
       else
         format.html { render :new }
         format.json { render json: @payment.errors, status: :unprocessable_entity }
