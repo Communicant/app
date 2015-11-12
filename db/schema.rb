@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151111224850) do
-=======
-ActiveRecord::Schema.define(version: 20151110205806) do
 
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
@@ -23,7 +20,6 @@ ActiveRecord::Schema.define(version: 20151110205806) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
->>>>>>> a3f0869fa645077dedbec103b0ff864c3b572574
 
   create_table "cases", force: :cascade do |t|
     t.integer  "case_number"
