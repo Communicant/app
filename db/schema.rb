@@ -20,16 +20,6 @@ ActiveRecord::Schema.define(version: 20151111211744) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "costs", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "amount"
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date     "due"
-    t.boolean  "paid"
-  end
-
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
