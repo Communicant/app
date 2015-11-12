@@ -4,15 +4,17 @@ h3.message-title{
   font-size: 35pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 10%;
+  margin-top: 1%;
   margin-left: 35%
 }
 section.chatbox {
   width: 80%;
+  height: 300px;
   border: 3px solid #004C80;
   border-radius: 5px;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-left: 10%;
+  overflow: scroll;
 }
 ul.messaging-list{
   li.message-display{

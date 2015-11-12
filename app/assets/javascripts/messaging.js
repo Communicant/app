@@ -1,4 +1,12 @@
 ;(function(){
+  $("#scroll-bottom").scrollTop($("#scroll-bottom").scrollHeight);
+  //$("#scroll-bottom").scrollTop(200);
+
+})();
+
+
+
+;(function(){
 
   var app = angular.module('Communicant', ['ngRoute']);
   console.log("inside angular")
