@@ -29,6 +29,8 @@ gem 'bower-rails'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'remove_tl'
+
+gem 'bower-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

@@ -61,6 +61,6 @@ message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Dat
 
 # User ---------------------
 
-user1 = User.create!(type: "Parent", email: "email1@email.com", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
-
-user1 = User.create!(type: "Parent", email: "email2@email.com", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Parent.create!(email: "email1@email.com", password: "123456", first_name: "Parent1 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Parent.create!(email: "email2@email.com", password: "123456", first_name: "Parent2 First Name", last_name: "Parent Last Name", address: "123 123rd st.")
+Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")

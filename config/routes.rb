@@ -5,8 +5,12 @@ Rails.application.routes.draw do
 
   resources :expenses
   resources :messages
-  root 'home#index'
 
+  root 'home#index'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :dashboards 
   resources :users
   resources :profiles
   resources :payments
