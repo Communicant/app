@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
-  # GET /messages
+
   def index
     @messages = Message.all
     respond_to do |format|
@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
        render json: @messages }
      end
   end
-
+  
   # GET /messages/1
   def show
   end

@@ -1,22 +1,7 @@
-<p id="notice"><%= notice %></p>
 
-<main class="header-container">
-  <header>
-    <h2>Communicant</h2>
-  </header>
-  <nav class="header-navig">
-    <section class="tabs-header">
-        <a href="#">Expenses</a>
-        <a href="#">Inbox</a>
-        <a href="#">Calendar</a>
-        <a href="#">Information</a>
-      <section class="tabs-right">
-        <a class="header-profile" href="#">Profile</a>
-        <a class="header-log-out" href="#">Log out</a>
-      </section>
-   </section>
-  </nav>
-</main>
+
+
+<p id="notice"><%= notice %></p>
 
 <h1 class="events-header">Your Upcoming Events</h1>
 
@@ -29,8 +14,8 @@
       <th>Time</th>
       <th>Parent</th>
       <th>Child</th>
-      <th>Mediator</th>
-      <th>Pending</th>
+      <!-- <th>Mediator</th> -->
+      <!-- <th>Pending</th> -->
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -41,11 +26,11 @@
         <td class="title"><%= event.title %></td>
         <td class="descrip"><%= event.description %></td>
         <td class="date"><%= event.date %></td>
-        <td class="time"><%= event.time.strftime("%I:%M%p") %></td>
-        <td class="parent"><%= event.parent_id %></td>
-        <td class="child"><%= event.child_id %></td>
-        <td class="mediator"><%= event.mediator_id %></td>
-        <td class="pending"><button type="button" name="button">Pending</button></td>
+        <td class="time"><%= event.time.try(:strftime, "%I:%M%p") %></td>
+        <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td>
+        <td class="child">Sarah<%# event.child.find(1).first_name %></td>
+        <!-- <td class="mediator"><%= event.mediator %></td> -->
+        <!-- <td class="pending"><button type="button" name="button">Pending</button></td> -->
         <td class="events-show"><%= link_to 'Details', event %></td>
         <td class="events-edit"><%= link_to 'Update', edit_event_path(event) %></td>
         <!-- <td><%# link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

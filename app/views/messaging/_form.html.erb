@@ -1,0 +1,8 @@
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an expense. Please check the Expense page.</input>
+<!-- NOTE: Maybe link to expenses? -->
+<input type="radio" name="yesno" value=1> I will not be able to attend the scheduled event for
+<%= f.collection_select :parent_id, Event.all.title, include_blank: true %>
+Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>
+<input type="radio" name="yesno" value=1> I created an event. Please check the calendar.</input>

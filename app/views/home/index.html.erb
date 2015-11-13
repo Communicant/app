@@ -3,16 +3,18 @@
       <header>
         <h1>Communicant</h1>
         <nav class="home-nav">
-          <a href="#" class="tabs clearfix">Register</a>
+          <!-- <a href="#" class="tabs clearfix">Register</a> -->
           <a href="#login" class="tabs clearfix">Login</a>
             <section id="login" class="drop-down-menu animated fadeInDown clearfix">
+              <%= form_tag '/sessions', method: :post %>
               <input type="email" class="email" placeholder="Email"></input><br />
               <input type="password" class="password" placeholder="Password"></input><br />
-              <button type="submit">Login</button>
+              <%= submit_tag "Login" %>
+            </form>
             </section><!--#login-->
           </nav><!--.home-nav-->
-        </header>
-      </section><!--.main-header-->
+      </header>
+</section><!--.main-header-->
 
       <section class="intro">
         <img src="divorced-parents.jpg" class="back-img" />
