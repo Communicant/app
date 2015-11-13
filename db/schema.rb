@@ -44,9 +44,9 @@ ActiveRecord::Schema.define(version: 20151113065955) do
     t.integer  "parent_id"
     t.integer  "child_id"
     t.integer  "mediator_id"
-    t.boolean  "approval",    default: true
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.boolean  "approval_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "expenses", force: :cascade do |t|
