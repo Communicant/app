@@ -125,7 +125,7 @@
   //   })
   // }]); // END NewExpenseController
 
-  }]);//END of NewMessageController
+  //}]);//END of NewMessageController
 
 })(); // END IIFE
 
