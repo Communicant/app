@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 h3.message-title{
   font-style: Gill Sans;
@@ -54,4 +55,76 @@ textarea.add-message-body{
 
 @media (min-width: 1025px) {            //DESKTOP
 
+=======
+.messaging-container {
+  width: 80%;
+  margin-left: 10%; margin-right: 10%;
+}
+
+.message-label {
+  font-family: Gill Sans;
+  font-weight: lighter;
+  font-size: 35pt;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.messages-all {
+  list-style: none;
+  padding: 5px;
+  margin-right: 6%;
+}
+
+.chatbox-scroll {
+  margin-top: 50px; margin-bottom: 5%;
+  position: relative;
+  height: 400px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+}
+
+.add-message {
+  position: relative;
+  width: 80%;
+}
+
+.add-message-body {
+  width: 124%;
+  height: 100px;
+  border-radius: 3px;
+}
+
+.messages-name {
+  color: darkblue;
+  padding-bottom: 3px;
+}
+
+.messages-body {
+  padding-bottom: 3px;
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+
+.messages-time, .messages-sent {
+  width: 40%;
+  display: inline-block;
+  color: gray;
+}
+
+.messages-sent {
+  float: right;
+  text-align: right;
+}
+
+.submit-button {
+  font-size: 10pt;
+  padding: 5px;
+  color: white;
+  background-color: #006300;
+}
+
+.blue {
+  background-color: aliceblue;
+>>>>>>> feature/expenses-angular
 }

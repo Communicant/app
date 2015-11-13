@@ -1,12 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  id: 1
-  type: School
-  due_at: 2015-11-10 16:56:58
-  amount: 500.00
-
-two:
-  type: School
-  due_at: 2015-11-10 16:56:58
-  amount: 500
+# one:
+#   type:
+#   due_at: 2015-11-10 16:56:58
+#   amount: 9.99
+#
+# two:
+#   type:
+#   due_at: 2015-11-10 16:56:58
+#   amount: 9.99
