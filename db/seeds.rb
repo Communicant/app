@@ -33,6 +33,12 @@ expense1 = Expense.create!(type: "School", amount: 450.00, due_at: Time.now + 5.
 
 expense2 = Expense.create!(type: "Medical", amount: 110.00, due_at: Time.now + 4.days)
 
+# Expenses -------------------------
+
+expense1 = Expense.create!(type: "School", amount: 450.00, due_at: Time.now + 5.days)
+
+expense2 = Expense.create!(type: "Medical", amount: 110.00, due_at: Time.now + 4.days)
+
 
 #Payments ----------------
 
