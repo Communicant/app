@@ -5,11 +5,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :log_parent_in
 
-  def require_mediator
-    if !User.find(session[:user_id]).is_a?(Mediator)
-      redirect_to root_path, notice: "This area is for mediators only"
-    end
-  end
+  # def require_mediator
+  #   if !User.find(session[:user_id]).is_a?(Mediator)
+  #     redirect_to root_path, notice: "This area is for mediators only"
+  #   end
+  # end
 
   def log_parent_in
     session[:user_id] = User.first.id
