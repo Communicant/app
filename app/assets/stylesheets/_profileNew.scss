@@ -1,0 +1,69 @@
+section.update-profile-container{
+  border: 2px solid #004C80;
+  border-radius: 5px;
+  width: 50%;
+  margin-top: 10%;
+  margin-left: 25%;
+  padding-bottom: 3%;
+  padding-top: 2%;
+  color: #004C80;
+
+  div.field{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .update-profile-name{
+    margin-left: 15%;
+    width: 70%;
+  }
+  .update-profile-email{
+    width: 70%;
+    margin-left: 15.1%;
+  }
+  .update-profile-phone{
+    width: 70%;
+    margin-left: 3.4%;
+  }
+  .update-profile-child{
+    width: 70%;
+    margin-left: 7.5%;
+  }
+  .update-profile-case{
+    width: 70%;
+    margin-left: 5.1%;
+  }
+  .update-profile-med{
+    width: 70%;
+    margin-left: 3%;
+  }
+
+
+  .update-profile-submit{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 14.5%;
+    font-size: 1em;
+    margin-top: -0.4%;
+    position: absolute;
+  }
+.update-profile-details{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 50%;
+  text-decoration: none;
+}
+.update-profile-back{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+}

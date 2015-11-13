@@ -1,11 +1,16 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
-  # GET /messages
+
   def index
     @messages = Message.all
+    respond_to do |format|
+      format.html
+      format.json { @messages = @messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
+       render json: @messages }
+     end
   end
-
+  
   # GET /messages/1
   def show
   end
@@ -21,7 +26,8 @@ class MessagesController < ApplicationController
 
   # POST /messages
   def create
-    @message = Message.new(message_params)
+    # @parent = Parent.find_by(params[:id])
+    @message = Message.new(user_id: 1, date: Date.today, time: Time.now, body: (params[:message][:body]))
 
     if @message.save
       redirect_to @message, notice: 'Message was successfully created.'

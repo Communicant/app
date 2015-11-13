@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @expense_types = ["Parent", "Mediator"]
   end
 
   # GET /users/1
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    @user = params[:expense][:type].constantize.new(user_params)
 
     respond_to do |format|
       if @user.save

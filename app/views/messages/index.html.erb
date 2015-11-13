@@ -1,79 +1,53 @@
-<!-- <p id="notice"><%= notice %></p>
-
-<h1>Listing Messages</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Body</th>
-      <th>Date</th>
-      <th>Time</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @messages.each do |message| %>
-      <tr>
-        <td><%# message.user_id %></td>
-        <td><%# message.body %></td>
-        <td><%# message.date %></td>
-        <td><%# message.time %></td>
-        <td><%# link_to 'Show', message %></td>
-        <td><%# link_to 'Edit', edit_message_path(message) %></td>
-        <td><%# link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br> -->
-
-<!-- <%= link_to 'New Message', new_message_path %> -->
 
 <p id="notice"><%= notice %></p>
 
-<main class="header-container">
-  <header>
-    <h2>Communicant</h2>
-  </header>
-  <nav class="header-navig">
-    <section class="tabs-header">
-        <a href="#">Expenses</a>
-        <a href="#">Inbox</a>
-        <a href="#">Calendar</a>
-        <a href="#">Information</a>
-
-      <section class="tabs-right">
-        <a class="header-profile" href="#">Profile</a>
-        <a class="header-log-out" href="#">Log out</a>
-      </section>
-   </section>
-
-  </nav>
-
-</main>
-
 <main class="messaging-container" ng-app="Communicant">
+  <h3 class="message-title">Messages</h3>
 
-<div class="chatbox-scroll">
   <section class="chatbox">
-    <% @messages.each do |message| %>
-    <ul class="messaging-list">
+    <!-- <div class="chatbox-scroll"> -->
+
+     <ul class="messaging-list" id="scroll-bottom" ng-controller="ListOfMessagesController">
+    <!-- <% @messages.each do |message| %>
       <li class="message">
-        <div class="message-name">{{message.name}}</div>
-        <div class="message-date">{{message.date}}<%= message.date %></div>
-        <div class="message-time">{{message.time}}<%= message.time %></div>
-        <div class="message-body">{{message.body}}<%= message.body %></div>
-      </li>
-    </ul>
-    <% end %>
-  </section>
-</div>
-  <form class="add-message" method="post">
-    <textarea class="add-message-body" placeholder="Type your message here..."></textarea>
-    <button type="submit" name="submit-message">Send</button>
-    <%= link_to 'New Message', new_message_path %>
+        <!-- <div class="message-name"><%# message.name %></div> -->
+        <!-- <div class="message-date"><%# message.date %></div>
+        <div class="message-time"><%# message.time %></div>
+        <div class="message-body"><%# message.body %></div>
+      </li> -->
+    <!-- <% end %> -->
+
+
+        <li class="message-display" ng-repeat="message in messages| orderBy: '-date'"><!-- '-date' is reverse for 'date' or 'date':true -->
+          <div class="message-name">{{message.name}}</div>
+          <div class="message-date">{{message.date | date : format : medium}}</div>
+        <!-- <div class="message-time">{{message.time | date : medium}}</div> -->
+          <div class="message-body">{{message.body}}</div>
+        </li>
+     </ul>
+   <!-- </div> -->
+
+ </section><!--END section.chatbox -->
+
+  <form class="add-message" ng-controller="NewMessageController" ng-submit="submit()">
+    <!-- <textarea class="add-message-body" ng-model="newMessage.body" placeholder="Type your message here..."></textarea> -->
+    <select class="select-premessage" ng-model="newMessage.message.body" name="select">
+      <option value="">Select an option</option>
+      <option>Check your mail</option>
+      <option>An event has been changed in your list of events</option>
+      <option>An expense has been changed in the list of expenses</option>
+      <option>A Change in Information panel</option>
+    </select>
+    <!-- {{newMessage.body}} -->
+    <button class="message-send" type="submit" name="submit-message">Send</button>
   </form>
+  <!-- <%# link_to 'New Message', new_message_path %> -->
+  <!-- <form class="add-messages" ng-controller="NewMessageController" ng-submit="submit()">
+    <section class="select-premessages" placeholder="Select your message" ng-model="newMessage.body">
+      <p>An event has been changed in your list of events</p>
+      <p>An expense has been changed in your list of expenses</p>
+      <p>A change in information panel</p>
+    </section>
+  </form> -->
+
 </main><!--.messaging-container-->
