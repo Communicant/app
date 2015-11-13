@@ -23,13 +23,19 @@ class EventsController < ApplicationController
   def edit
   end
 
+  # def create_approval
+  #   @approval = Approval.new(approval_params)
+  # end
+
   # POST /events
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    # create_approval
 
     respond_to do |format|
-      if @event.save
+      if
+        @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -89,4 +95,8 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending)
     end
+
+    # def approval_params
+    #   params.require(:approval).permit(:parent_id, :parent_approval, :event_id)
+    # end
 end

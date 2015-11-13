@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
       redirect_to root_path, notice: "This area is for mediators only"
     end
   end
-  
+
   def log_parent_in
     session[:user_id] = User.first.id
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111224850) do
+ActiveRecord::Schema.define(version: 20151113065955) do
 
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
@@ -28,14 +28,12 @@ ActiveRecord::Schema.define(version: 20151111224850) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "costs", force: :cascade do |t|
-    t.string   "title"
-    t.decimal  "amount"
+  create_table "children", force: :cascade do |t|
+    t.string   "first_name"
+    t.integer  "age"
     t.integer  "parent_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date     "due"
-    t.boolean  "paid"
   end
 
   create_table "events", force: :cascade do |t|
@@ -46,9 +44,9 @@ ActiveRecord::Schema.define(version: 20151111224850) do
     t.integer  "parent_id"
     t.integer  "child_id"
     t.integer  "mediator_id"
-    t.boolean  "pending"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "approval",    default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "expenses", force: :cascade do |t|
@@ -106,6 +104,7 @@ ActiveRecord::Schema.define(version: 20151111224850) do
     t.string  "last_name"
     t.text    "address"
     t.integer "phone_number"
+    t.integer "child_id"
   end
 
 end
