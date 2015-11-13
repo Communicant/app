@@ -39,12 +39,9 @@ expense1 = Expense.create!(type: "School", amount: 450.00, due_at: Time.now + 5.
 
 expense2 = Expense.create!(type: "Medical", amount: 110.00, due_at: Time.now + 4.days)
 
-<<<<<<< HEAD
-=======
 
 #Payments ----------------
 
->>>>>>> feature/expenses-angular
 payment1 = Payment.create!(amount: "60.00", paid_at: Date.new(2015, 11, 8), paid_by: 2, expense_id: 1)
 
 payment2 = Payment.create!(amount: "40.00", paid_at: Date.new(2015, 10, 29), paid_by: 1, expense_id: 2)
