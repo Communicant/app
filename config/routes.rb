@@ -1,10 +1,23 @@
 Rails.application.routes.draw do
 
+
+  resources :expenses
+  resources :messages
+
+  root 'home#index'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :dashboards
+  resources :users
   resources :profiles
-  # root 'layouts' =>'layout#index'
   resources :payments
-  resources :costs
   resources :events
+  resources :home
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

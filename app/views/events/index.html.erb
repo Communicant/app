@@ -1,22 +1,7 @@
-<p id="notice"><%= notice %></p>
 
-<main class="header-container">
-  <header>
-    <h2>Communicant</h2>
-  </header>
-  <nav class="header-navig">
-    <section class="tabs-header">
-        <a href="#">Expenses</a>
-        <a href="#">Inbox</a>
-        <a href="#">Calendar</a>
-        <a href="#">Information</a>
-      <section class="tabs-right">
-        <a class="header-profile" href="#">Profile</a>
-        <a class="header-log-out" href="#">Log out</a>
-      </section>
-   </section>
-  </nav>
-</main>
+
+
+<p id="notice"><%= notice %></p>
 
 <h1 class="events-header">Your Upcoming Events</h1>
 
@@ -44,10 +29,10 @@
         <td class="title"><%= link_to event.title, event %></td>
         <!-- <td class="descrip"><%# event.description %></td> -->
         <td class="date"><%= event.date %></td>
-        <!-- <td class="time"><%# event.time %></td> -->
-        <!-- <td class="parent"><%# event.parent_id %></td> -->
+        <td class="time"><%= event.time.strftime("%I:%M%p") %></td>
+        <td class="parent"><%= event.user[0][:first_name] %></td>
         <td class="child"><%= event.child_id %></td>
-        <!-- <td class="mediator"><%# event.mediator_id %></td> -->
+        <td class="mediator"><%= event.mediator %></td>
         <td class="pending"><button type="button" name="button">Pending</button></td>
         <!-- <td class="events-show"><%# link_to 'Details', event %></td> -->
         <!-- <td class="events-edit"><%# link_to 'Update', edit_event_path(event) %></td> -->

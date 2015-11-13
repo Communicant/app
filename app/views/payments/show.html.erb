@@ -1,23 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @payment.title %>
-</p>
-
-<p>
   <strong>Amount:</strong>
   <%= @payment.amount %>
 </p>
 
 <p>
-  <strong>Parent:</strong>
-  <%= @payment.parent_id %>
+  <strong>Expense:</strong>
+  <%= @payment.expense_id %>
 </p>
 
 <p>
   <strong>Created at:</strong>
   <%= @payment.created_at %>
+</p>
+
+<p>
+  <strong>Created By:</strong>
+  <%= @payment.created_by %>
 </p>
 
 <p>
@@ -31,8 +31,8 @@
 </p>
 
 <p>
-  <strong>Cost:</strong>
-  <%= @payment.cost_id %>
+  <strong>Paid By:</strong>
+  <%= @payment.paid_by %>
 </p>
 
 <%= link_to 'Edit', edit_payment_path(@payment) %> |
