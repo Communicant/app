@@ -30,6 +30,7 @@ class ExpensesController < ApplicationController
 
   # GET /expenses/1/edit
   def edit
+    @user = params[:user][:type].constantize
   end
 
   # POST /expenses

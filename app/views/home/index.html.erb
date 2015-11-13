@@ -3,13 +3,14 @@
       <header>
         <h1>Communicant</h1>
         <nav class="home-nav">
-          <a href="#" class="tabs clearfix">Register</a>
+          <!-- <a href="#" class="tabs clearfix">Register</a> -->
           <a href="#login" class="tabs clearfix">Login</a>
             <section id="login" class="drop-down-menu animated fadeInDown clearfix">
-              <%= form_tag login_path %>
+              <%= form_tag '/sessions', method: :post %>
               <input type="email" class="email" placeholder="Email"></input><br />
               <input type="password" class="password" placeholder="Password"></input><br />
               <%= submit_tag "Login" %>
+            </form>
             </section><!--#login-->
           </nav><!--.home-nav-->
       </header>

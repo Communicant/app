@@ -5,9 +5,14 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
-        redirect_to dashboard_index_path, notice: "You have been successfully logged in."
+        if user.is_a?(Parent)
+          redirect_to events_path
+        elsif user.is_a?(Mediator)
+          redirect_to profiles_index_path, notice: "You have been successfully logged in."
+        end
       else
-
+        flash[:warning] = 'LEARN TO LOG IN, FOOL!'
+        redirect_to root_path
       end
   end
 
