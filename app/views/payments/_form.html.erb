@@ -12,32 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :expense_id %><br>
+    <%= f.number_field :expense_id %>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
     <%= f.text_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :parent_id %><br>
-    <%= f.number_field :parent_id %>
-  </div>
-  <div class="field">
-    <%= f.label :created_at %><br>
-    <%= f.datetime_select :created_at %>
-  </div>
-  <div class="field">
-    <%= f.label :updated_at %><br>
-    <%= f.datetime_select :updated_at %>
+    <%= f.label :paid_by %><br>
+    <%= f.number_field :paid_by %>
   </div>
   <div class="field">
     <%= f.label :paid_at %><br>
     <%= f.date_select :paid_at %>
   </div>
   <div class="field">
-    <%= f.label :cost_id %><br>
-    <%= f.number_field :cost_id %>
+    <%= f.label :created_by %><br>
+    <%= f.number_field :created_by %>
   </div>
   <div class="actions">
     <%= f.submit %>

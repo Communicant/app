@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
 
+  resources :children
+  resources :messages
   root 'home#index'
 
-  resources :users
+  resources :users do
+    resources :children
+  end
   resources :profiles
   resources :payments
   resources :costs
   resources :events
   resources :home
-
-
+  resources :sessions
+  resources :expenses
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

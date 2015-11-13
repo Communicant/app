@@ -1,0 +1,158 @@
+h3.message-title{
+  font-style: Gill Sans;
+  font-size: 35pt;
+  font-weight: lighter;
+  color: #004C80;
+  margin-top: 1%;
+  margin-left: 35%
+}
+section.chatbox {
+  width: 70%;
+  height: 300px;
+  border: 3px solid #004C80;
+  border-radius: 5px;
+  margin-top: 1%;
+  margin-left: 15%;
+  overflow: auto;
+}
+
+ul.messaging-list{
+  li.message-display{
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-bottom: 2px solid #004C80;
+    list-style-type: none;
+    width: 90%;
+    //margin-right: 5%;
+  }
+  li:last-child{
+    border-bottom: white;
+  }
+  div.message-name{
+    color: #004C80;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  div.message-date{
+    color: #004C80;
+    margin-left: 82%;
+
+
+  }
+}
+form.add-message{
+  width: 70%;
+  margin-left: 15%;
+}
+select.select-premessage{
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ width: 88%;
+ margin-top: 2%;
+ margin-right: 1%;
+ font-size: 1.1em;
+ padding: 5px;
+ background-color: #004C80;
+ color: white;
+ line-height: 1.5;
+ //align-items: center;
+ // option{
+ //   width: 88%;
+ //   background-color: #004C80;
+ //   color: white;
+ //   line-height: 1.5;
+ //
+ // }
+}
+button.message-send{
+ width: 10%;
+ background-color: #004C80;
+ color: white;
+ border-radius: 5px;
+ padding: 9px 5px;
+ border: 1px solid #004C80;
+ margin-right: 0;
+ margin-top: -0.5%;
+}
+
+
+@media (max-width: 767px) {           //MOBILE
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px){      //TABLET
+
+}
+
+@media (min-width: 1025px) {            //DESKTOP
+
+.messaging-container {
+  width: 80%;
+  margin-left: 10%; margin-right: 10%;
+}
+
+.message-label {
+  font-family: Gill Sans;
+  font-weight: lighter;
+  font-size: 35pt;
+  text-align: center;
+  margin-bottom: -5px;
+}
+
+.messages-all {
+  list-style: none;
+  padding: 5px;
+  margin-right: 6%;
+}
+
+.chatbox-scroll {
+  margin-top: 50px; margin-bottom: 5%;
+  position: relative;
+  height: 400px;
+  overflow: auto;
+  border: 1.5px solid #636363;
+  border-radius: 3px;
+}
+
+.add-message {
+  position: relative;
+  width: 80%;
+}
+
+.add-message-body {
+  width: 124%;
+  height: 100px;
+  border-radius: 3px;
+}
+
+.messages-name {
+  color: #004C80;
+  padding-bottom: 3px;
+}
+
+.messages-body {
+  padding-bottom: 3px;
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+
+.messages-time {
+  width: 40%;
+  //display: inline-block;
+  color: gray;
+}
+
+.messages-sent {
+  float: right;
+  text-align: right;
+}
+
+.submit-button {
+  font-size: 10pt;
+  padding: 5px;
+  color: white;
+  background-color: #006300;
+}
+}

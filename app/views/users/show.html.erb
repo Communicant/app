@@ -1,40 +1,8 @@
-<main class="header-container">
-  <header>
-    <h2>Communicant</h2>
-  </header>
-  <nav class="header-navig">
-    <section class="tabs-header">
-        <a href="#">Expenses</a>
-        <a href="#">Inbox</a>
-        <a href="#">Calendar</a>
-        <a href="#">Information</a>
-
-      <section class="tabs-right">
-        <a class="header-profile" href="#">Profile</a>
-        <a class="header-log-out" href="#">Log out</a>
-      </section>
-   </section>
-
-  </nav>
-
-</main>
-
-
 <p id="notice"><%= notice %></p>
 <section class="user-container-details">
 <p>
   <strong>Type:</strong>
   <%= @user.type %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
 </p>
 
 <p>
@@ -60,16 +28,6 @@
 <p>
   <strong>Phone number:</strong>
   <%= @user.phone_number %>
-</p>
-
-<p>
-  <strong>Case number:</strong>
-  <%= @user.case_number %>
-</p>
-
-<p>
-  <strong>Case:</strong>
-  <%= @user.case_id %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user), class:"user-edit" %>
