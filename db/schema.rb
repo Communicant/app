@@ -36,8 +36,19 @@ ActiveRecord::Schema.define(version: 20151113065955) do
     t.datetime "updated_at", null: false
   end
 
-# Could not dump table "events" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.date     "date"
+    t.time     "time"
+    t.integer  "parent_id"
+    t.integer  "child_id"
+    t.integer  "mediator_id"
+    t.boolean  "approval_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "expenses", force: :cascade do |t|
     t.string   "type",       null: false
