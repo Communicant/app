@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+/db/migrate/20151113065955_add_default_value_to_show_attribute.rb
