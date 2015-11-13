@@ -23,7 +23,7 @@
 </p>
 
 <p class="new-event-parent">
-  <strong>Parent:</strong>
+  <strong>Created by:</strong>
   <%= @event.parent_id %>
 </p>
 
@@ -32,16 +32,20 @@
   <%= @event.child_id %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Mediator:</strong>
-  <%= @event.mediator_id %>
-</p>
+  <%# @event.mediator_id %>
+</p> -->
 
 <p>
-  <!-- <strong>Confirmed by:</strong>
+
+  <strong>Approved at:</strong>
+  <%= @event.pending %>
+
+  <strong>Confirmed by:</strong>
   <%# @approved_parents[0][:user][:first_name] %>
   <strong> At:</strong>
-  <%# @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %> -->
+  <%# @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %>
 
 </p>
 

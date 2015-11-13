@@ -10,11 +10,27 @@ h1.events-header{
   margin-bottom: 5%;
 }
 
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;;
+  margin-left: 71%;
+  //margin-bottom: 10%;
+ }
+}
+
+
 table.events-table{
-  margin-left: 2.5%;
+  margin-top: 2%;
+  margin-left: 20%;
   border: 3px solid #004C80;
   border-radius: 5px;
-  width: 95%;
+  width: 60%;
 }
 
 thead.events-thead{
@@ -45,26 +61,35 @@ tr.events-main-table{
   }
 
   td.title{
-    width:10%;
+    width:40%;
+    a{
+      text-decoration: none;
+      color: #004C80;
+    }
   }
-  td.descrip{
+  // td.descrip{
+  //   width: 20%;
+  // }
+  td.date{
+    width: 20%;
+    color: #004C80;
+  }
+  // td.time{
+  //   width: 5%;
+  // }
+  // td.parent{
+  //   width: 10%;
+  // }
+  td.child{
+    width: 20%;
+    color: #004C80;
+  }
+  td.pending{
     width: 20%;
   }
-  td.date{
-    width: 10%;
-  }
-  td.time{
-    width: 5%;
-  }
-  td.parent{
-    width: 10%;
-  }
-  td.child{
-    width: 10%;
-  }
-  td.mediator{
-    width: 10%;
-  }
+  // td.mediator{
+  //   width: 10%;
+  // }
  td.events-show{
    a{
     text-decoration: none;
@@ -87,17 +112,3 @@ tr.events-main-table{
     padding: 5%;
     }
  }
-
-
-div.new-event{
- a{
-  text-decoration: none;
-  border: 1px solid #004C80;
-  background-color: #004C80;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  padding: 5px;;
-  margin-left: 88.3%;
- }
-}
