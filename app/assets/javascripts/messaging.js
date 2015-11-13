@@ -1,7 +1,3 @@
-
-
-
-
 ;(function(){
 
   var app = angular.module('Communicant', ['ngRoute']);
@@ -25,18 +21,20 @@
         console.log("probando timeout")
         //console.log("inside the get after the post, just trying to update the list of messages")
         })
-      }, 5000);
+      }, 2000);
 
    }]);//END of ListOfMessagesController
   app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
     console.log("inside NewMessageController")
-    $scope.newMessage = { };
+    $scope.newMessage = {
+      //body: "select_option"
+    };
     $scope.submit = function(){
       console.log("after submit")
       $http.post("/messages.json", $scope.newMessage)
         .then(function(response){
           $scope.newMessage = { };
-          console.log('look what I got!', response)
+          console.log("post works")
           // TODO: What's in response? do i need that?
           // FIXME: API should return me the message I just created _as JSON_
           // $scope.messages.push(response.data)
