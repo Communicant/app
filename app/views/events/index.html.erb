@@ -26,8 +26,8 @@
         <td class="title"><%= event.title %></td>
         <td class="descrip"><%= event.description %></td>
         <td class="date"><%= event.date %></td>
-        <td class="time"><%= event.time.strftime("%I:%M%p") %></td>
-        <td class="parent"><%= event.user[0][:first_name] %></td>
+        <td class="time"><%= event.time.try(:strftime, "%I:%M%p") %></td>
+        <td class="parent"><%= event.parents.try(:first).try(:first_name) %></td>
         <td class="child"><%= event.child_id %></td>
         <td class="mediator"><%= event.mediator %></td>
         <td class="pending"><button type="button" name="button">Pending</button></td>
