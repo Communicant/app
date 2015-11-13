@@ -71,6 +71,7 @@ Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom",
 Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 2)
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
 
+
 #Children -------------------
 Child.create!(first_name: "Mike", age: 10, parent_id: 1)
 Child.create!(first_name: "Sarah", age: 7, parent_id: 1)
