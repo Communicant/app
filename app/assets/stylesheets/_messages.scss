@@ -36,7 +36,7 @@ ul.messaging-list{
   }
   div.message-date{
     color: #004C80;
-    margin-left: 87.5%;
+    margin-left: 82%;
 
 
   }
@@ -128,7 +128,7 @@ button.message-send{
 }
 
 .messages-name {
-  color: darkblue;
+  color: #004C80;
   padding-bottom: 3px;
 }
 
@@ -138,9 +138,9 @@ button.message-send{
   font-size: 12pt;
 }
 
-.messages-time, .messages-sent {
+.messages-time {
   width: 40%;
-  display: inline-block;
+  //display: inline-block;
   color: gray;
 }
 
@@ -155,9 +155,4 @@ button.message-send{
   color: white;
   background-color: #006300;
 }
-
-.blue {
-  background-color: aliceblue;
-}
-
 }
