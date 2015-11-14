@@ -33,6 +33,8 @@ gem 'remove_tl'
 gem 'faker', '~> 1.5'
 
 gem 'bourbon'
+
+gem 'font-awesome-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
