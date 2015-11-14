@@ -1,13 +1,17 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body.page-background{
+  background-color: #FAF2EB;
+}
+
 h1.events-header{
   font-style: Gill Sans;
-  font-size: 35pt;
+  font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 10%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 div.new-event{
@@ -18,97 +22,71 @@ div.new-event{
   border-radius: 5px;
   color: white;
   text-align: center;
-  padding: 5px;;
-  margin-left: 71%;
+  padding: 10px;;
+  margin-left: 69%;
+  font-size: 1.2;
+  width: 15%;
   //margin-bottom: 10%;
  }
 }
 
 
-table.events-table{
+
+
+
+
+ul.events-body-table{
   margin-top: 2%;
-  margin-left: 20%;
+  margin-left: 10%;
   border: 3px solid #004C80;
   border-radius: 5px;
-  width: 60%;
-}
-
-thead.events-thead{
+  width: 75%;
+li.events-main-table{
+  list-style: none;
   border-bottom: 1px solid #004C80;
-  tr.events-title-row{
-    border-bottom: 1px solid #004C80;
-    th{
-      padding-top: 2%;
-      padding-bottom: 1%;
-      font-size: 1.3em;
-      margin-right: 2%;
-      color: #004C80;
-      font-style: arial;
-    }
-  }
-}
-
-tbody.events-body-table{
-tr.events-main-table{
-  margin-top: 5%;
-  text-align: center;
-  margin-bottom: 5%;
-  border-bottom: 1px solid #004C80;
-  }
-}
-  td{
-    padding: 20px 5px 20px 5px;
-  }
-
-  td.title{
-    width:40%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: #004C80;
+  div.title{
+    text-align: center;
+    //margin-left: 10%;
+    display: inline-block;
+    width: 20%;
     a{
       text-decoration: none;
       color: #004C80;
     }
   }
-  // td.descrip{
-  //   width: 20%;
-  // }
-  td.date{
-    width: 20%;
-    color: #004C80;
-  }
-  // td.time{
-  //   width: 5%;
-  // }
-  // td.parent{
-  //   width: 10%;
-  // }
-  td.child{
-    width: 20%;
-    color: #004C80;
-  }
-  td.pending{
-    width: 20%;
-  }
-  // td.mediator{
-  //   width: 10%;
-  // }
- td.events-show{
-   a{
-    text-decoration: none;
-    border: 1px solid #004C80;
-    background-color: #004C80;
-    border-radius: 5px;
-    color: white;
+  div.child{
     text-align: center;
-    padding: 5%;
-   }
- }
- td.events-edit{
-   a{
-    text-decoration: none;
-    border: 1px solid #004C80;
-    background-color: #004C80;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    padding: 5%;
+    display: inline-block;
+    width: 18%;
+    i.fa{
+      margin-right: 2px;
     }
- }
+  }
+  div.date{
+    display: inline-block;
+    text-align: center;
+    width: 18%;
+  }
+  div.time{
+    display: inline-block;
+    text-align: center;
+    width: 18%;
+    i.fa{
+      margin-right: 3px;
+    }
+  }
+  div.location{
+    padding-left: 2%;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1%;
+    width: 20%;
+  }
+}
+li:last-child{
+  border-bottom:#FAF2EB;
+}
+}
