@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151113062739) do
     t.datetime "updated_at", null: false
   end
 
+
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
