@@ -12,8 +12,8 @@
  *
  *= require_self
  */
-@import "bourbon/bourbon";
-@import "base/base";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "header";
 @import "home";
 @import "costs";
