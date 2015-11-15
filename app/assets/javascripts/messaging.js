@@ -2,31 +2,18 @@
 
   var app = angular.module('Communicant', ['ngRoute']);
   console.log("inside angular")
+  
   app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$timeout', '$interval', function($scope, $http, $routeParams, $timeout, $interval){
-     //var Id = $routeParams.id - 1; //Id to make a difference with id
-     $scope.loading = true; //Spinner with angular starting, not working
 
      function updateMessages(){
-       //$scope.loading = false; //Spinner with angular sttoping, not working
-
       return $http.get("/messages.json")
         .then(function(response){
-
           $scope.messages = response.data
           })
-        .finally(function(){
-          $scope.loading = false; //Spinner with angular sttoping, not working
-
-        })
-
-
           console.log("inside ListOfMessagesController")
           console.log(response.data.length)
-
-
      }
 
-     //$scope.stopping = true; //trying to stop the spinner, other way
 
      $interval(function(){
         $http.get("/messages.json")
