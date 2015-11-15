@@ -2,7 +2,7 @@
 
   var app = angular.module('Communicant', ['ngRoute']);
   console.log("inside angular")
-  
+
   app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$timeout', '$interval', function($scope, $http, $routeParams, $timeout, $interval){
 
      function updateMessages(){
