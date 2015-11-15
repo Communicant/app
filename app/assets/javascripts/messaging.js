@@ -7,15 +7,22 @@
      $scope.loading = true; //Spinner with angular starting, not working
 
      function updateMessages(){
+       //$scope.loading = false; //Spinner with angular sttoping, not working
+
       return $http.get("/messages.json")
         .then(function(response){
+
           $scope.messages = response.data
-      $scope.loading = false; //Spinner with angular sttoping, not working
+          })
+        .finally(function(){
+          $scope.loading = false; //Spinner with angular sttoping, not working
+
+        })
+
 
           console.log("inside ListOfMessagesController")
           console.log(response.data.length)
-      })
-      //$scope.loading = false; //Spinner with angular sttoping, not working
+
 
      }
 

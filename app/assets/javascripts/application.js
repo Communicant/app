@@ -36,7 +36,7 @@
   //messageBox.scrollTop = messageBox.scrollHeight;
   console.log("inside js")
   //$('ul.messaging-list').scrollTop($('ul.messaging-list li:last-child').position().top);
- $("li.message-display").load(function(){
-   $(".fa-spin").hide();;
- });
+ //$("li.message-display").load(function(){
+   //$(".fa-spin").hide();;
+ //});
 })();
