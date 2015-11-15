@@ -1,23 +1,3 @@
-<main class="header-container">
-  <header>
-    <h2>Communicant</h2>
-  </header>
-  <nav class="header-navig">
-    <section class="tabs-header">
-        <a href="#">Expenses</a>
-        <a href="#">Inbox</a>
-        <a href="#">Calendar</a>
-        <a href="#">Information</a>
-      <section class="tabs-right">
-        <a class="header-profile" href="#">Profile</a>
-        <a class="header-log-out" href="#">Log out</a>
-      </section>
-   </section>
-  </nav>
-</main>
-
-
-
 
 <%= form_for(@event) do |f| %>
   <% if @event.errors.any? %>
@@ -33,14 +13,24 @@
   <% end %>
 <section class="update-event-container">
 
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :title, class:"update-title-label" %>
-    <%= f.text_field :title, class:"update-title-field" %>
-  </div>
+    <%= f.text_field :title, class:"update-title-field" %> -->
+  <!-- </div>
   <div class="field">
     <%= f.label :description %>
     <%= f.text_field :description, class:"update-description-field" %>
-  </div>
+  </div> -->
+  <select class="new-event-select" name="new event">
+    <option value="">Select your event</option>
+    <option value="">Birthday party</option>
+    <option value="">Doctor's appointment</option>
+    <option value="">Dentist's appointment</option>
+    <option value="">After School music class</option>
+    <option value="">After School sport practice</option>
+    <option value="">After school other activity</option>
+    <option value="">Play date</option>
+  </select>
   <div class="field">
     <%= f.label :date, class:"update-date-label" %>
     <%= f.date_select :date, class:"update-date" %>
@@ -57,14 +47,14 @@
     <%= f.label :child_id %>
     <%= f.number_field :child_id, class:"update-child" %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :mediator_id %>
     <%= f.number_field :mediator_id, class:"update-mediator" %>
-  </div>
-  <div class="field">
-    <%= f.label :pending, class:"update-pending" %>
-    <%= f.check_box :pending %>
-  </div>
+  </div> -->
+  <!-- <div class="field">
+    <%# f.label :approval, class:"update-approval" %>
+    <%# f.check_box :approval %>
+  </div> -->
   <div class="actions">
     <%= (f.submit class:"update-submit") %>
   </div>

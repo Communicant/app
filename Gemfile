@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+# ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -29,6 +29,12 @@ gem 'bower-rails'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'remove_tl'
+
+gem 'faker', '~> 1.5'
+
+gem 'bourbon'
+
+gem 'font-awesome-sass'
 # Use Unicorn as the app server
 # gem 'unicorn'
 

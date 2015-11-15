@@ -4,12 +4,14 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.order(:date)
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find(params[:id])
+    @approved_parents = approved_parents(@event)
   end
 
   # GET /events/new
@@ -21,13 +23,19 @@ class EventsController < ApplicationController
   def edit
   end
 
+  # def create_approval
+  #   @approval = Approval.new(approval_params)
+  # end
+
   # POST /events
   # POST /events.json
   def create
     @event = Event.new(event_params)
+    # create_approval
 
     respond_to do |format|
-      if @event.save
+      if
+        @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
@@ -61,14 +69,34 @@ class EventsController < ApplicationController
     end
   end
 
+  # def approved_parents(event_id)
+  #   @approved_parents = []
+  #   approved_parents
+  # end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
     end
 
+    def approved_parents(event)
+      approved_parents = []
+      approvals = event.approvals
+      approvals.each do |approval|
+        if approval.parent_approval
+          user = User.find(approval[:parent_id])
+          approved_parents.push({user: user, approved_at: approval.updated_at})
+        end
+      end
+      approved_parents
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending)
     end
+
+    # def approval_params
+    #   params.require(:approval).permit(:parent_id, :parent_approval, :event_id)
+    # end
 end
