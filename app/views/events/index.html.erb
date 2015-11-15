@@ -47,11 +47,11 @@
         </div>
         <div class="time">
           <i class="fa fa-clock-o">
-          </i><%= event.time.try(:strftime, "%I:%M%p") %>
+          </i><%= event.time.try(:strftime, "%I:%M%P") %>
         </div>
         <div class="location">
           <i class="fa fa-location-arrow"></i>
-          Location
+          <%= event.location %>
         </div>
         <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
         <!-- <td class="mediator"><%= event.mediator %></td> -->
