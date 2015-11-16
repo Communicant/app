@@ -11,8 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20151116030712) do
+ActiveRecord::Schema.define(version: 20151113062739) do
 
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
@@ -37,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 # Could not dump table "events" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> Stashed changes
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -61,7 +63,6 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.datetime "updated_at",  null: false
     t.text     "location"
   end
->>>>>>> develop
 
   create_table "expenses", force: :cascade do |t|
     t.string   "type",       null: false
@@ -94,13 +95,13 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.string   "name"
     t.string   "email"
     t.text     "address"
-<<<<<<< HEAD
     t.integer  "phone_number"
     t.string   "child_name"
     t.integer  "case_number"
     t.string   "mediator_name"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+<<<<<<< Updated upstream
 =======
     t.integer  "phone_number",  limit: 10
     t.string   "child_name"
@@ -109,6 +110,8 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
 >>>>>>> develop
+=======
+>>>>>>> Stashed changes
   end
 
   create_table "user_cases", force: :cascade do |t|
