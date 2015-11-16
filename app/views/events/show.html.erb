@@ -12,8 +12,6 @@
   <%= @event.description %>
 </p>
 
-
-
 <p class="new-event-date">
   <strong>Date:</strong>
   <%= @event.date.strftime("%m-%e-%y") %>
@@ -25,8 +23,8 @@
 </p>
 
 <p class="new-event-parent">
-  <strong>Created by:</strong>
-  <%= @event.parents.try(:first).try(:first_name) %>
+  <strong>Parent:</strong>
+  <%= @event.parent_id %>
 </p>
 
 <p>
@@ -34,20 +32,16 @@
   <%= @event.child_id %>
 </p>
 
-<!-- <p>
+<p>
   <strong>Mediator:</strong>
-  <%# @event.mediator_id %>
-</p> -->
+  <%= @event.mediator_id %>
+</p>
 
 <p>
-
-  <!-- <strong>Approved at:</strong> -->
-  <%# @event.pending %>
-
-  <strong>Confirmed by:</strong>
-  <%= @approved_parents[0][:user][:first_name] %>
+  <!-- <strong>Confirmed by:</strong>
+  <%# @approved_parents[0][:user][:first_name] %>
   <strong> At:</strong>
-  <%= @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %>
+  <%# @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %> -->
 
 </p>
 
