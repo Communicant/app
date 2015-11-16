@@ -77,11 +77,30 @@ message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Dat
 
 
 # User ---------------------
+10.times do |parent|
+parent = Parent.create!(
+  :email => Faker::Internet.safe_email,
+  :password => "123456",
+  :first_name => Faker::Name.name,
+  :last_name => Faker::Name.name,
+  :address => Faker::Address.street_address,
+  :child_id => rand(1..5)
+)
+end
 
+10.times do |mediator|
+mediator = Mediator.create!(
+  :email => Faker::Internet.safe_email,
+  :password => "123456",
+  :first_name => Faker::Name.name,
+  :last_name => Faker::Name.name,
+  :address => Faker::Address.street_address,
+  :child_id => rand(1..5)
+)
+end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)
 Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 2)
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
-
 
 #Children -------------------
 Child.create!(first_name: "Mike", age: 10, parent_id: 1)
@@ -93,3 +112,7 @@ Approval.create!(parent_id: 1, event_id: 1, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 2, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 3, parent_approval: true)
 Approval.create!(parent_id: 2, event_id: 4, parent_approval: true)
+
+#Cases --------------------------
+
+Case.create!()

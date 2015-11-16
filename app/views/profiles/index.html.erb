@@ -19,17 +19,17 @@
 </main>
 <h1 class="profile-m-header">Cases</h1>
 <div class="new-profile">
-<%= link_to 'New Profile', new_profile_path %>
+<%= link_to 'New Cases', new_profile_path %>
 </div>
 
 <table class="profile-m-table">
   <thead class="profile-m-thead">
     <tr class="profile-m-title-row">
+      <th>Case #</th>
       <th>Name</th>
       <th>Email</th>
       <th>Phone number</th>
       <th>Child name</th>
-      <th>Case #</th>
       <th>Mediator name</th>
       <!-- <th colspan="3"></th> -->
     </tr>
@@ -38,8 +38,9 @@
   <tbody class="profile-m-body-table">
     <% @profiles.each do |profile| %>
       <tr class="profile-m-main-table">
+        <td class="profile-case"><%= mediator.case_number %></td>
         <td class="profile-name"><%= link_to profile.name, profile %></td>
-        <td class="profile-email"><%= profile.email %></td>
+        <td class="profile-email"><%= parent.email %></td>
         <td class="profile-phone"><%= profile.phone_number %></td>
         <td class="profile-child"><%= profile.child_name %></td>
         <td class="profile-case"><%= profile.case_number %></td>

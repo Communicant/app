@@ -28,13 +28,23 @@
       </ul>
     </div>
   <% end %>
-
+<table table class="table table-striped">
   <section class="update-profile-container">
-
-
+    <div class="field">
+      <%= f.label :case_number %>
+      <%= f.number_field :case_number, class:"update-profile-case" %>
+    </div>
   <div class="field">
-    <%= f.label :name, class:"update-profile-n" %>
+    <%= f.label :parent_name, class:"update-profile-n" %>
     <%= f.text_field :name, class:"update-profile-name" %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_name, class:"update-profile-n" %>
+    <%= f.text_field :name, class:"update-profile-name" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email, class:"update-profile-email" %>
   </div>
   <div class="field">
     <%= f.label :email %>
@@ -48,10 +58,7 @@
     <%= f.label :child_name %>
     <%= f.text_field :child_name, class:"update-profile-child" %>
   </div>
-  <div class="field">
-    <%= f.label :case_number %>
-    <%= f.number_field :case_number, class:"update-profile-case" %>
-  </div>
+
   <div class="field">
     <%= f.label :mediator_name %>
     <%= f.text_field :mediator_name, class:"update-profile-med" %>
@@ -65,3 +72,4 @@
 
 <% end %>
 </section>
+</table>
