@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_filter :require_mediator
+  # before_filter :require_mediator
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /profiles
