@@ -1,6 +1,38 @@
-html {
-  background-image: url('picture.jpg');
+.back-img {
+  background-image: asset-url('divorced-parents.jpg');
+  background-size:     100% auto;                      /* <------ */
+  background-repeat:   no-repeat;
+  // background-position: 70%;
+  }
+
+//STYLE FOR THE FORM IN THE HOME PAGE (LOG IN)
+
+input.email{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1.2em;
 }
+input.password{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+.submit-login{
+  margin-left: 40%;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1.2em;
+}
+
+
+
+
+
+
 //
 //
 // .main-header {
