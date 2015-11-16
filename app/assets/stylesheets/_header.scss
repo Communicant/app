@@ -23,6 +23,7 @@ nav.header-navig{
   opacity: 0.8;
 }
 section.tabs-header{
+  padding-left: 2%;
   a{
     font-size: 1.2em;
     border: 1px solid #FAF2EB;
@@ -40,7 +41,17 @@ section.tabs-header{
     color: white;
     background-color: #004C80;
     }
+  a.header-log-out{
+    float: right;
+    margin-right: 5%;
+    margin-top: -.5%;
   }
+  a.stay-blue{
+    color: white;
+    background-color: #004C80;
+  }
+}
+
 //   section.tabs-right{
 //     float: right;
 //   }
