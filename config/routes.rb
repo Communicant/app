@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
 
-  # resources :children
+  resources :children
   resources :messages
   root 'home#index'
+
   resources :users do
     resources :children
   end

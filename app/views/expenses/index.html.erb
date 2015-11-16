@@ -18,10 +18,8 @@
   </nav>
 
 </main> -->
-<body class="page-background">
-  <section class="expenses-container" ng-app="Communicant">
-    <div ng-controller="ListExpensesController">
 
+<<<<<<< HEAD
       <form name="new-expense" method="post" ng-submit="submitExpense()" class="new-expense">
         <label>Expense Type<select class="expense-type" ng-model="newExpense.type">
           <option value="School">School</option>
@@ -54,10 +52,40 @@
               </li>
             </ul><hr />
             <div class="expense-amt-stl-o">Total Still Due: {{expense.amount_still_owed | currency}}</div>
+=======
+<section class="expenses-container" ng-app="Communicant">
+  <div ng-controller="ListExpensesController">
+  <div class="expenses-scroll">
+    <ul class="expenses-listing">
+      <li class="expenses-item" ng-repeat="expense in expenses">
+        <div class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</div>
+        <div class="expense-amount">{{expense.amount | currency}}</div>
+        <ul class="payments-listing">
+          <li class="payments-item" ng-repeat="payment in expense.payments">
+            <div class="payment-paid-by">{{payment.paid_by}}</div>
+            <div class="payment-paid-at">{{payment.paid_at}}</div>
+            <div class="payment-paid-amount">{{payment.amount | currency}}</div>
+>>>>>>> master
           </li>
+          <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)">
+            <label>Amount<input type="number" ng-model="newPayment.payment.amount"></input></label>
+            <button type="submit" name="submit-expense" class="submit-payment-button">Add Payment</button>
+          </form>
         </ul>
-      </div>
+      </li>
+    </ul>
+  </div>
 
-    </div>
-  </section><!--.expense-container-->
-</body><!--.page-background-->
+  <form name="new-expense" method="post" ng-submit="submitExpense()">
+    <label>Expense Type<select class="expense-type" ng-model="newExpense.type">
+      <option value="School">School</option>
+      <option value="Medical">Medical</option>
+      <option value="Personal">Personal</option>
+      <option value="Other">Other</option>
+    </select></label>
+    <label>Amount<input type="number" ng-model="newExpense.amount" class="amount-due"></input></label>
+    <label>Due<input type="datetime-local" ng-model="newExpense.due_at" class="payment-due-time"></input></label>
+    <button type="submit" name="submit-expense" class="submit-button">Submit</button>
+  </form>
+  </div>
+</section><!--.expense-container-->
