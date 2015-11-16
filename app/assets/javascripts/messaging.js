@@ -125,7 +125,25 @@
   //   })
   // }]); // END NewExpenseController
 
-  //}]);//END of NewMessageController
+
+  // app.controller('toggleExpenseController', ['$scope', '$http', function($scope, $http){
+  //
+  //   $http.get("/expenses.json").success(function(data) {
+  //   $scope.expenseItem = data.results;
+  //   $('#expense').show();
+  // });
+  //
+  //   $scope.showDetail = function (expense){
+  //
+  //     if ($scope.active != expense) {
+  //       $scope.active = expense;
+  //     }
+  //     else {
+  //       $scope.active = null;
+  //     }
+  //   };
+  // }]); // END toggleExpenseController
+
 
 })(); // END IIFE
 
