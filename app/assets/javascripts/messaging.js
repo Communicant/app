@@ -129,8 +129,6 @@
   //   })
   // }]); // END NewExpenseController
 
-  //}]);//END of NewMessageController
-
 })(); // END IIFE
 
 // SOURCE for $timeout function: http://stackoverflow.com/questions/13671031/server-polling-with-angularjs
