@@ -36,6 +36,20 @@ ActiveRecord::Schema.define(version: 20151113065955) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Could not dump table "events" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+=======
+  create_table "event_children", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "child_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> feature/expenses-angular
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -48,6 +62,7 @@ ActiveRecord::Schema.define(version: 20151113065955) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+>>>>>>> develop
 
   create_table "expenses", force: :cascade do |t|
     t.string   "type",       null: false
@@ -80,12 +95,30 @@ ActiveRecord::Schema.define(version: 20151113065955) do
     t.string   "name"
     t.string   "email"
     t.text     "address"
+<<<<<<< HEAD
     t.integer  "phone_number"
     t.string   "child_name"
     t.integer  "case_number"
     t.string   "mediator_name"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+=======
+<<<<<<< HEAD
+    t.integer  "phone_number"
+    t.string   "child_name"
+    t.integer  "case_number"
+    t.string   "mediator_name"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+=======
+    t.integer  "phone_number",  limit: 10
+    t.string   "child_name"
+    t.integer  "case_number"
+    t.string   "mediator_name"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+>>>>>>> develop
+>>>>>>> feature/expenses-angular
   end
 
   create_table "user_cases", force: :cascade do |t|
