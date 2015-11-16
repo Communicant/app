@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  helper_method :grab_child
 
   # GET /events
   # GET /events.json
@@ -90,6 +91,10 @@ class EventsController < ApplicationController
         end
       end
       approved_parents
+    end
+
+    def grab_child
+      @grab_child = Child.find(Event.first.child_id).first_name
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
