@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :children
   resources :messages
   root 'home#index'
+  resources :cases
 
   resources :users do
     resources :children
