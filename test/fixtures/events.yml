@@ -1,16 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 
-# one:
-#   title: MyString
-#   description: MyText
-#   date: 2015-11-07
-#   time: 2015-11-07 14:35:41
-#   parent_id: 1
-#   child_id: 1
-#   mediator_id: 1
-#   case_id: 1
-#
+one:
+  title: Event Test
+  description: Testing the Event Stuff
+  date: 2015-11-16
+  # time: 2015-11-07 14:35:41
+  parent_id: 99
+  child_id: 98
+  mediator_id: 3
+  # case_id: 1
+
 # two:
 #   title: MyString
 #   description: MyText
@@ -20,7 +20,7 @@
 #   child_id: 1
 #   mediator_id: 1
 #   case_id: 1
-
+#
 # one:
 #   title: MyString
 #   description: MyText

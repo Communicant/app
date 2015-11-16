@@ -97,7 +97,7 @@ class EventsController < ApplicationController
       approved_parents
     end
 
-
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending)

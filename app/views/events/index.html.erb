@@ -77,6 +77,12 @@
           <i class="fa fa-location-arrow"></i>
           <%= event.location %>
         </div>
+
+        <div>
+          <% unless event.has_been_approved? %>
+            <%= link_to 'Approve', approvals, method: :post, button type="button" %>
+          <% end %>
+        </div>
         <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
         <!-- <td class="pending"><button type="button" name="button">Pending</button></td> -->
     <% end %>

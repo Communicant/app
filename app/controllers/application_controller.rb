@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
   layout "application", except: [:index, :home]
 
+#FOR TESTING PURPOSES: -----------------------
   # before_filter :log_parent_in
 
   # def require_mediator
@@ -17,11 +18,14 @@ class ApplicationController < ActionController::Base
   #   session[:user_id] = User.first.id
   # end
 
-  skip_before_action :verify_authenticity_token, if: :json_request?
+  # skip_before_action :verify_authenticity_token, if: :json_request?
+
+# --------------------------------------------
+
 
 
   def logged_in_user
-    session[:user_id] = User.find[:user_id]
+    @logged_in_user = User.find(session[:user_id]) 
   end
 
   def json_request?

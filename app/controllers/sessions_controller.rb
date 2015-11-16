@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
           redirect_to profiles_path, notice: "You have been successfully logged in."
         end
       else
-        flash[:warning] = 'LEARN TO LOG IN, FOOL!'
+        flash[:warning] = 'Wrong email/password combination.'
         redirect_to root_path
       end
   end
