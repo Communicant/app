@@ -15,6 +15,10 @@ class EventsController < ApplicationController
     @approved_parents = approved_parents(@event)
   end
 
+  def grab_child
+    @grab_child = Child.find(Event.first.child_id).first_name
+  end
+
   # GET /events/new
   def new
     @event = Event.new
@@ -93,9 +97,7 @@ class EventsController < ApplicationController
       approved_parents
     end
 
-    def grab_child
-      @grab_child = Child.find(Event.first.child_id).first_name
-    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending)
