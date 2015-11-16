@@ -8,15 +8,12 @@
         <a href="#">Inbox</a>
         <a href="#">Calendar</a>
         <a href="#">Information</a>
-
       <section class="tabs-right">
         <a class="header-profile" href="#">Profile</a>
         <a class="header-log-out" href="#">Log out</a>
       </section>
    </section>
-
   </nav>
-
 </main> -->
 <body class="page-background">
   <section class="expenses-container" ng-app="Communicant">
@@ -38,10 +35,11 @@
         <ul class="expenses-listing">
           <li class="expenses-item" ng-repeat="expense in expenses">
             <section class="expense-tab">
-              <a href="#rel-pay" class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</a>
+              <input type="checkbox" ng-model="collapse"></input>
+              <div class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</div>
               <div class="expense-amount">{{expense.amount | currency}}</div>
             </section>
-            <ul class="payments-listing" id="rel-pay">
+            <ul class="payments-listing" ng-show="collapse">
               <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)" class="add-payment-form">
                 <label>Amount <input type="number" ng-model="newPayment.payment.amount"></input></label>
                 <button type="submit" name="submit-expense" class="submit-payment-button">Add Payment</button>

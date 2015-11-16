@@ -54,7 +54,7 @@ li, ul {
 .expense-type {
   width: 40%;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 10px; margin-left: 6px;
 }
 
 .expense-amount {
@@ -93,14 +93,14 @@ li, ul {
   float: right;
 }
 
-// .add-payment-form {
-//   margin-left: -7%;
-//   padding-bottom: 5px;
-//
-//   input {
-//     padding-left: 5px;
-//   }
-// }
+.add-payment-form {
+  margin-left: -5px;
+  padding-bottom: 5px; padding-top: 5px;
+
+  input {
+    padding-left: 5px;
+  }
+}
 
 .expense-amt-stl-o {
   text-align: right;
@@ -109,6 +109,25 @@ li, ul {
   background-color: white;
 }
 
-.active {
-  display: inherit;
+input[type=checkbox] {
+	-webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+}
+
+input[type=checkbox]:hover {
+  cursor: pointer;
+}
+
+input[type=checkbox]:after {
+  content: '+';
+  border: 1px solid #636363;
+  border-radius: 3px;
+  padding: 0 4px 2px 4px;
+  font-size: 12pt;
+}
+
+input.open[type=checkbox]:active {
+  content: '-';
+  font-size: 14pt;
 }
