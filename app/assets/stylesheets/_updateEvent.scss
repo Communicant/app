@@ -1,4 +1,4 @@
-section.event-container{
+section.update-event-container{
   border: 2px solid #004C80;
   border-radius: 5px;
   width: 50%;
@@ -6,26 +6,66 @@ section.event-container{
   margin-left: 25%;
   padding-bottom: 3%;
   padding-top: 2%;
-  p{
-    margin-top: 2%;
+  color: #004C80;
+
+  div.field{
     margin-left: 10%;
-    color: #004C80;
+    margin-right: 10%;
   }
-  .event-edit{
+  .update-title-field{
+    margin-left: 9.5%;
+    width: 80%;
+  }
+  .update-description-field{
+    width: 80%;
+  }
+  .update-date-label{
+    margin-right: 8.8%;
+  }
+  .update-time-label{
+    margin-right: 8.8%;
+  }
+  .update-parent{
+    width: 80%;
+    margin-left: 7%;
+  }
+  .update-child{
+    width: 80%;
+    margin-left: 9%;
+  }
+  .update-mediator{
+    width: 80%;
+    margin-left: 4%;
+  }
+  .update-pending{
+    margin-right: 5%;
+  }
+  .update-submit{
     border: 1px solid #004C80;
     background-color: #004C80;
     color: white;
     border-radius: 5px;
     padding: 5px;
-    margin-left: 45%;
-    text-decoration: none;
+    margin-left: 14.5%;
+    font-size: 1em;
+    margin-top: -0.4%;
+    position: absolute;
   }
-  .event-back{
-    border: 1px solid #004C80;
-    background-color: #004C80;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    text-decoration: none;
-  }
+.update-details{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 45%;
+  text-decoration: none;
+}
+.update-back{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
 }
