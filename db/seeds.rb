@@ -29,7 +29,7 @@ e = Event.create(
   :location => Faker::Address.street_address,
   :description => "event description",
   :parent_id => rand(1..5),
-  :child_id => rand(1..5)
+  :child_id => rand(1..2)
 )
 end
 # event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
@@ -84,7 +84,7 @@ parent = Parent.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
+  :child_id => rand(1..2)
 )
 end
 
@@ -95,7 +95,7 @@ mediator = Mediator.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
+  :child_id => rand(1..2)
 )
 end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)
