@@ -1,3 +1,7 @@
+.expenses-container {
+  width: 80%;
+  margin-left: 10%; margin-right: 10%;
+
 .page-background {
   background-color: #FAF2EB;
 }
@@ -28,11 +32,16 @@ section.expense-tab {
 
 ul.expenses-listing {
   list-style: none;
+  padding: 5px;
+  margin-right: 6%;
 }
 
 div.expenses-scroll {
   margin-top: 50px; margin-bottom: 5%;
   position: relative;
+  height: 400px;
+  overflow: auto;
+  border: 1.5px solid #636363;
   border-radius: 3px;
 }
 
