@@ -1,0 +1,49 @@
+<%= form_for(@case) do |f| %>
+  <% if @case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+      <% @case.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :parent_name %><br>
+    <%= f.text_field :parent_name %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_name %><br>
+    <%= f.text_field :parent_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :child_name %><br>
+    <%= f.text_field :child_name %>
+  </div>
+  <div class="field">
+    <%= f.label :child_name %><br>
+    <%= f.text_field :child_name %>
+  </div>
+  <div class="field">
+    <%= f.label :child_name %><br>
+    <%= f.text_field :child_name %>
+  </div>
+  <div class="field">
+    <%= f.label :case_number %><br>
+    <%= f.number_field :case_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116030712) do
+ActiveRecord::Schema.define(version: 20151113065955) do
 
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
@@ -36,13 +36,6 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "event_children", force: :cascade do |t|
-    t.integer  "event_id"
-    t.integer  "child_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -51,10 +44,9 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.integer  "parent_id"
     t.integer  "child_id"
     t.integer  "mediator_id"
-    t.boolean  "approval"
+    t.boolean  "approval_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.text     "location"
   end
 
   create_table "expenses", force: :cascade do |t|
@@ -88,12 +80,12 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.string   "name"
     t.string   "email"
     t.text     "address"
-    t.integer  "phone_number",  limit: 10
+    t.integer  "phone_number"
     t.string   "child_name"
     t.integer  "case_number"
     t.string   "mediator_name"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "user_cases", force: :cascade do |t|

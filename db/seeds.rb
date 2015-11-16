@@ -21,22 +21,11 @@
 # cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.new(2015, 11, 30), parent_id: 2, paid: true)
 
 #Events ------------------
-10.times do |e|
-e = Event.create(
-  :title   => Faker::Book.title,
-  :date    => Faker::Date.between(2.days.ago, Time.now),
-  :time    => Faker::Time.between(2.days.ago, Time.now, :day),
-  :location => Faker::Address.street_address,
-  :description => "event description",
-  :parent_id => rand(1..5),
-  :child_id => rand(1..5)
-)
-end
-# event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
-#           parent_id: 1, child_id: 1)
-# event2 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: (event.location), parent_id: 1, child_id: 2)
-# event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", location: (event.location), parent_id: 1, child_id: 1)
-# event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.", location: (event.location), parent_id:  2, child_id: 2)
+event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party.",
+          parent_id: 1, child_id: 1)
+event2 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", parent_id: 1, child_id: 2)
+event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", parent_id: 1, child_id: 1)
+event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.",   parent_id:  2, child_id: 2)
 
 # Expenses -------------------------
 
@@ -77,30 +66,11 @@ message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Dat
 
 
 # User ---------------------
-10.times do |parent|
-parent = Parent.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
-)
-end
 
-10.times do |mediator|
-mediator = Mediator.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
-)
-end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)
 Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 2)
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
+
 
 #Children -------------------
 Child.create!(first_name: "Mike", age: 10, parent_id: 1)
@@ -112,7 +82,3 @@ Approval.create!(parent_id: 1, event_id: 1, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 2, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 3, parent_approval: true)
 Approval.create!(parent_id: 2, event_id: 4, parent_approval: true)
-
-#Cases --------------------------
-
-Case.create!()
