@@ -28,23 +28,18 @@
       </ul>
     </div>
   <% end %>
+
 <table table class="table table-striped">
+
   <section class="update-profile-container">
     <div class="field">
       <%= f.label :case_number %>
       <%= f.number_field :case_number, class:"update-profile-case" %>
     </div>
+    <br><br>
   <div class="field">
     <%= f.label :parent_name, class:"update-profile-n" %>
     <%= f.text_field :name, class:"update-profile-name" %>
-  </div>
-  <div class="field">
-    <%= f.label :parent_name, class:"update-profile-n" %>
-    <%= f.text_field :name, class:"update-profile-name" %>
-  </div>
-  <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email, class:"update-profile-email" %>
   </div>
   <div class="field">
     <%= f.label :email %>
@@ -54,6 +49,20 @@
     <%= f.label :phone_number %>
     <%= f.text_field :phone_number, class:"update-profile-phone" %>
   </div>
+  <br><br>
+  <div class="field">
+    <%= f.label :parent_name, class:"update-profile-n" %>
+    <%= f.text_field :name, class:"update-profile-name" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email, class:"update-profile-email" %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, class:"update-profile-phone" %>
+  </div>
+  <br><br>
   <div class="field">
     <%= f.label :child_name %>
     <%= f.text_field :child_name, class:"update-profile-child" %>
@@ -67,8 +76,8 @@
     <%= (f.submit class:"update-profile-submit") %>
   </div>
 
-  <%= link_to 'Details', @profile, class:"update-profile-details" %>
-  <%= link_to 'Back', profiles_path, class:"update-profile-back" %>
+<%= link_to 'Details', @profile, class:"update-profile-details" %>
+<%= link_to 'Back', profiles_path, class:"update-profile-back" %>
 
 <% end %>
 </section>
