@@ -19,14 +19,14 @@
       <nav class="header-navig">
         <section class="tabs-header">
 
-            <%= link_to 'Expenses', expenses_path, class: "header-profile" %>
-            <%= link_to 'Inbox', messages_path, class: "header-profile" %>
-            <%= link_to 'Events', events_path %>
-            <!-- <%= link_to 'Information', '#' %> This page still needs to be done.   -->
-          <section class="tabs-right">
-            <%= link_to 'Profile', profiles_path, class: "header-profile" %>
+            <%= link_to 'Expenses', expenses_path, class: "header" %>
+            <%= link_to 'Inbox', messages_path, class: "header" %>
+            <%= link_to 'Events', events_path, class: "header" %>
+            <!-- <%# link_to 'Information', '#' %> This page still needs to be done.   -->
+          <!-- <section class="tabs-right"> -->
+            <!-- <%# link_to 'Profile', profiles_path, class: "header-profile" %> -->
             <%= link_to 'Log out', root_path, class: "header-log-out" %>
-          </section>
+          <!-- </section> -->
        </section>
       </nav>
     </main>

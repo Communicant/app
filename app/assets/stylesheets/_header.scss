@@ -1,3 +1,84 @@
+
+main.header-container{
+  background-color: #004C80;
+  opacity: 0.9;
+  width: 102%;
+  padding-top: 5px;
+}
+h2{
+  text-align: center;
+  font-size: 35pt;
+  letter-spacing: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 5px; padding-bottom: 5px;
+  color: white;
+  font-family: Asenine;
+}
+nav.header-navig{
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 12px; padding-bottom: 10px;
+  background-color: white;
+  opacity: 0.8;
+}
+section.tabs-header{
+  padding-left: 2%;
+  a{
+    font-size: 1.2em;
+    border: 1px solid #FAF2EB;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    //width: 10%;
+    }
+  a:hover{
+    opacity: 1;
+    color: white;
+    background-color: #004C80;
+    }
+  a.header-log-out{
+    float: right;
+    margin-right: 5%;
+    margin-top: -.5%;
+  }
+  a.stay-blue{
+    color: white;
+    background-color: #004C80;
+  }
+}
+
+//   section.tabs-right{
+//     float: right;
+//   }
+//   a.header-profile:hover{
+//     background-color: #004C80;
+//     color: white;
+//   }
+//   a.header-log-out:hover{
+//     background-color: #004C80;
+//     color: white;
+//   }
+// }
+@media screen and (max-width: 70em) {           //MOBILE
+  main.header-container{
+    width: 90%;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+
+}
+
+
+@media (min-width: 1025px) {            //DESKTOP
+
+}
+
 // main.header-container{
 //   background-color: #004C80;
 //   opacity: 0.9;

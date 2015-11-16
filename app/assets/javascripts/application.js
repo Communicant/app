@@ -29,17 +29,22 @@
 // END of IIFE JS
 
 
-//scroll the messages box to show the bottom first
 ;(function(){
-  //$("#scroll-bottom").scrollTop($("#scroll-bottom").scrollHeight);
-  //$(".chatbox").scrollTop(600);
-  //var messageBox = document.getElementById('#scroll-bottom');
-  //messageBox.scrollTop = messageBox.scrollHeight;
+  // $('a.header').on('click', function(){
+  //   console.log('inside click')
+  //   $(this).addClass('stay-blue').siblings().removeClass('stay-blue');
+  // });
   console.log("inside js")
-  //$('ul.messaging-list').scrollTop($('ul.messaging-list li:last-child').position().top);
- //$("li.message-display").load(function(){
-   //$(".fa-spin").hide();;
- //});
+
+  $(document).ready(function () {
+    var url = window.location
+
+    var tabHeader = $('a.header').filter(function() {
+      return this.href == url;
+    })
+
+    tabHeader.addClass('stay-blue').siblings().removeClass('stay-blue');
+  })
 })();
 
 
