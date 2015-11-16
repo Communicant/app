@@ -1,26 +1,75 @@
-
-<section class="main-header">
+<!DOCTYPE html>
+<!-- <section class="main-header">
       <header>
         <h1>Communicant</h1>
-        <nav class="home-nav">
+        <nav class="home-nav"> -->
           <!-- <a href="#" class="tabs clearfix">Register</a> -->
-          <a href="#login" class="tabs clearfix">Login</a>
+          <!-- <a href="#login" class="tabs clearfix">Login</a>
             <section id="login" class="drop-down-menu animated fadeInDown clearfix">
               <%= form_tag '/sessions', method: :post %>
-              <input type="email" class="email" placeholder="Email"></input><br />
-              <input type="password" class="password" placeholder="Password"></input><br />
+              <input type="email" class="email" name="email" placeholder="Email"></input><br />
+              <input type="password" class="password" name="password" placeholder="Password"></input><br />
               <%= submit_tag "Login" %>
-            </form>
-            </section><!--#login-->
-          </nav><!--.home-nav-->
-      </header>
-</section><!--.main-header-->
+            </form> -->
+            <!-- </section> -->
+            <!--#login-->
+          <!-- </nav> -->
+          <!--.home-nav-->
+      <!-- </header> -->
+<!-- </section> -->
+<!--.main-header-->
 
-      <section class="intro">
+      <!-- <section class="intro">
         <img src="divorced-parents.jpg" class="back-img" />
         <div class="text-container">
-          <h4 class="intro-text clearfix">There are so many choices in life.  When you make the wrong one, come to us.</h4>
+          <h4 class="intro-text clearfix">There are so many choices in life.  When you make the wrong one, come to us.</h4> -->
           <!-- <h2 class="intro-text-Commu clearfix">Communicant</h2> -->
           <!-- <h3 class="intro-text-introd clearfix">Introducing</h3> -->
-        </div><!--.text-container-->
-      </section><!--.intro-->
+        <!-- </div> -->
+        <!--.text-container-->
+      <!-- </section> -->
+      <!--.intro-->
+<html>
+<body class="back-img">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Communicant</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target=".bs-example-modal-sm">Sign in</button>
+
+
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <br>
+        <br>
+        <%= form_tag '/sessions', method: :post %>
+          <input type="email" class="email" placeholder="Email" name="email"></input><br />
+          <input type="password" class="password" placeholder="Password" name="password"></input><br />
+        <%= submit_tag "Login", class:"submit-login" %>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+      </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+</body>
+</html>
