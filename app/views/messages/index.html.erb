@@ -4,48 +4,43 @@
 <main class="messaging-container" ng-app="Communicant">
   <h3 class="message-title">Messages</h3>
 
+  <section class="chatbox">
+    <!-- <div class="chatbox-scroll"> -->
+
+     <ul class="messaging-list" id="scroll-bottom" ng-controller="ListOfMessagesController">
+    <!-- <% @messages.each do |message| %>
+      <li class="message">
+        <!-- <div class="message-name"><%# message.name %></div> -->
+        <!-- <div class="message-date"><%# message.date %></div>
+        <div class="message-time"><%# message.time %></div>
+        <div class="message-body"><%# message.body %></div>
+      </li> -->
+    <!-- <% end %> -->
+
+
+        <li class="message-display" ng-repeat="message in messages| orderBy: '-date'"><!-- '-date' is reverse for 'date' or 'date':true -->
+          <div class="message-name">{{message.name}}</div>
+          <div class="message-date">{{message.date | date : format : medium}}</div>
+        <!-- <div class="message-time">{{message.time | date : medium}}</div> -->
+          <div class="message-body">{{message.body}}</div>
+        </li>
+     </ul>
+   <!-- </div> -->
+
+ </section><!--END section.chatbox -->
 
   <form class="add-message" ng-controller="NewMessageController" ng-submit="submit()">
     <!-- <textarea class="add-message-body" ng-model="newMessage.body" placeholder="Type your message here..."></textarea> -->
     <select class="select-premessage" ng-model="newMessage.message.body" name="select">
       <option value="">Select an option</option>
-      <option>Emergency happened, the schedule for today has been changed</option>
-      <option>Event date for tomorrow has been changed, check events</option>
+      <option>Check your mail</option>
+      <option>An event has been changed in your list of events</option>
       <option>An expense has been changed in the list of expenses</option>
-      <option>A new expense has been created, check expenses</option>
-      <option>Tomorrow is the due date for an expense, check expenses</option>
-      <option>Time for pick up today has been changed, check events</option>
+      <option>A Change in Information panel</option>
     </select>
     <!-- {{newMessage.body}} -->
     <button class="message-send" type="submit" name="submit-message">Send</button>
   </form>
-
-
-
-
-
-     <ul class="messaging-list" ng-controller="ListOfMessagesController">
-
-       <i class="fa fa-refresh fa-spin" ng-hide="messages"></i>
-
-
-
-        <li class="message-display" ng-repeat="message in messages| orderBy: '-date'"><!-- '-date' is reverse for 'date' or 'date':true -->
-
-          <div class="message-name"><i class="fa fa-user"></i>
-            {{message.name}}</div>
-
-          <div class="message-time"><i class="fa fa-clock-o"></i>
-            {{message.created_at | date : medium}}</div>
-          <div class="message-date"><i class="fa fa-calendar"></i>
-            {{message.date | date : format : medium}}</div>
-          <div class="message-body">{{message.body}}</div>
-        </li>
-
-     </ul>
-
-
-
   <!-- <%# link_to 'New Message', new_message_path %> -->
   <!-- <form class="add-messages" ng-controller="NewMessageController" ng-submit="submit()">
     <section class="select-premessages" placeholder="Select your message" ng-model="newMessage.body">
