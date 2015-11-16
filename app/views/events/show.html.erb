@@ -5,7 +5,7 @@
 <p class="new-event-title">
   <strong>Title:</strong>
   <%= @event.title %>
-</p> 
+</p>
 
 <p class="new-event-descrip" >
   <strong>Description:</strong>
@@ -26,7 +26,7 @@
 
 <p class="new-event-parent">
   <strong>Created by:</strong>
-  <%= @event.parent_id %>
+  <%= @event.parents.try(:first).try(:first_name) %>
 </p>
 
 <p>
@@ -41,13 +41,13 @@
 
 <p>
 
-  <strong>Approved at:</strong>
+  <!-- <strong>Approved at:</strong> -->
   <%# @event.pending %>
 
   <strong>Confirmed by:</strong>
-  <%# @approved_parents[0][:user][:first_name] %>
+  <%= @approved_parents[0][:user][:first_name] %>
   <strong> At:</strong>
-  <%# @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %>
+  <%= @approved_parents[0][:approved_at].strftime("%m-%e-%y %l:%M%p") %>
 
 </p>
 

@@ -35,6 +35,8 @@ gem 'faker', '~> 1.5'
 gem 'bourbon'
 
 gem 'font-awesome-sass'
+
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
