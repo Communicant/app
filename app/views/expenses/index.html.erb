@@ -42,7 +42,7 @@
               <div class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</div>
               <div class="expense-amount">{{expense.amount | currency}}</div>
             </section>
-            <ul class="payments-listing" ng-show="collapse">
+            <ul class="payments-listing" ng-show="collapse" class="slideInDown">
               <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)" class="add-payment-form">
                 <label>Amount <input type="number" ng-model="newPayment.payment.amount"></input></label>
                 <button type="submit" name="submit-expense" class="submit-payment-button">Add Payment</button>

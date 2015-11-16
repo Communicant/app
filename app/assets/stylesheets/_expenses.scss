@@ -2,18 +2,18 @@
   background-color: #FAF2EB;
 }
 
-.expenses-container {
+section.expenses-container {
   width: 80%;
   margin-left: 10%; margin-right: 10%; margin-top: 56px;
   height: 100%;
   border-radius: 5px;
 }
 
-.new-expense {
+form.new-expense {
   margin-left: 3.8%;
 }
 
-.expense-tab {
+section.expense-tab {
   background-color: #DEEDFA;
   padding-bottom: 9px; padding-left: 8px; padding-right: 8px;
 }
@@ -26,11 +26,11 @@
   margin-bottom: -5px;
 }
 
-.expenses-all {
+ul.expenses-listing {
   list-style: none;
 }
 
-.expenses-scroll {
+div.expenses-scroll {
   margin-top: 50px; margin-bottom: 5%;
   position: relative;
   border-radius: 3px;
@@ -40,52 +40,52 @@ li, ul {
   list-style: none;
 }
 
-.expenses-item {
+li.expenses-item {
   width: 94%;
   margin-right: 6%;
 }
 
-.expense-type, .expense-amount {
+div.expense-type, div.expense-amount {
   color: #636363;
   font-size: 12pt;
   font-family: Gill Sans;
 }
 
-.expense-type {
+div.expense-type {
   width: 40%;
   display: inline-block;
   margin-top: 10px; margin-left: 6px;
 }
 
-.expense-amount {
+div.expense-amount {
   width: 40%;
   float: right;
   margin-top: 10px;
   text-align: right;
 }
 
-.payments-listing {
+ul.payments-listing {
   background-color: white;
   padding-bottom: 3px;
   margin-bottom: -7px;
 }
 
-.payment-paid-by {
+div.payment-paid-by {
   width: 30%;
   display: inline-block;
 }
 
-.payments-item {
+li.payments-item {
   margin-bottom: 3px;
   border-bottom: .5px solid #636363;
 }
 
-.payment-paid-at {
+div.payment-paid-at {
   width: 30%;
   display: inline-block;
 }
 
-.payment-paid-amount {
+div.payment-paid-amount {
   width: 30%;
   padding-right: 8px;
   text-align: right;
@@ -93,7 +93,7 @@ li, ul {
   float: right;
 }
 
-.add-payment-form {
+form.add-payment-form {
   margin-left: -5px;
   padding-bottom: 5px; padding-top: 5px;
 
@@ -102,7 +102,7 @@ li, ul {
   }
 }
 
-.expense-amt-stl-o {
+div.expense-amt-stl-o {
   text-align: right;
   margin-top: -6px; margin-bottom: 10px;
   padding-top: 3px; padding-bottom: 3px; padding-right: 8px;
