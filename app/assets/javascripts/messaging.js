@@ -2,17 +2,18 @@
 
   var app = angular.module('Communicant', ['ngRoute']);
   console.log("inside angular")
+
   app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$timeout', '$interval', function($scope, $http, $routeParams, $timeout, $interval){
-     //var Id = $routeParams.id - 1; //Id to make a difference with id
 
      function updateMessages(){
       return $http.get("/messages.json")
         .then(function(response){
           $scope.messages = response.data
+          })
           console.log("inside ListOfMessagesController")
           console.log(response.data.length)
-      })
      }
+
 
      $interval(function(){
         $http.get("/messages.json")
@@ -23,7 +24,10 @@
         })
       }, 2000);
 
+
    }]);//END of ListOfMessagesController
+
+
   app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
     console.log("inside NewMessageController")
     $scope.newMessage = {
@@ -124,8 +128,6 @@
   //     $scope.expenses = response.data;
   //   })
   // }]); // END NewExpenseController
-
-  //}]);//END of NewMessageController
 
 })(); // END IIFE
 
