@@ -23,6 +23,9 @@
   $('a[href="#login"]').on('click', function (){
     $('#login').toggleClass('active').siblings().removeClass('active');
   });
+  $('a[href="#rel-pay"]').on('click', function (){
+    $('#rel-pay').toggleClass('active');
+  });
 })();
 // END of IIFE JS
 
