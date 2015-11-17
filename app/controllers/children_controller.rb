@@ -1,5 +1,6 @@
 class ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /children
   def index

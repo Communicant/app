@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
   before_filter :require_mediator
   before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /dashboards
   def index

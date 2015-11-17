@@ -112,7 +112,3 @@ Approval.create!(parent_id: 1, event_id: 1, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 2, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 3, parent_approval: true)
 Approval.create!(parent_id: 2, event_id: 4, parent_approval: true)
-
-#Cases --------------------------
-
-Case.create!()

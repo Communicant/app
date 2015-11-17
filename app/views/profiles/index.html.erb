@@ -24,8 +24,7 @@
         <td class="profile-name"><%= link_to profile.name, profile %></td>
         <td class="profile-email"><%= profile.email %></td>
         <td class="profile-phone"><%= profile.phone_number %></td>
-        <td class="profile-child">
-          <%=Child.each do |child%></td>
+        <td class="profile-child"><%= profile.child_name %></td>
         <td class="profile-mediator"><%= profile.mediator_name %></td>
       </tr>
     <% end %>
