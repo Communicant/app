@@ -13,11 +13,14 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "header";
 @import "home";
 @import "costs";
 @import "payments";
 @import "events";
+@import "expenses";
 @import "newEvent";
 @import "usersView";
 @import "detailsEvent";

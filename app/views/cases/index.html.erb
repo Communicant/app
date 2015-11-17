@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<!-- <h1>Welcome, <%# case.mediators.first_name %></h1> -->
+<br>
+<br>
+<h1>Listing Cases</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case number</th>
+      <th>Primary Guardian</th>
+      <th>Guardian</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cases.each do |case| %>
+      <tr>
+        <td>234678<%# case.case_number %></td>
+        <td>John<%# case.parents.first_name %></td>
+        <td>Marcy<%# case.parents.first_name %></td>
+
+
+        <td><%= link_to 'Show', case %></td>
+
+        <td><%= link_to 'Edit', edit_case_path(caze) %></td>
+        <td><%= link_to 'Destroy', caze, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Case', new_case_path %>
