@@ -1,10 +1,11 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  helper_method :grab_child
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.order(:date)
   end
 
   # GET /events/1
@@ -15,6 +16,10 @@ class EventsController < ApplicationController
   end
 
   # GET /events/new
+  def grab_child
+     @grab_child = Child.find(Event.first.child_id).first_name
+   end
+
   def new
     @event = Event.new
   end
