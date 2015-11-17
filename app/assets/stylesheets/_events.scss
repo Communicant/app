@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body.page-background{
   background-color: #FAF2EB;
+  font-family: Lato;
 }
 
 h1.events-header{
@@ -61,7 +62,7 @@ li.events-main-table{
   div.child{
     text-align: left;
     display: inline-block;
-    width: 18%;
+    width: 15%;
     i.fa{
       margin-right: 2px;
     }
@@ -69,7 +70,7 @@ li.events-main-table{
   div.date{
     display: inline-block;
     text-align: left;
-    width: 18%;
+    width: 15%;
   }
   div.time{
     display: inline-block;
@@ -138,12 +139,12 @@ li:last-child{
   ul.events-body-table{
     li.events-main-table{
       div.title{
-        width: 38%;
+        width: 45%;
         margin-bottom: 7px;
       }
       div.child{
-        text-align: right;
-        width: 38%;
+        text-align: center;
+        width: 30%;
         margin-bottom: 7px;
       }
       div.date{
