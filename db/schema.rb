@@ -88,7 +88,7 @@ ActiveRecord::Schema.define(version: 20151116030712) do
     t.string   "name"
     t.string   "email"
     t.text     "address"
-    t.integer  "phone_number",  limit: 10
+    t.integer  "phone_number"
     t.string   "child_name"
     t.integer  "case_number"
     t.string   "mediator_name"
