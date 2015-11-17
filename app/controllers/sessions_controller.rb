@@ -47,4 +47,5 @@ class SessionsController < ApplicationController
     redirect_to root, alert: "You have been logged out."
   end
 
+
 end

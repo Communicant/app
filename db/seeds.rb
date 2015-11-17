@@ -84,7 +84,7 @@ parent = Parent.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
+  :child_id => rand(1..2)
 )
 end
 
@@ -95,7 +95,7 @@ mediator = Mediator.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..5)
+  :child_id => rand(1..2)
 )
 end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)

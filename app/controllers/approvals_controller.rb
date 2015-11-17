@@ -53,6 +53,6 @@ class ApprovalsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def approval_params
-      params[:approval].require(:parent_approval, :event_id, :parent_id)
+      params.require(:approval).permit(:parent_approval, :event_id, :parent_id)
     end
 end

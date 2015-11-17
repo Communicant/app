@@ -21,9 +21,9 @@ class EventsControllerTest < ActionController::TestCase
   end
 
   def test_has_second_approval
-    test_e = Event.create!(title: "Event Test", description: "Testing the event stuff", date: Date.new(2015, 11, 16),
-            parent_id: 99, child_id: 98, mediator_id: 3, approval: true)
-    test_no = Event.create!(title: "Event Test", description: "Testing the event stuff", date: Date.new(2015, 11, 16),
+
+    false_parent_approval = Event.create!(title: "Event Test", description: "Testing the event stuff", date: Date.new(2015, 11, 16),
             parent_id: 99, child_id: 98, mediator_id: 3, approval: false)
+
   end
 end

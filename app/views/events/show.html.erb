@@ -31,7 +31,7 @@
 
 <p>
   <strong>Child:</strong>
-  <!-- <%# @event. %>  TODO: Add child name in show --> 
+  <%= Child.find(Event.first.child_id).first_name %>  
 </p>
 
 <!-- <p>

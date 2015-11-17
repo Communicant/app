@@ -80,7 +80,7 @@
 
         <div>
           <% unless event.has_been_approved? %>
-            <%= link_to 'Approve', approvals, method: :post, button type="button" %>
+          <button type="button"><%= link_to 'Approve', approvals_path, method: :post %></button>
           <% end %>
         </div>
         <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
