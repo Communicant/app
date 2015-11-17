@@ -61,7 +61,8 @@
         </div>
         <div class="child">
           <i class="fa fa-child"></i>
-         <%= grab_child %>
+         <%= Child.find(event.child_id).first_name %>
+
 
           <!-- <%# event.child.find(1).first_name %> TODO: Figure out why I can't access Child info -->
         </div>

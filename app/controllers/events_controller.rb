@@ -15,13 +15,15 @@ class EventsController < ApplicationController
     @approved_parents = approved_parents(@event)
   end
 
+  def event_descriptions
+  end
+
   # GET /events/new
-  def grab_child
-     @grab_child = Child.find(Event.first.child_id).first_name
-   end
 
   def new
     @event = Event.new
+    @event_titles = ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After School music class",
+        "After School sport practice", "After school other activity", "Play date"]
   end
 
   # GET /events/1/edit
