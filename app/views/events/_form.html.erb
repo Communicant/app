@@ -31,8 +31,8 @@
   <div class="field">
     <%= f.label :child %>
     <%= collection_select(:event, :child_id, Child.all, :id, :first_name, {:prompt => 'Please select A Child'}) %>
-
   </div>
+<%= f.hidden_field :user_id, value: params[:user_id] %>
   <div class="actions">
     <%= (f.submit class:"update-submit") %>
   </div>

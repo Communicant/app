@@ -2,7 +2,7 @@
 
 <h1 class="events-header">Your Upcoming Events</h1>
 
-<div class="new-event"><%=link_to 'Add New Event', new_event_path %></div>
+<div class="new-event"><%=link_to 'Add New Event', new_event_path(user_id: @logged_in_user.id) %></div>
 
 
   <ul class="events-body-table">

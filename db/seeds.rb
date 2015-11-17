@@ -23,17 +23,13 @@
 #Events ------------------
 10.times do |e|
 e = Event.create(
-  :title   => Faker::Book.title,
+  :title   => ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After School music class",
+      "After School sport practice", "After school other activity", "Play date"].sample,
   :date    => Faker::Date.between(2.days.ago, Time.now),
   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
   :location => Faker::Address.street_address,
-  :description => "event description",
   :parent_id => rand(1..5),
-<<<<<<< HEAD
   :child_id => rand(1..6)
-=======
-  :child_id => rand(1..2)
->>>>>>> e1e2aa7ec0846e4d5ee6eb34b6dda4c310e2e574
 )
 end
 # event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
@@ -88,11 +84,7 @@ parent = Parent.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-<<<<<<< HEAD
   :child_id => rand(1..6)
-=======
-  :child_id => rand(1..2)
->>>>>>> e1e2aa7ec0846e4d5ee6eb34b6dda4c310e2e574
 )
 end
 
@@ -103,11 +95,7 @@ mediator = Mediator.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-<<<<<<< HEAD
   :child_id => rand(1..6)
-=======
-  :child_id => rand(1..2)
->>>>>>> e1e2aa7ec0846e4d5ee6eb34b6dda4c310e2e574
 )
 end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)

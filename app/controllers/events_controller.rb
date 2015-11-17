@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
   helper_method :grab_child
+  helper_method :event_titles
+
 
   # GET /events
   # GET /events.json
@@ -21,8 +24,10 @@ class EventsController < ApplicationController
     @grab_child = Child.find(@event.child_id).first_name
   end
 
-  def event_descriptions
-  end
+  # def event_titles
+  #   @event_titles = ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After School music class",
+  #       "After School sport practice", "After school other activity", "Play date"]
+  # end
 
   # GET /events/new
 
@@ -108,7 +113,7 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending)
+      params.require(:event).permit(:title, :description, :date, :time, :parent_id, :child_id, :mediator_id, :pending, :user_id)
     end
 
 end
