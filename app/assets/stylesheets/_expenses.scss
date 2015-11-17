@@ -22,8 +22,10 @@ section.expense-tab {
   font-family: Gill Sans;
   font-weight: lighter;
   font-size: 35pt;
-  text-align: center;
-  margin-bottom: -5px;
+  font-weight: lighter;
+  color: #004C80;
+  text-align: left;
+  margin-left: 3.5%;
 }
 ul.expenses-listing{
   list-style: none;
@@ -103,7 +105,7 @@ form.add-payment-form {
 
 div.expense-amt-stl-o {
   text-align: right;
-  margin-top: -20px; margin-bottom: 10px;
+  margin-bottom: 10px;
   padding-top: 3px; padding-bottom: 3px; padding-right: 8px;
   background-color: white;
 }
@@ -129,4 +131,33 @@ input[type=checkbox]:after {
 input.open[type=checkbox]:active {
   content: '-';
   font-size: 14pt;
+}
+
+select.expense-type {
+  -moz-appearance: none;
+  appearance: none;
+  width: 85%;
+  margin-top: 2px; margin-right: 1%;
+  font-family: Lato;
+  font-size: 15pt;
+  font-weight: lighter;
+  padding-top: 4px;
+  padding-bottom: 2%;
+  background-color: #004C80;
+  color: white;
+  line-height: 1.5;
+}
+
+input.amount-due {
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 1%;
+  font-family: Lato;
+  font-size: 1.3em;
+  font-weight: lighter;
+  background-color: #004C80;
+  color: white;
+  line-height: 1.5;
+  border: 1px solid #FAF2EB;
+  border-radius: 3px;
 }
