@@ -11,31 +11,36 @@
     <% @events.each do |event| %>
       <li class="events-main-table">
 
+      <div class="section group">
 
-        <div class="title">
+
+        <div class="title col span-1-of-6">
           <i class="fa fa-arrow-right"></i>
           <%= link_to event.title, event %>
         </div>
-        <div class="child">
+        <div class="child col span-1-of-6">
           <i class="fa fa-child"></i>
          <%= grab_child %>
 
           <!-- <%# event.child.find(1).first_name %> TODO: Figure out why I can't access Child info -->
         </div>
         <!-- <td class="descrip"><%# event.description %></td> -->
-        <div class="date">
+        <div class="date col span-1-of-6">
           <i class="fa fa-calendar"></i>
           <%= event.date %>
         </div>
-        <div class="time">
+        <div class="time col span-1-of-6">
           <i class="fa fa-clock-o">
           </i><%= event.time.try(:strftime, "%I:%M%P") %>
         </div>
-        <div class="location">
+        <div class="location col span-1-of-6">
           <i class="fa fa-location-arrow"></i>
           <%= event.location %>
         </div>
-
+        <div class="approved col span-1-of-6">
+          Approved
+        </div>
+      </div>
         <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
         <!-- <td class="pending"><button type="button" name="button">Pending</button></td> -->
     <% end %>

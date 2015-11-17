@@ -49,43 +49,67 @@ li.events-main-table{
   padding-top: 2%;
   padding-bottom: 2%;
   color: #004C80;
+  width: 100%;
+    .section {
+  	clear: both;
+  	padding: 0px;
+  	margin: 0px;
+    }
+    .col {
+  	display: block;
+  	float:left;
+  	margin: 1% 0 1% 1.6%;
+    }
+    .col:first-child { margin-left: 0;
+    }
+    .group:before,
+    .group:after {
+    	content:"";
+    	display:table;
+    }
+    .group:after {
+    	clear:both;
+    }
+    .group {
+        zoom:1; /* For IE 6/7 */
+    }
+    .span-1-of-6 {
+      	width: 15.33%;
+    }
+
+
+
   div.title{
-    text-align: left;
+    //text-align: left;
     //margin-left: 10%;
-    display: inline-block;
-    width: 20%;
+    // display: inline-block;
+    // width: 20%;
     a{
       text-decoration: none;
       color: #004C80;
     }
   }
   div.child{
-    text-align: left;
-    display: inline-block;
-    width: 15%;
     i.fa{
       margin-right: 2px;
     }
   }
   div.date{
-    display: inline-block;
-    text-align: left;
-    width: 15%;
   }
   div.time{
-    display: inline-block;
-    text-align: left;
-    width: 18%;
     i.fa{
       margin-right: 3px;
     }
+
   }
   div.location{
-    padding-left: 2%;
-    display: inline-block;
-    text-align: left;
-    margin-right: 1%;
-    width: 20%;
+    i.fa{
+      margin-right: 1px;
+    }
+  }
+  div.approved{
+    text-align: right;
+    margin-left: -1%;
   }
 }
 li:last-child{
@@ -121,7 +145,13 @@ li:last-child{
       div.location{
         width: 80%;
         margin-bottom: 7px;
-        margin-left: -1px;
+        //margin-left: -1px;
+      }
+      div.approved{
+        width: 80%;
+        margin-bottom: 7px;
+        text-align: left;
+        margin-left: 1%;
       }
     }
   }
@@ -138,23 +168,30 @@ li:last-child{
   }
   ul.events-body-table{
     li.events-main-table{
-      div.title{
-        width: 45%;
-        margin-bottom: 7px;
-      }
-      div.child{
-        text-align: center;
-        width: 30%;
-        margin-bottom: 7px;
-      }
+      // div.title{
+      //   width: 45%;
+      //   margin-bottom: 7px;
+      // }
+      // div.child{
+      //   text-align: center;
+      //   width: 30%;
+      //   margin-bottom: 7px;
+      // }
       div.date{
-        width: 25%;
+        text-align: right;
       }
-      div.time{
-        width: 20%;
+      // div.time{
+      //   width: 20%;
+      // }
+      // div.location{
+      //   width: 35%;
+      // }
+      div.approved{
+        text-align: right;
+        margin-left: -1%;
       }
-      div.location{
-        width: 35%;
+      .span-1-of-6{
+        width: 30%;
       }
     }
   }
@@ -164,6 +201,7 @@ li:last-child{
 @media (min-width: 1025px) {            //DESKTOP
   body.page-background{
     background-color: #FAF2EB;
+    font-family: Lato;
   }
 
   h1.events-header{
@@ -185,66 +223,97 @@ li:last-child{
     color: white;
     text-align: center;
     padding: 10px;;
-    margin-left: 75%;
+    margin-left: 80%;
     font-size: 1.2;
-    width: 15%;
+    width: 20%;
+    //margin-bottom: 10%;
    }
   }
+
+
+
+
+
 
   ul.events-body-table{
     margin-top: 2%;
     margin-left: 10%;
     border: 3px solid #004C80;
     border-radius: 5px;
-    width: 75%;
+    width: 80%;
   li.events-main-table{
     list-style: none;
     border-bottom: 1px solid #004C80;
     padding-top: 2%;
     padding-bottom: 2%;
     color: #004C80;
+    width: 100%;
+      .section {
+    	clear: both;
+    	padding: 0px;
+    	margin: 0px;
+      }
+      .col {
+    	display: block;
+    	float:left;
+    	margin: 1% 0 1% 1.6%;
+      }
+      .col:first-child { margin-left: 0;
+      }
+      .group:before,
+      .group:after {
+      	content:"";
+      	display:table;
+      }
+      .group:after {
+      	clear:both;
+      }
+      .group {
+          zoom:1; /* For IE 6/7 */
+      }
+      .span-1-of-6 {
+        	width: 15.33%;
+      }
+
+
+
     div.title{
-      text-align: left;
+      //text-align: left;
       //margin-left: 10%;
-      display: inline-block;
-      width: 20%;
+      // display: inline-block;
+      // width: 20%;
       a{
         text-decoration: none;
         color: #004C80;
       }
     }
     div.child{
-      text-align: left;
-      display: inline-block;
-      width: 18%;
       i.fa{
         margin-right: 2px;
       }
     }
     div.date{
-      display: inline-block;
-      text-align: left;
-      width: 18%;
     }
     div.time{
-      display: inline-block;
-      text-align: left;
-      width: 18%;
       i.fa{
         margin-right: 3px;
       }
+
     }
     div.location{
-      padding-left: 2%;
-      display: inline-block;
-      text-align: left;
-      margin-right: 1%;
-      width: 20%;
+      i.fa{
+        margin-right: 1px;
+      }
+    }
+    div.approved{
+      text-align: right;
+      margin-left: -1%;
     }
   }
   li:last-child{
     border-bottom:#FAF2EB;
   }
   }
+
 
 } //END of DESKTOP

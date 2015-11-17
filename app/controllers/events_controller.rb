@@ -22,6 +22,8 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @event_locations = ["123 Main St", "543 Lucas Dr", "786 Miami Ave", "617 Brighton Ln",
+       "7053 Green Ave", "8853 Independence Dr", "3172 Guerrilla Ct"]
   end
 
   # GET /events/1/edit

@@ -47,6 +47,10 @@
     <%= f.label :child_id %>
     <%= f.number_field :child_id, class:"update-child" %>
   </div>
+  <div class="field">
+   <%= f.label :location, class:"update-location-label" %>
+   <%= f.select("location",  @event_locations, {:include_blank => "Please select a location"}) %>
+ </div>
   <!-- <div class="field">
     <%= f.label :mediator_id %>
     <%= f.number_field :mediator_id, class:"update-mediator" %>
@@ -57,7 +61,7 @@
   </div> -->
   <div class="actions">
     <%= (f.submit class:"update-create") %>
-  <%= link_to 'Details', @event, class:"update-details" %>
+  <%# link_to 'Details', @event, class:"update-details" %>
   <%= link_to 'Back', events_path, class:"update-back" %>
  </div>
 <% end %>
