@@ -18,21 +18,23 @@
           <i class="fa fa-arrow-right"></i>
           <%= link_to event.title, event %>
         </div>
-        <div class="child col span-1-of-6">
-          <i class="fa fa-child"></i>
-         <%= grab_child %>
 
-          <!-- <%# event.child.find(1).first_name %> TODO: Figure out why I can't access Child info -->
+        <div class="time col span-1-of-6">
+          <i class="fa fa-clock-o">
+          </i><%= event.time.try(:strftime, "%I:%M%P") %>
         </div>
         <!-- <td class="descrip"><%# event.description %></td> -->
         <div class="date col span-1-of-6">
           <i class="fa fa-calendar"></i>
           <%= event.date %>
         </div>
-        <div class="time col span-1-of-6">
-          <i class="fa fa-clock-o">
-          </i><%= event.time.try(:strftime, "%I:%M%P") %>
+        <div class="child col span-1-of-6">
+          <i class="fa fa-child"></i>
+         <%= grab_child %>
+
+          <!-- <%# event.child.find(1).first_name %> TODO: Figure out why I can't access Child info -->
         </div>
+
         <div class="location col span-1-of-6">
           <i class="fa fa-location-arrow"></i>
           <%= event.location %>
