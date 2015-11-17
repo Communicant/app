@@ -20,7 +20,10 @@
         <td>234678<%# case.case_number %></td>
         <td>John<%# case.parents.first_name %></td>
         <td>Marcy<%# case.parents.first_name %></td>
-        <td><%= link_to 'Show', caze %></td>
+
+
+        <td><%= link_to 'Show', case %></td>
+
         <td><%= link_to 'Edit', edit_case_path(caze) %></td>
         <td><%= link_to 'Destroy', caze, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
