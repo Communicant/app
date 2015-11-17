@@ -1,4 +1,3 @@
-//  Renee playing
 
 $(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
