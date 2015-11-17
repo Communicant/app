@@ -17,9 +17,9 @@
   <tbody>
     <% @cases.each do |case| %>
       <tr>
-        <td>234678<%# case.case_number %></td>
-        <td>John<%# case.parents.first_name %></td>
-        <td>Marcy<%# case.parents.first_name %></td>
+        <td><%= case.case_number %></td>
+        <td><%= case.parents.first_name %></td>
+        <td><%= case.parents.first_name %></td>
 
 
         <td><%= link_to 'Show', case %></td>
