@@ -29,7 +29,7 @@ e = Event.create(
   :location => Faker::Address.street_address,
   :description => "event description",
   :parent_id => rand(1..5),
-  :child_id => rand(1..5)
+  :child_id => rand(1..6)
 )
 end
 # event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
@@ -84,7 +84,7 @@ parent = Parent.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..2)
+  :child_id => rand(1..6)
 )
 end
 
@@ -95,16 +95,24 @@ mediator = Mediator.create!(
   :first_name => Faker::Name.name,
   :last_name => Faker::Name.name,
   :address => Faker::Address.street_address,
-  :child_id => rand(1..2)
+  :child_id => rand(1..6)
 )
 end
 Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)
 Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 2)
+Parent.create!(email: "email4@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 3)
+Parent.create!(email: "email5@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 4)
+Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 5)
+
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
 
 #Children -------------------
 Child.create!(first_name: "Mike", age: 10, parent_id: 1)
 Child.create!(first_name: "Sarah", age: 7, parent_id: 1)
+Child.create!(first_name: "Jan", age: 9, parent_id: 1)
+Child.create!(first_name: "Harry", age: 13, parent_id: 1)
+Child.create!(first_name: "Calliope", age: 2, parent_id: 1)
+Child.create!(first_name: "Annalise", age: 16, parent_id: 1)
 
 #Approval -----------------------
 

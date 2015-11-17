@@ -13,7 +13,7 @@
   <% end %>
 <section class="update-event-container">
 
-  <select class="new-event-select" name="new event">
+  <!-- <select class="new-event-select" name="new event">
     <option value="">Select your event</option>
     <option value="">Birthday party</option>
     <option value="">Doctor's appointment</option>
@@ -22,7 +22,11 @@
     <option value="">After School sport practice</option>
     <option value="">After school other activity</option>
     <option value="">Play date</option>
-  </select>
+  </select> -->
+  <div class="field">
+   <%= f.label :title %>
+   <%= f.select(:title, options_for_select([['Select your event', 1], ['Birthday party', 2], ["Doctor's appointment", 3],['Dentist\'s appointment', 4],['After School music class', 5],['After School sport practice', 6]])) %>
+ </div>
   <div class="field">
     <%= f.label :date, class:"update-date-label" %>
     <%= f.date_select :date, class:"update-date" %>
@@ -33,12 +37,12 @@
   </div>
   <div class="field">
     <%= f.label :parent_id %>
-    <%= f.number_field :parent_id, class:"update-parent" %>
+    <%= f.collection_select(:parent_id, User.where(id: session[:user_id]), :id, :first_name, {prompt: "Select Parent"}) %>
   </div>
-  <div class="field">
-    <%= f.label :child_id %>
-    <%= f.number_field :child_id, class:"update-child" %>
-  </div>
+  <!-- <div class="field">
+    <%# f.label :child_id %>
+    <%# f.collection_select (:child_id, Child.where(){prompt: "Select Child"}) %>
+  </div> -->
   <div class="actions">
     <%= (f.submit class:"update-submit") %>
   </div>

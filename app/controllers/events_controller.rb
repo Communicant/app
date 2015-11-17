@@ -13,10 +13,12 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @approved_parents = approved_parents(@event)
+    # @children = Child.where('event_id = ?', @event.id).order(:first_name)
+    # @parents =
   end
 
   def grab_child
-    @grab_child = Child.find(Event.first.child_id).first_name
+    @grab_child = Child.find(@event.child_id).first_name
   end
 
   # GET /events/new
