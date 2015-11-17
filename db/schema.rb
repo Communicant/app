@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20151117193132) do
 
   create_table "approvals", force: :cascade do |t|
@@ -91,6 +92,7 @@ ActiveRecord::Schema.define(version: 20151117193132) do
     t.text     "name2"
     t.text     "email2"
     t.text     "phone2"
+
   end
 
   create_table "user_cases", force: :cascade do |t|

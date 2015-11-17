@@ -5,7 +5,9 @@ class ApplicationController < ActionController::Base
 
   layout "application", except: [:index, :home]
 
+
 #FOR TESTING PURPOSES: -----------------------
+
   # before_filter :log_parent_in
 
   # def log_parent_in

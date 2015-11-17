@@ -14,6 +14,12 @@ section.update-event-container{
     padding: 5px;
     margin-top: 3%;
     margin-bottom: 3%;
+    font-size: 1.3em;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #004C80;
+    color: white;
+    line-height: 1.5;
   }
 
   div.field{
@@ -36,13 +42,16 @@ section.update-event-container{
   .update-time-label{
     margin-right: 8.8%;
   }
-  .update-parent{
-    width: 80%;
-    margin-left: 7%;
-  }
+
   .update-child{
-    width: 80%;
+    width: 60%;
     margin-left: 8.6%;
+  }
+  .update-location-label{
+    margin-right: 5%;
+  }
+  .update-location-field{
+    width: 60%;
   }
   .update-mediator{
     width: 80%;
@@ -51,16 +60,16 @@ section.update-event-container{
   .update-pending{
     margin-right: 5%;
   }
-  .update-submit{
+  .update-create{
     border: 1px solid #004C80;
     background-color: #004C80;
     color: white;
     border-radius: 5px;
-    padding: 5px;
-    margin-left: 13%;
+    padding: 4px;
+    margin-left: 25%;
     font-size: 1em;
-    margin-top: -0.4%;
-    position: absolute;
+    margin-top: -0.5%;
+    //position: absolute;
   }
 .update-details{
   border: 1px solid #004C80;
@@ -68,7 +77,7 @@ section.update-event-container{
   color: white;
   border-radius: 5px;
   padding: 5px;
-  margin-left: 45%;
+  margin-left: 4%;
   text-decoration: none;
 }
 .update-back{
@@ -77,6 +86,149 @@ section.update-event-container{
   color: white;
   border-radius: 5px;
   padding: 5px;
+  margin-left: 4%;
   text-decoration: none;
 }
+}
+@media (max-width: 567px) {           //MOBILE
+  section.update-event-container{
+  div.actions{
+  .update-child{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .update-create{
+    width: 60%;
+    margin-bottom: 4%;
+  }
+  .update-location-field{
+    width: 80%;
+  }
+
+  .update-back{
+    width: 60%;
+    margin-left: 45%;
+  }
+  }
+ }
+}
+
+
+
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+  section.update-event-container{
+  .update-child{
+    width: 90%;
+    margin-left: 5%;
+  }
+  div.actions{
+  .update-create{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 25%;
+    font-size: 1em;
+    margin-top: -0.5%;
+    //position: absolute;
+  }
+  .update-location-field{
+    width: 80%;
+  }
+
+.update-back{
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 4%;
+  text-decoration: none;
+}
+}
+}
+}
+
+
+@media (min-width: 1025px) {            //DESKTOP
+  section.update-event-container{
+    border: 2px solid #004C80;
+    border-radius: 5px;
+    width: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    padding-bottom: 3%;
+    padding-top: 2%;
+    color: #004C80;
+
+    select.new-event-select{
+      margin-left: 9%;
+      width: 80%;
+      padding: 5px;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      font-size: 1.3em;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      background-color: #004C80;
+      color: white;
+      line-height: 1.5;
+    }
+
+    div.field{
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 3%;
+      margin-bottom: 3%;
+    }
+    .update-title-field{
+      margin-left: 9.5%;
+      width: 80%;
+
+    }
+    .update-description-field{
+      width: 80%;
+    }
+    .update-date-label{
+      margin-right: 8.8%;
+    }
+    .update-time-label{
+      margin-right: 8.8%;
+    }
+    .update-child{
+      width: 60%;
+      margin-left: 8.6%;
+    }
+    .update-mediator{
+      width: 80%;
+      margin-left: 4%;
+    }
+    .update-pending{
+      margin-right: 5%;
+    }
+    div.actions{
+    .update-create{
+      border: 1px solid #004C80;
+      background-color: #004C80;
+      color: white;
+      border-radius: 5px;
+      padding: 4px;
+      margin-left: 25%;
+      font-size: 1em;
+      margin-top: -0.5%;
+      //position: absolute;
+    }
+  .update-back{
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 4%;
+    text-decoration: none;
+  }
+  }
+  }
 }
