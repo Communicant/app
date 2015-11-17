@@ -38,7 +38,7 @@
              <!-- || @logged_in_user == moderator  -->
               Pending Approval
             <% else %>
-              <button type="button"><%= link_to 'Approve', approvals_path, method: :post %></button>
+              <button type="button"><%= link_to 'Approve', approvals_path(approval: {event_id: event.id, parent_id: @logged_in_user.id, parent_approval: true}), method: :post %></button>
             <% end %>
           <% else %>
               APPROVED

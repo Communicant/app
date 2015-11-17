@@ -3,15 +3,19 @@ class Event < ActiveRecord::Base
   belongs_to :user
   has_many :parents, through: :approvals, class_name: 'User'
   has_one :child
-  has_many :approvals
+  has_one :approval
   has_one :mediator, through: :case
 
   # has_one :child, through: :event_children
   #
 
   def has_been_approved?
-    if self.approval == true
-      return true
+    if self.approval.blank? == false
+      if self.approval.parent_approval == true
+        return true
+      else
+        false
+      end
     else
       false
     end
