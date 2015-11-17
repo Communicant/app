@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
         if user.is_a?(Parent)
           redirect_to events_path
         elsif user.is_a?(Mediator)
-          redirect_to profiles_index_path, notice: "You have been successfully logged in."
+          redirect_to profiles_path, notice: "You have been successfully logged in."
         end
       else
         flash[:warning] = 'LEARN TO LOG IN, FOOL!'

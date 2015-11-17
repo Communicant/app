@@ -13,8 +13,8 @@
   <% end %>
 <section class="update-event-container">
 
-  <div class="new-event-select" name="new event">
-    <%= f.label :event %><br>
+  <div class="field">
+    <%= f.label :event %>
     <%= f.select("title", @event_titles, {:include_blank => "Please select an event"})%>
   </div>
   <div class="field">
@@ -32,7 +32,6 @@
   <div class="field">
     <%= f.label :child %>
     <%= collection_select(:event, :child_id, Child.all, :id, :first_name, {:prompt => 'Please select A Child'}) %>
-
   </div>
   <div class="actions">
     <%= (f.submit class:"update-submit") %>
