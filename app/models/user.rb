@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-  # has_many :events, through: :approvals
+  has_many :events
   # has_many :approvals
 
 end

@@ -32,10 +32,16 @@
           <i class="fa fa-location-arrow"></i>
           <%= event.location %>
         </div>
-
         <div>
-          <% unless event.has_been_approved? %>
-          <button type="button"><%= link_to 'Approve', approvals_path, method: :post %></button>
+          <% if event.has_been_approved? == false %>
+            <% if @logged_in_user.id == event.user_id %>
+             <!-- || @logged_in_user == moderator  -->
+              Pending Approval
+            <% else %>
+              <button type="button"><%= link_to 'Approve', approvals_path, method: :post %></button>
+            <% end %>
+          <% else %>
+              APPROVED
           <% end %>
         </div>
         <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
