@@ -103,8 +103,8 @@ Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad",
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
 
 #Children -------------------
-Child.create!(first_name: "Mike", age: 10, parent_id: 1)
-Child.create!(first_name: "Sarah", age: 7, parent_id: 1)
+Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
 
 #Approval -----------------------
 

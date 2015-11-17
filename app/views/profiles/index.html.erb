@@ -3,16 +3,15 @@
 </main>
 <h1 class="events-header">Cases</h1>
 <div class="new-profile">
-<%= link_to 'New Case', new_profile_path %>
+<%= link_to 'New Case', new_profile_path %> <%= link_to 'New Child', new_child_path %>
 </div>
 
 <table class="profile-m-table">
   <thead class="profile-m-thead">
     <tr class="profile-m-title-row">
       <th>Case Number</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone number</th>
+      <th>Parent 1 Name</th>
+      <th>Parent 2 Name</th>
       <th>Children</th>
       <th>Mediator name</th>
     </tr>
@@ -22,9 +21,10 @@
       <tr class="profile-m-main-table">
         <td class="profile-case"><%= profile.case_number %></td>
         <td class="profile-name"><%= link_to profile.name, profile %></td>
-        <td class="profile-email"><%= profile.email %></td>
-        <td class="profile-phone"><%= profile.phone_number %></td>
-        <td class="profile-child"><%= profile.child_name %></td>
+        <td class="profile-name"><%= link_to profile.name2, profile %></td>
+        <td class="profile-child"> <% profile.profile_children.each do |child| %>
+                                          <li><%= child %></li>
+                                        <% end %></td>
         <td class="profile-mediator"><%= profile.mediator_name %></td>
       </tr>
     <% end %>
