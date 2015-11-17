@@ -3,19 +3,20 @@
 }
 
 section.expenses-container {
-  width: 80%;
-  margin-left: 10%; margin-right: 10%; margin-top: 56px;
-  height: 100%;
+  width: 70%;
+  margin-left: 15%; margin-right: 15%; margin-top: 25px;
   border-radius: 5px;
 }
 
 form.new-expense {
-  margin-left: 3.8%;
+  margin-bottom: 2%;
 }
 
 section.expense-tab {
   background-color: #DEEDFA;
   padding-bottom: 9px; padding-left: 8px; padding-right: 8px;
+  border-radius: 5px;
+  display: block;
 }
 
 .expenses-label {
@@ -25,14 +26,17 @@ section.expense-tab {
   font-weight: lighter;
   color: #004C80;
   text-align: left;
-  margin-left: 3.5%;
+  margin-bottom: 15px;
+  // margin-left: 3.5%;
 }
 ul.expenses-listing{
   list-style: none;
+  padding-left: 0px;
+  margin-top: 5px;
 }
 
 div.expenses-scroll {
-  margin-top: 50px; margin-bottom: 5%;
+  margin-bottom: 5%;
   position: relative;
   border-radius: 3px;
 }
@@ -42,8 +46,8 @@ li, ul {
 }
 
 li.expenses-item {
-  width: 94%;
-  margin-right: 6%;
+  width: 100%;
+  margin-top: 10px;
 }
 
 div.expense-type, div.expense-amount {
@@ -53,9 +57,10 @@ div.expense-type, div.expense-amount {
 }
 
 div.expense-type {
+  font-weight: 600;
   width: 40%;
   display: inline-block;
-  margin-top: 10px; margin-left: 6px;
+  margin-top: 10px; margin-left: 10px;
 }
 
 div.expense-amount {
@@ -66,9 +71,12 @@ div.expense-amount {
 }
 
 ul.payments-listing {
-  background-color: white;
+  color: #636363;
+  background-color: #FAF2EB;
+  font-family: Lato;
+  font-size: 12pt;
   padding-bottom: 3px;
-  margin-bottom: -7px;
+  margin-bottom: -10px;
 }
 
 div.payment-paid-by {
@@ -95,7 +103,7 @@ div.payment-paid-amount {
 }
 
 form.add-payment-form {
-  margin-left: -5px;
+  // margin-left: -5px;
   padding-bottom: 5px; padding-top: 5px;
 
   input {
@@ -103,11 +111,42 @@ form.add-payment-form {
   }
 }
 
+button.submit-payment-button {
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato;
+  font-size: 1em;
+  font-weight: lighter;
+  background-color: #004C80;
+  color: white;
+  border-top: 1px solid #FAF2EB; border-left: 1px solid #FAF2EB; border-bottom: 1px solid #636363; border-right: 1px solid #636363;
+  line-height: 1;
+  border-radius: 5px;
+  float: right;
+}
+
+input.np-amt {
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 1%;
+  font-family: Lato;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 1;
+  border-radius: 5px;
+}
+
+label.amt-label {
+  padding-right: 5px;
+}
+
 div.expense-amt-stl-o {
+  font-family: Lato;
+  font-size: 12pt;
   text-align: right;
   margin-bottom: 10px;
   padding-top: 3px; padding-bottom: 3px; padding-right: 8px;
-  background-color: white;
+  background-color: #FAF2EB;
 }
 
 input[type=checkbox] {
@@ -126,6 +165,8 @@ input[type=checkbox]:after {
   border-radius: 3px;
   padding: 0 4px 2px 4px;
   font-size: 12pt;
+  background-color: #636363;
+  color: white;
 }
 
 input.open[type=checkbox]:active {
@@ -137,7 +178,7 @@ select.expense-type {
   -moz-appearance: none;
   appearance: none;
   width: 85%;
-  margin-top: 2px; margin-right: 1%;
+  margin-top: 2px;
   font-family: Lato;
   font-size: 15pt;
   font-weight: lighter;
@@ -148,6 +189,10 @@ select.expense-type {
   line-height: 1.5;
 }
 
+select.expense-type:hover {
+  background-color: #195d8c;
+}
+
 input.amount-due {
   -moz-appearance: none;
   appearance: none;
@@ -155,9 +200,124 @@ input.amount-due {
   font-family: Lato;
   font-size: 1.3em;
   font-weight: lighter;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+input.payment-due-time {
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 1%;
+  font-family: Lato;
+  font-size: 1.3em;
+  font-weight: lighter;
+  line-height: 1.5;
+  border-radius: 5px;
+}
+
+button.submit-button {
+  -moz-appearance: none;
+  appearance: none;
+  font-family: Lato;
+  font-size: 1.3em;
+  font-weight: lighter;
   background-color: #004C80;
   color: white;
+  border-top: 1px solid #FAF2EB; border-left: 1px solid #FAF2EB; border-bottom: 1px solid #636363; border-right: 1px solid #636363;
+  margin-top: 18px;
   line-height: 1.5;
-  border: 1px solid #FAF2EB;
-  border-radius: 3px;
+  border-radius: 5px;
+  float: right;
+}
+
+label {
+  color: #636363;
+}
+
+hr.payments-divider {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.new-e-dropdown {
+  background-color: #004C80;
+  color: white;
+  padding: 3px;
+  width: 150px;
+  margin-bottom: 35px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.3em;
+  font-family: Lato;
+  display: none;
+  margin-left: 39.5%;
+}
+
+.new-e-dropdown:hover {
+  cursor: pointer;
+}
+
+.new-e-container {
+  width: 100%;
+  display: inline-table;
+}
+
+@media only screen and (max-width: 1100px){
+  button.submit-button {
+    width: 50%;
+    margin-left: 25%; margin-bottom: 2%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  section.tablet-label {
+    width: 100%;
+    box-sizing: border-box;
+    display: table;
+  }
+
+  form.new-expense {
+    display: none;
+  }
+
+  .active {
+    display: inherit;
+    position: absolute;
+  }
+
+  div.new-e-dropdown {
+    display: inherit;
+    font-size: 1.5em;
+    width: 35%;
+    float: right;
+    margin-left: 0px; margin-bottom: 0px; margin-top: 30px;
+  }
+
+  h3.expenses-label {
+    width: 40%;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 720px){
+  section.expenses-container {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  h3.expenses-label {
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 4em;
+  }
+
+  div.new-e-dropdown {
+    float: left;
+    width: 100%;
+    font-size: 2em;
+  }
 }
