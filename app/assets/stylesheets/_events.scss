@@ -12,7 +12,7 @@ h1.events-header{
   color: #004C80;
   margin-top: 2%;
   margin-bottom: 3%;
-  margin-left: 35%;
+  margin-left: 10%;
 }
 
 div.new-event{
@@ -24,9 +24,9 @@ div.new-event{
   color: white;
   text-align: center;
   padding: 10px;;
-  margin-left: 69%;
+  margin-left: 80%;
   font-size: 1.2;
-  width: 15%;
+  width: 20%;
   //margin-bottom: 10%;
  }
 }
@@ -41,7 +41,7 @@ ul.events-body-table{
   margin-left: 10%;
   border: 3px solid #004C80;
   border-radius: 5px;
-  width: 75%;
+  width: 80%;
 li.events-main-table{
   list-style: none;
   border-bottom: 1px solid #004C80;
@@ -49,7 +49,7 @@ li.events-main-table{
   padding-bottom: 2%;
   color: #004C80;
   div.title{
-    text-align: center;
+    text-align: left;
     //margin-left: 10%;
     display: inline-block;
     width: 20%;
@@ -59,7 +59,7 @@ li.events-main-table{
     }
   }
   div.child{
-    text-align: center;
+    text-align: left;
     display: inline-block;
     width: 18%;
     i.fa{
@@ -68,12 +68,12 @@ li.events-main-table{
   }
   div.date{
     display: inline-block;
-    text-align: center;
+    text-align: left;
     width: 18%;
   }
   div.time{
     display: inline-block;
-    text-align: center;
+    text-align: left;
     width: 18%;
     i.fa{
       margin-right: 3px;
@@ -82,7 +82,7 @@ li.events-main-table{
   div.location{
     padding-left: 2%;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     margin-right: 1%;
     width: 20%;
   }
@@ -91,3 +91,159 @@ li:last-child{
   border-bottom:#FAF2EB;
 }
 }
+
+@media (max-width: 567px) {           //MOBILE
+
+  div.new-event{
+   a{
+    margin-left: 10%;
+   }
+  }
+  ul.events-body-table{
+    li.events-main-table{
+      div.title{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.child{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.date{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.time{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.location{
+        width: 80%;
+        margin-bottom: 7px;
+        margin-left: -1px;
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+  div.new-event{
+   a{
+    margin-left: 10%;
+   }
+  }
+  ul.events-body-table{
+    li.events-main-table{
+      div.title{
+        width: 38%;
+        margin-bottom: 7px;
+      }
+      div.child{
+        text-align: right;
+        width: 38%;
+        margin-bottom: 7px;
+      }
+      div.date{
+        width: 25%;
+      }
+      div.time{
+        width: 20%;
+      }
+      div.location{
+        width: 35%;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1025px) {            //DESKTOP
+  body.page-background{
+    background-color: #FAF2EB;
+  }
+
+  h1.events-header{
+    font-style: Gill Sans;
+    font-size: 30pt;
+    font-weight: lighter;
+    color: #004C80;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-left: 10%;
+  }
+
+  div.new-event{
+   a{
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 10px;;
+    margin-left: 75%;
+    font-size: 1.2;
+    width: 15%;
+   }
+  }
+
+  ul.events-body-table{
+    margin-top: 2%;
+    margin-left: 10%;
+    border: 3px solid #004C80;
+    border-radius: 5px;
+    width: 75%;
+  li.events-main-table{
+    list-style: none;
+    border-bottom: 1px solid #004C80;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    color: #004C80;
+    div.title{
+      text-align: left;
+      //margin-left: 10%;
+      display: inline-block;
+      width: 20%;
+      a{
+        text-decoration: none;
+        color: #004C80;
+      }
+    }
+    div.child{
+      text-align: left;
+      display: inline-block;
+      width: 18%;
+      i.fa{
+        margin-right: 2px;
+      }
+    }
+    div.date{
+      display: inline-block;
+      text-align: left;
+      width: 18%;
+    }
+    div.time{
+      display: inline-block;
+      text-align: left;
+      width: 18%;
+      i.fa{
+        margin-right: 3px;
+      }
+    }
+    div.location{
+      padding-left: 2%;
+      display: inline-block;
+      text-align: left;
+      margin-right: 1%;
+      width: 20%;
+    }
+  }
+  li:last-child{
+    border-bottom:#FAF2EB;
+  }
+  }
+
+} //END of DESKTOP
