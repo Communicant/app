@@ -18,9 +18,11 @@
 <body class="page-background">
   <section class="expenses-container" ng-app="Communicant">
     <div ng-controller="ListExpensesController">
+      <h3 class="expenses-label">Expenses</h3>
 
       <form name="new-expense" method="post" ng-submit="submitExpense()" class="new-expense">
         <label>Expense Type<select class="expense-type" ng-model="newExpense.type">
+          <option value="">Select a Type</option>
           <option value="School">School</option>
           <option value="Medical">Medical</option>
           <option value="Personal">Personal</option>
@@ -48,8 +50,8 @@
                 <div class="payment-paid-by">{{payment.paid_by}}</div>
                 <div class="payment-paid-at">{{payment.paid_at}}</div>
                 <div class="payment-paid-amount">{{payment.amount | currency}}</div>
-              </li>
-            </ul><hr />
+              </li><hr />
+            </ul>
             <div class="expense-amt-stl-o">Total Still Due: {{expense.amount_still_owed | currency}}</div>
           </li>
         </ul>
