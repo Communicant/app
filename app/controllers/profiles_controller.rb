@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   # before_filter :require_mediator
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /profiles
   # GET /profiles.json
@@ -70,6 +71,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :email, :phone_number, :child_name, :case_number, :mediator_name)
+      params.require(:profile).permit(:name, :email, :phone_number,:name2, :email2, :phone2, :child_name, :case_number, :mediator_name)
     end
 end
