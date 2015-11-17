@@ -3,10 +3,15 @@ class EventsController < ApplicationController
   before_action :logged_in_user
   helper_method :grab_child
   helper_method :event_titles
+  helper_method :user_type
 
 
   # GET /events
   # GET /events.json
+  # def user_type
+  #   if @logged_in_user = Mediator
+  # end
+
   def index
     @events = Event.all.order(:date)
   end
@@ -15,9 +20,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = Event.find(params[:id])
-    @approved_parents = approved_parents(@event)
-    # @children = Child.where('event_id = ?', @event.id).order(:first_name)
-    # @parents =
+    # @approved_parents = approved_parents(@event)
   end
 
   def grab_child
@@ -34,7 +37,9 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
     @event_titles = ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After School music class",
-        "After School sport practice", "After school other activity", "Play date"]
+        "After School sport practice", "After school other activity", "Play date", "Other..."]
+    @event_locations = ["123 Main St", "543 Lucas Dr", "786 Miami Ave", "617 Brighton Ln",
+        "7053 Green Ave", "8853 Independence Dr", "3172 Guerrilla Ct"]
   end
 
   # GET /events/1/edit
@@ -98,17 +103,17 @@ class EventsController < ApplicationController
       @event = Event.find(params[:id])
     end
 
-    def approved_parents(event)
-      approved_parents = []
-      approvals = event.approvals
-      approvals.each do |approval|
-        if approval.parent_approval
-          user = User.find(approval[:parent_id])
-          approved_parents.push({user: user, approved_at: approval.updated_at})
-        end
-      end
-      approved_parents
-    end
+    # def approved_parents(event)
+    #   approved_parents = []
+    #   approvals = event.approvals
+    #   approvals.each do |approval|
+    #     if approval.parent_approval
+    #       user = User.find(approval[:parent_id])
+    #       approved_parents.push({user: user, approved_at: approval.updated_at})
+    #     end
+    #   end
+    #   approved_parents
+    # end
 
 
     # Never trust parameters from the scary internet, only allow the white list through.

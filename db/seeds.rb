@@ -28,8 +28,9 @@ e = Event.create(
   :date    => Faker::Date.between(2.days.ago, Time.now),
   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
   :location => Faker::Address.street_address,
-  :parent_id => rand(1..5),
-  :child_id => rand(1..6)
+  :parent_id => rand(1..2),
+  :child_id => rand(1..6),
+  :mediator_id => 1
 )
 end
 # event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
@@ -123,4 +124,4 @@ Approval.create!(parent_id: 2, event_id: 4, parent_approval: true)
 
 #Cases --------------------------
 
-Case.create!()
+Profile.create!(case_number: 1, mediator_id: 1)

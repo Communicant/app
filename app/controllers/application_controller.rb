@@ -8,12 +8,6 @@ class ApplicationController < ActionController::Base
 #FOR TESTING PURPOSES: -----------------------
   # before_filter :log_parent_in
 
-  # def require_mediator
-  #   if !User.find(session[:user_id]).is_a?(Mediator)
-  #     redirect_to root_path, notice: "This area is for mediators only"
-  #   end
-  # end
-
   # def log_parent_in
   #   session[:user_id] = User.first.id
   # end
@@ -22,10 +16,14 @@ class ApplicationController < ActionController::Base
 
 # --------------------------------------------
 
-
+  def require_mediator
+    if !User.find(session[:user_id]).is_a?(Mediator)
+      redirect_to root_path, notice: "This area is for mediators only"
+    end
+  end
 
   def logged_in_user
-    @logged_in_user = User.find(session[:user_id]) 
+    @logged_in_user = User.find(session[:user_id])
   end
 
   def json_request?

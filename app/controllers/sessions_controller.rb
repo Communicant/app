@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
 
+  def new
+    redirect_to root_path
+  end
 
   def create
     user = User.find_by_email(params[:email])
@@ -44,7 +47,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     session[:type] = nil
-    redirect_to root, alert: "You have been logged out."
+    redirect_to root_path, alert: "You have been logged out."
   end
 
 

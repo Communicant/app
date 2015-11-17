@@ -26,7 +26,7 @@
 
 <p class="new-event-parent">
   <strong>Created by:</strong>
-  <%= @event.parents.try(:first).try(:first_name) %>
+  <%= @event.user.first_name %>
 </p>
 
 <p>

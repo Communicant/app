@@ -25,6 +25,10 @@
     <%= f.time_select :time, class:"update-time" %>
   </div>
   <div class="field">
+    <%= f.label :location, class:"update-location-label" %>
+    <%= f.select("location", @event_locations, {:include_blank => "Please select a location"}) %>
+  </div>
+  <div class="field">
     <%= f.label :parent_id %>
     <%= f.collection_select(:parent_id, User.where(id: session[:user_id]), :id, :first_name, {prompt: "Select Parent"}) %>
   </div>
@@ -32,7 +36,7 @@
     <%= f.label :child %>
     <%= collection_select(:event, :child_id, Child.all, :id, :first_name, {:prompt => 'Please select A Child'}) %>
   </div>
-<%= f.hidden_field :user_id, value: params[:user_id] %>
+    <%= f.hidden_field :user_id, value: params[:user_id] %>
   <div class="actions">
     <%= (f.submit class:"update-submit") %>
   </div>

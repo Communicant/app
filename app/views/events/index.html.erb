@@ -34,11 +34,12 @@
         </div>
         <div>
           <% if event.has_been_approved? == false %>
-            <% if @logged_in_user.id == event.user_id %>
-             <!-- || @logged_in_user == moderator  -->
+            <% if @logged_in_user.id == event.user_id || @logged_in_user.id == event.mediator_id %>
               Pending Approval
-            <% else %>
-              <button type="button"><%= link_to 'Approve', approvals_path(approval: {event_id: event.id, parent_id: @logged_in_user.id, parent_approval: true}), method: :post %></button>
+            <% elsif @logged_in_user.id == event.parent_id %>
+              <button type="button"><%= link_to 'Approve', approvals_path(approval:
+              {event_id: event.id, parent_id: @logged_in_user.id, parent_approval: true}), method: :post %>
+              </button>
             <% end %>
           <% else %>
               APPROVED
