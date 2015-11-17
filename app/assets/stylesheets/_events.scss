@@ -121,7 +121,17 @@ li:last-child{
 
   div.new-event{
    a{
+    //  text-decoration: none;
+    //  border: 1px solid #004C80;
+    //  background-color: #004C80;
+    //  border-radius: 5px;
+    //  color: white;
+    //  text-align: center;
+    //  padding: 10px;;
+    //  font-size: 1.2;
+    margin-bottom: 1%;
     margin-left: 10%;
+    width: 100%;
    }
   }
   ul.events-body-table{
@@ -163,7 +173,17 @@ li:last-child{
 @media (max-width: 1024px) and (min-width: 568px){      //TABLET
   div.new-event{
    a{
+    //  text-decoration: none;
+    //  border: 1px solid #004C80;
+    //  background-color: #004C80;
+    //  border-radius: 5px;
+    //  color: white;
+    //  text-align: center;
+    //  padding: 10px;;
+    //  font-size: 1.2;
+    margin-bottom: 1%;
     margin-left: 10%;
+    width: 50%;
    }
   }
   ul.events-body-table{
