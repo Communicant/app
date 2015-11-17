@@ -12,8 +12,9 @@
     </div>
   <% end %>
 <section class="update-event-container">
-  <div class="new-event-select" name="new event">
-    <%= f.label :event %><br>
+
+  <div class="field">
+    <%= f.label :event %>
     <%= f.select("title", @event_titles, {:include_blank => "Please select an event"})%>
   </div>
   <div class="field">

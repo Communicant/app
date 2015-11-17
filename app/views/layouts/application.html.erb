@@ -8,7 +8,11 @@
   <%= csrf_meta_tags %>
 
 
- <% unless request.path == root_path %>
+    <% if flash[:notice] %>
+        <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+     <% unless request.path == root_path || session[:user_id] == nil %>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
   <body class="page-background">
@@ -23,11 +27,9 @@
             <%= link_to 'Expenses', expenses_path, class: "header" %>
             <%= link_to 'Inbox', messages_path, class: "header" %>
             <%= link_to 'Events', events_path, class: "header" %>
-            <!-- <%# link_to 'Information', '#' %> This page still needs to be done.   -->
-          <!-- <section class="tabs-right"> -->
+
             <%= link_to 'Profile/Dashboard', profiles_path, class: "header" %>
             <%= link_to 'Log out', session_path(session[:user_id]), method: :delete, class: "header-log-out" %>
-          <!-- </section> -->
        </section>
       </nav>
     </main>

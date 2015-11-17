@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   helper_method :grab_child
   helper_method :event_titles
   helper_method :user_type
-
+  before_action :authenticate_user
 
   # GET /events
   # GET /events.json
