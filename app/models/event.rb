@@ -3,7 +3,8 @@ class Event < ActiveRecord::Base
   has_many :parents, through: :approvals, class_name: 'User'
   has_many :approvals
   has_one :mediator, through: :case
-  has_one :child, through: :event_children
+
+  # has_one :child, through: :event_children
 
   def has_been_approved?
     if self.approval == true
@@ -17,5 +18,5 @@ class Event < ActiveRecord::Base
     end
   end
 
-
+  has_one :child
 end

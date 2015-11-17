@@ -6,11 +6,15 @@ class MessagesController < ApplicationController
     @messages = Message.all
     respond_to do |format|
       format.html
-      format.json { @messages = @messages.map { |m| m.as_json.merge(name: User.find(m.user_id).first_name)}
-       render json: @messages }
+      format.json do
+        @messages = @messages.map do |m|
+           m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%H:%M:%S"))
+          end
+          render json: @messages
+       end
      end
   end
-  
+
   # GET /messages/1
   def show
   end
