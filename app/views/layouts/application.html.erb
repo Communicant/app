@@ -6,9 +6,12 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
 
-<% unless request.path == root_path %>
-  </head>
-  <body>
+
+ <% unless request.path == root_path %>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+  <body class="page-background">
+
     <main class="header-container">
       <header>
         <h2>Communicant</h2>
@@ -16,17 +19,14 @@
       <nav class="header-navig">
         <section class="tabs-header">
 
-
             <%= link_to 'Expenses', expenses_path, class: "header" %>
             <%= link_to 'Inbox', messages_path, class: "header" %>
             <%= link_to 'Events', events_path, class: "header" %>
             <!-- <%# link_to 'Information', '#' %> This page still needs to be done.   -->
           <!-- <section class="tabs-right"> -->
-
             <%= link_to 'Profile/Dashboard', profiles_path, class: "header" %>
-
             <%= link_to 'Log out', root_path, class: "header-log-out" %>
-          </section>
+          <!-- </section> -->
        </section>
       </nav>
     </main>
