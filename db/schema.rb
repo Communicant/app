@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20151118003033) do
 
+
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
     t.integer  "event_id"

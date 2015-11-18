@@ -45,8 +45,13 @@
     var tabHeader = $('a.header').filter(function() {
       return this.href == url;
     })
+    var tabHeader2 = $('a.head-resp').filter(function() {
+      return this.href == url;
+    })
 
     tabHeader.addClass('stay-blue').siblings().removeClass('stay-blue');
+    tabHeader2.addClass('stay-blue').siblings().removeClass('stay-blue');
+
   })
 })();
 
