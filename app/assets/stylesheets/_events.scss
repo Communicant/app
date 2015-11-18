@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body.page-background{
   background-color: #FAF2EB;
+  font-family: Helvetica;
 }
 
 h1.events-header{
@@ -10,9 +11,9 @@ h1.events-header{
   font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 2%;
-  margin-bottom: 3%;
-  margin-left: 35%;
+  //margin-top: -5px;
+  //margin-bottom: 1%;
+  margin-left: 15%;
 }
 
 div.new-event{
@@ -23,11 +24,12 @@ div.new-event{
   border-radius: 5px;
   color: white;
   text-align: center;
-  padding: 10px;;
-  margin-left: 69%;
-  font-size: 1.2;
+  padding: 5px;
+  margin-right: 9.5%;
+  font-size: 1.3em;
   width: 15%;
-  //margin-bottom: 10%;
+  margin-top: -4%;
+  float: right;
  }
 }
 
@@ -38,56 +40,305 @@ div.new-event{
 
 ul.events-body-table{
   margin-top: 2%;
-  margin-left: 10%;
-  border: 3px solid #004C80;
-  border-radius: 5px;
-  width: 75%;
+  margin-left: 12%;
+  width: 76%;
 li.events-main-table{
   list-style: none;
-  border-bottom: 1px solid #004C80;
-  padding-top: 2%;
+  //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
+  width: 100%;
+    .section {
+    background-color: #DEEDFA;
+    border-radius: 5px;
+  	clear: both;
+  	padding: 3px;
+  	margin: 0px;
+    }
+    .col {
+  	display: block;
+  	float:left;
+  	margin: 1% 0 1% 1.6%;
+    }
+    .col:first-child { margin-left: 0;
+    }
+    .group:before,
+    .group:after {
+    	content:"";
+    	display:table;
+    }
+    .group:after {
+    	clear:both;
+    }
+    .group {
+        zoom:1; /* For IE 6/7 */
+    }
+    .span-1-of-8 {
+      	width: 11.1%;
+    }
+    .span-2-of-8{
+      width: 23.8%;
+    }
+
+
+
   div.title{
-    text-align: center;
-    //margin-left: 10%;
-    display: inline-block;
-    width: 20%;
-    a{
+      font-weight: bolder;
       text-decoration: none;
       color: #004C80;
-    }
+      padding-left: 10px;
   }
   div.child{
-    text-align: center;
-    display: inline-block;
-    width: 18%;
     i.fa{
       margin-right: 2px;
     }
   }
   div.date{
-    display: inline-block;
-    text-align: center;
-    width: 18%;
   }
   div.time{
-    display: inline-block;
-    text-align: center;
-    width: 18%;
     i.fa{
       margin-right: 3px;
     }
+
   }
   div.location{
-    padding-left: 2%;
-    display: inline-block;
-    text-align: center;
-    margin-right: 1%;
-    width: 20%;
+    i.fa{
+      margin-right: 1px;
+    }
+  }
+  div.approved{
+    text-align: right;
   }
 }
 li:last-child{
   border-bottom:#FAF2EB;
 }
 }
+
+@media (max-width: 567px) {           //MOBILE
+
+  div.new-event{
+   a{
+    margin-bottom: 1%;
+    margin-left: 15%;
+    width: 100%;
+   }
+  }
+  ul.events-body-table{
+    li.events-main-table{
+      div.section {
+      background-color: #DEEDFA;
+      border-radius: 5px;
+      margin-left: -5%;
+      div.title{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.child{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.date{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.time{
+        width: 80%;
+        margin-bottom: 7px;
+      }
+      div.location{
+        width: 80%;
+        margin-bottom: 7px;
+        //margin-left: -1px;
+      }
+
+    }
+  }
+}
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-right: 9.5%;
+  font-size: 1.3em;
+  width: 75%;
+  margin-top: 1%;
+  //float: right;
+ }
+ }
+} //END OF MOBILE
+
+
+
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+
+  h1.events-header{
+    margin-left: 7%;
+  }
+  div.new-event{
+   a{
+    margin-bottom: 1%;
+    margin-left: 10%;
+    width: 50%;
+   }
+  }
+  ul.events-body-table{
+    li.events-main-table{
+      margin-left: -10%;
+      div.section {
+      background-color: #DEEDFA;
+      border-radius: 5px;
+      div.time{
+        text-align: right;
+      }
+      div.location{
+        //margin-left: -0.5%;
+      }
+      div.approved{
+        text-align: right;
+        margin-left: -0.5%;
+      }
+      .span-1-of-8 {
+        	width: 20%;
+      }
+      .span-2-of-8{
+        width: 45%;
+      }
+    }
+  }
+}
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-right: 20%;
+  font-size: 1.3em;
+  width: 70%;
+  margin-top: 1%;
+  //float: right;
+ }
+ }
+} //END OF TABLET
+
+
+@media (min-width: 1025px) {            //DESKTOP
+  body.page-background{
+    background-color: #FAF2EB;
+    font-family: Helvetica;
+  }
+
+  h1.events-header{
+    font-style: Gill Sans;
+    font-size: 30pt;
+    font-weight: lighter;
+    color: #004C80;
+    //margin-top: 2%;
+    //margin-bottom: 3%;
+    margin-left: 15%;
+  }
+
+  div.new-event{
+   a{
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 5px;;
+    margin-left: 79%;
+    font-size: 1.3em;
+    font-weight: lighter;
+    width: 20%;
+   }
+  }
+
+  ul.events-body-table{
+    margin-top: 2%;
+    margin-left: 12%;
+    width: 78.5%;
+  li.events-main-table{
+    list-style: none;
+    //padding-top: 3%;
+    padding-bottom: 2%;
+    color: #004C80;
+    width: 100%;
+      .section {
+        background-color: #DEEDFA;
+        border-radius: 5px;
+      	clear: both;
+      	padding: 3px;
+      	margin: 0px;
+      }
+      .col {
+      	display: block;
+      	float:left;
+      	margin: 1% 0 1% 1.6%;
+      }
+      .col:first-child {
+        margin-left: 0;
+      }
+      .group:before,
+      .group:after {
+      	content:"";
+      	display:table;
+      }
+      .group:after {
+      	clear:both;
+      }
+      .group {
+        zoom:1; /* For IE 6/7 */
+      }
+      .span-1-of-8 {
+        width: 11.1%;
+      }
+      .span-2-of-8{
+        width: 23.8%;
+      }
+
+
+
+      div.title{
+        font-weight: bolder;
+        text-decoration: none;
+        color: #004C80;
+      }
+      div.child{
+        i.fa{
+          margin-right: 2px;
+        }
+      }
+      div.date{
+      }
+      div.time{
+        i.fa{
+          margin-right: 3px;
+        }
+
+      }
+      div.location{
+        i.fa{
+          margin-right: 1px;
+        }
+      }
+      div.approved{
+        text-align: right;
+        margin-left: -1%;
+        }
+      }
+  }
+  li:last-child{
+    border-bottom:#FAF2EB;
+  }
+  }//END of DESKTOP

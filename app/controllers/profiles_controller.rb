@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
-  # before_filter :require_mediator
+  before_filter :require_mediator
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
+
 
   # GET /profiles
   # GET /profiles.json
@@ -29,7 +31,7 @@ class ProfilesController < ApplicationController
 
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
+        format.html { redirect_to profiles_path, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
@@ -43,7 +45,7 @@ class ProfilesController < ApplicationController
   def update
     respond_to do |format|
       if @profile.update(profile_params)
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
+        format.html { redirect_to profiles_path, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
       else
         format.html { render :edit }
@@ -70,6 +72,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :email, :phone_number, :child_name, :case_number, :mediator_name)
+      params.require(:profile).permit(:name, :email, :phone_number,:name2, :email2, :phone2, :child_name, :case_number, :mediator_name)
     end
 end

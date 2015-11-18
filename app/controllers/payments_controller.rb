@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /payments
   # GET /payments.json
@@ -25,7 +26,7 @@ class PaymentsController < ApplicationController
   # POST /payments
   # POST /payments.json
   def create
-    @payment = Payment.new(paid_at: Date.today, created_by: 1, expense_id: (params[:payment][:expense_id]), paid_by: 1, amount: (params[:payment][:amount]))
+    @payment = Payment.new(paid_at: Date.today, created_by: logged_in_user.id, expense_id: (params[:payment][:expense_id]), paid_by: logged_in_user.id, amount: (params[:payment][:amount]))
 
     respond_to do |format|
       if @payment.save

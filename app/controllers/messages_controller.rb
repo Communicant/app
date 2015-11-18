@@ -1,15 +1,18 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
 
   def index
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :desc)
     respond_to do |format|
       format.html
       format.json do
         @messages = @messages.map do |m|
-           m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%H:%M:%S"))
+          Time.use_zone("Eastern Time (US & Canada)") do
+            m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%l:%M %p"))
           end
+        end
           render json: @messages
        end
      end
@@ -31,7 +34,7 @@ class MessagesController < ApplicationController
   # POST /messages
   def create
     # @parent = Parent.find_by(params[:id])
-    @message = Message.new(user_id: 1, date: Date.today, time: Time.now, body: (params[:message][:body]))
+    @message = Message.new(user_id: logged_in_user.id, date: Date.today, time: Time.now, body: (params[:message][:body]))
 
     if @message.save
       redirect_to @message, notice: 'Message was successfully created.'

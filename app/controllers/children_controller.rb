@@ -1,5 +1,6 @@
 class ChildrenController < ApplicationController
   before_action :set_child, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /children
   def index
@@ -24,7 +25,7 @@ class ChildrenController < ApplicationController
     @child = Child.new(child_params)
 
     if @child.save
-      redirect_to @child, notice: 'Child was successfully created.'
+      redirect_to profiles_path, notice: 'Child was successfully created.'
     else
       render :new
     end
@@ -33,7 +34,7 @@ class ChildrenController < ApplicationController
   # PATCH/PUT /children/1
   def update
     if @child.update(child_params)
-      redirect_to @child, notice: 'Child was successfully updated.'
+      redirect_to profiles_path, notice: 'Child was successfully updated.'
     else
       render :edit
     end
@@ -53,6 +54,6 @@ class ChildrenController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def child_params
-      params.require(:child).permit(:first_name, :age, :parent_id)
+      params.require(:child).permit(:first_name, :age, :parent_id, :case_number)
     end
 end

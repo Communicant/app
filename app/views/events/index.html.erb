@@ -1,86 +1,62 @@
-<!-- <nav class="navbar navbar-default">
-  <div class="container-fluid"> -->
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <!-- <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Communicant</a>
-    </div> -->
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'Events', events_path, class: "header-profile" %><span class="sr-only">(current)</span></a></li>
-        <li><%= link_to 'Expenses', expenses_path, class: "header-profile" %></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <button type="button" class="btn btn-default navbar-btn">Log Out</button>
-      </ul> -->
-  <!-- </div> -->
-  <!-- /.container-fluid -->
-<!-- </nav> -->
-
-
-<p id="notice"><%= notice %></p>
+<p id="notice"><%# notice %></p>
 
 <h1 class="events-header">Your Upcoming Events</h1>
 
-<div class="new-event"><%=link_to 'Add New Event', new_event_path %></div>
 
-
-<!-- <table class="events-table"> -->
-  <!-- <thead class="events-thead"> -->
-    <!-- <tr class="events-title-row"> -->
-      <!-- <th>Event</th> -->
-      <!-- <th>Description</th> -->
-      <!-- <th>Time</th> -->
-      <!-- <th>Parent</th> -->
-      <!-- <th>Child</th> -->
-      <!-- <th>Date</th> -->
-      <!-- <th>Time</th> -->
-      <!-- <th>Location</th> -->
-      <!-- <th>Mediator</th> -->
-      <!-- <th>Pending</th> -->
-
-      <!-- <th>Status</th> -->
-      <!-- <th colspan="3"></th> -->
-    <!-- </tr> -->
-  <!-- </thead> -->
+<div class="new-event"><%=link_to 'Add New Event', new_event_path(user_id: @logged_in_user.id) %></div>
 
   <ul class="events-body-table">
     <% @events.each do |event| %>
       <li class="events-main-table">
 
-        <div class="title">
-          <i class="fa fa-arrow-right"></i>
-          <%= link_to event.title, event %>
-        </div>
-        <div class="child">
-          <i class="fa fa-child"></i>
-         <%= grab_child %>
+      <div class="section group">
 
-          <!-- <%# event.child.find(1).first_name %> TODO: Figure out why I can't access Child info -->
+
+        <div class="title col span-2-of-8">
+          <%= event.title %>
         </div>
 
-        <!-- <td class="descrip"><%# event.description %></td> -->
-        <div class="date">
+
+        <div class="date col span-1-of-8">
           <i class="fa fa-calendar"></i>
-          <%= event.date %>
+          <%= event.date.try(:strftime, "%b %e %Y") %>
         </div>
-        <div class="time">
+
+        <div class="time col span-1-of-8">
           <i class="fa fa-clock-o">
           </i><%= event.time.try(:strftime, "%I:%M%P") %>
         </div>
-        <div class="location">
+
+        <div class="location col span-2-of-8">
           <i class="fa fa-location-arrow"></i>
           <%= event.location %>
         </div>
-        <!-- <td class="parent">Mom<%# event.parents.try(:first).try(:first_name) %></td> -->
-        <!-- <td class="pending"><button type="button" name="button">Pending</button></td> -->
+
+        <div class="child col span-1-of-8">
+          <i class="fa fa-child"></i>
+
+          <% if event.child_id %>
+          <%= Child.find(event.child_id).first_name %>
+          <% end %>
+        </div>
+
+        <div class="approved col span-1-of-8">
+          <% if event.has_been_approved? == false %>
+            <% if @logged_in_user.id == event.user_id || @logged_in_user.id == event.mediator_id %>
+              <div class="pending-approval">
+                Pending Approval
+              </div>
+            <% elsif @logged_in_user.id == event.user_id %>
+              <button class="button-approved" type="button"><%= link_to 'Approve', approvals_path(approval:
+              {event_id: event.id, parent_id: @logged_in_user.id, parent_approval: true}), method: :post %>
+              </button>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+
     <% end %>
+    <%# will_paginate @events %>
+
   </li>
 </ul>

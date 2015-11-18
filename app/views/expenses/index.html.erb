@@ -18,39 +18,48 @@
 <body class="page-background">
   <section class="expenses-container" ng-app="Communicant">
     <div ng-controller="ListExpensesController">
-
-      <form name="new-expense" method="post" ng-submit="submitExpense()" class="new-expense">
-        <label>Expense Type<select class="expense-type" ng-model="newExpense.type">
-          <option value="School">School</option>
-          <option value="Medical">Medical</option>
-          <option value="Personal">Personal</option>
-          <option value="Other">Other</option>
-        </select></label>
-        <label>Amount<input type="number" ng-model="newExpense.amount" class="amount-due"></input></label>
-        <label>Due<input type="datetime-local" ng-model="newExpense.due_at" class="payment-due-time"></input></label>
-        <button type="submit" name="submit-expense" class="submit-button">Submit</button>
-      </form>
+      <section class="tablet-label">
+        <h3 class="expenses-label">Expenses</h3>
+        <div class="new-e-dropdown slideInDown">Add New Expense</div>
+      </section>
+      <section class="new-e-container">
+        <form name="new-expense" method="post" ng-submit="submitExpense()" class="new-expense">
+          <label>Expense Type<select class="expense-type" ng-model="newExpense.type">
+            <option value="">Select a Type</option>
+            <option value="School">School</option>
+            <option value="Medical">Medical</option>
+            <option value="Personal">Personal</option>
+            <option value="Other">Other</option>
+          </select></label>
+          <label>Amount<input type="number" ng-model="newExpense.amount" class="amount-due" placeholder=" Select an Amount"></input></label>
+          <label>Due<input type="date" ng-model="newExpense.due_at" class="payment-due-time"></input></label>
+          <button type="submit" name="submit-expense" class="submit-button">Submit</button>
+        </form>
+      </section>
 
       <div class="expenses-scroll">
         <ul class="expenses-listing">
+          <i class="fa fa-refresh fa-spin" ng-hide="expenses"></i>
           <li class="expenses-item" ng-repeat="expense in expenses">
-            <section class="expense-tab">
+            <section class="expense-tab" ng-class="{true: 'blue', false: 'red'}[expense.due_at > Date.now()]">
               <input type="checkbox" ng-model="collapse"></input>
-              <div class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</div>
-              <div class="expense-amount">{{expense.amount | currency}}</div>
+              <div class="expense-type ng-cloak">{{expense.type}}:</div>
+              <div class="expense-due ng-cloak"> Due ({{expense.due_at | date : medium : timezone }})</div>
+              <div class="expense-amount ng-cloak">{{expense.amount | currency}}</div>
             </section>
-            <ul class="payments-listing" ng-show="collapse">
+            <ul class="payments-listing slideInDown" ng-show="collapse">
+              <hr class="payments-divider" />
               <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)" class="add-payment-form">
-                <label>Amount <input type="number" ng-model="newPayment.payment.amount"></input></label>
+                <label class="amt-label">Amount </label><input type="number" ng-model="newPayment.payment.amount" class="np-amt"></input>
                 <button type="submit" name="submit-expense" class="submit-payment-button">Add Payment</button>
               </form>
               <li class="payments-item" ng-repeat="payment in expense.payments">
-                <div class="payment-paid-by">{{payment.paid_by}}</div>
-                <div class="payment-paid-at">{{payment.paid_at}}</div>
-                <div class="payment-paid-amount">{{payment.amount | currency}}</div>
+                <div class="payment-paid-by ng-cloak">{{payment.paid_by}}</div>
+                <div class="payment-paid-at ng-cloak">Applied on: {{payment.paid_at}}</div>
+                <div class="payment-paid-amount ng-cloak">{{payment.amount | currency}}</div>
               </li>
-            </ul><hr />
-            <div class="expense-amt-stl-o">Total Still Due: {{expense.amount_still_owed | currency}}</div>
+            </ul>
+            <div class="expense-amt-stl-o ng-cloak"><strong>Total Still Due:</strong> {{expense.amount_still_owed | currency}}</div>
           </li>
         </ul>
       </div>
@@ -58,3 +67,8 @@
     </div>
   </section><!--.expense-container-->
 </body><!--.page-background-->
+
+<script>$( '.new-e-dropdown' ).on('click', function(event){
+  $('.new-e-container').toggleClass('active');
+});
+</script>
