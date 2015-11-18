@@ -2,6 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="events-header">Your Upcoming Events</h1>
+<p id="notice"><%# notice %></p>
 
 <div class="new-event"><%=link_to 'Add New Event', new_event_path(user_id: @logged_in_user.id) %></div>
 
@@ -57,5 +58,7 @@
         </div>
 
     <% end %>
+    <%# will_paginate @events %>
+
   </li>
 </ul>

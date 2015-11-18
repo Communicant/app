@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20151118003033) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "cases", force: :cascade do |t|
+    t.integer  "case_number"
+    t.integer  "mediator_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "children", force: :cascade do |t|
     t.string   "first_name"
     t.integer  "age"

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :messages
+  has_many :events
 
   before_save { self.email = email.downcase }
 
@@ -12,7 +13,6 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
 
-  has_many :events
   # has_many :approvals
 
 end

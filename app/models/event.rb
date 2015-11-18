@@ -1,3 +1,6 @@
+# require 'will_paginate/array'
+
+
 class Event < ActiveRecord::Base
   belongs_to :case
   belongs_to :user
@@ -21,4 +24,7 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def will_paginate
+    Event.order('created_at DESC').page(params[:page]).per_page(10)
+  end
 end
