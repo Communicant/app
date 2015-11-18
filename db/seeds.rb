@@ -108,12 +108,12 @@ Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad",
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
 
 #Children -------------------
-Child.create!(first_name: "Mike", age: 10, parent_id: 1)
-Child.create!(first_name: "Sarah", age: 7, parent_id: 1)
-Child.create!(first_name: "Jan", age: 9, parent_id: 1)
-Child.create!(first_name: "Harry", age: 13, parent_id: 1)
-Child.create!(first_name: "Calliope", age: 2, parent_id: 1)
-Child.create!(first_name: "Annalise", age: 16, parent_id: 1)
+Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 3)
+Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Jan", age: 9, parent_id: 1, case_number: 2)
+Child.create!(first_name: "Harry", age: 13, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Calliope", age: 2, parent_id: 1, case_number: 2)
+Child.create!(first_name: "Annalise", age: 16, parent_id: 1, case_number: 3)
 
 #Approval -----------------------
 
