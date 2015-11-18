@@ -28,7 +28,7 @@ e = Event.create(
   :date    => Faker::Date.between(2.days.ago, Time.now),
   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
   :location => Faker::Address.street_address,
-  :parent_id => rand(1..2),
+  :user_id => rand(1..2),
   :child_id => rand(1..6),
   :mediator_id => 1
 )
@@ -108,11 +108,19 @@ Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad",
 Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
 
 #Children -------------------
+<<<<<<< HEAD
 Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 1)
 Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
 Child.create!(first_name: "Jan", age: 9, parent_id: 1, case_number: 2)
 Child.create!(first_name: "Harry", age: 13, parent_id: 1, case_number: 2)
 Child.create!(first_name: "Calliope", age: 2, parent_id: 1, case_number: 3)
+=======
+Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 3)
+Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Jan", age: 9, parent_id: 1, case_number: 2)
+Child.create!(first_name: "Harry", age: 13, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Calliope", age: 2, parent_id: 1, case_number: 2)
+>>>>>>> develop
 Child.create!(first_name: "Annalise", age: 16, parent_id: 1, case_number: 3)
 
 #Approval -----------------------
@@ -121,7 +129,10 @@ Approval.create!(parent_id: 1, event_id: 1, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 2, parent_approval: true)
 Approval.create!(parent_id: 1, event_id: 3, parent_approval: true)
 Approval.create!(parent_id: 2, event_id: 4, parent_approval: true)
+<<<<<<< HEAD
 
 #Cases --------------------------
 
 # Profile.create!(case_number: 1, mediator_id: 1)
+=======
+>>>>>>> develop

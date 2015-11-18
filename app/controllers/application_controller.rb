@@ -5,16 +5,21 @@ class ApplicationController < ActionController::Base
 
   layout "application", except: [:index, :home]
 
+
 #FOR TESTING PURPOSES: -----------------------
+
   # before_filter :log_parent_in
 
   # def log_parent_in
   #   session[:user_id] = User.first.id
   # end
 
-  # skip_before_action :verify_authenticity_token, if: :json_request?
 
 # --------------------------------------------
+
+  # Necessary in order for new messages, expenses, and payments to be created through json! 
+skip_before_action :verify_authenticity_token, if: :json_request?
+
 
   def require_mediator
     if !User.find(session[:user_id]).is_a?(Mediator)

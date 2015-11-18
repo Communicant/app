@@ -4,13 +4,15 @@ class MessagesController < ApplicationController
 
 
   def index
-    @messages = Message.all
+    @messages = Message.all.order(created_at: :desc)
     respond_to do |format|
       format.html
       format.json do
         @messages = @messages.map do |m|
-           m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%H:%M:%S"))
+          Time.use_zone("Eastern Time (US & Canada)") do
+            m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%l:%M:%S %p"))
           end
+        end
           render json: @messages
        end
      end

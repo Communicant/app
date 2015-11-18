@@ -4,20 +4,20 @@ class ExpensesController < ApplicationController
 
   # GET /expenses
   def index
-    @expenses = Expense.all
-    respond_to do |format|
-      format.html
-      format.json do
-      @expenses = @expenses.map.each do |e|
-        payments = e.payments.to_a.map do |payment|
-          payment.as_json.merge(paid_by: User.find(payment.paid_by).first_name)
-        end
-        e.as_json.merge({type: e.type, payments: payments, payments_total: e.payments_total, amount_still_owed: e.amount_still_owed})
-      end
-       render json: @expenses
+     @expenses = Expense.all.order(:due_at)
+     respond_to do |format|
+       format.html
+       format.json do
+       @expenses = @expenses.map.each do |e|
+         payments = e.payments.to_a.map do |payment|
+           payment.as_json.merge(paid_by: User.find(payment.paid_by).first_name)
+         end
+         e.as_json.merge({type: e.type, payments: payments, payments_total: e.payments_total, amount_still_owed: e.amount_still_owed})
        end
-     end
-  end
+        render json: @expenses
+        end
+      end
+   end
 
   # GET /expenses/1
   def show

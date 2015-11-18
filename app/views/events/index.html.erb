@@ -1,38 +1,49 @@
 
+<p id="notice"><%= notice %></p>
+
 <h1 class="events-header">Your Upcoming Events</h1>
 <p id="notice"><%# notice %></p>
 
 <div class="new-event"><%=link_to 'Add New Event', new_event_path(user_id: @logged_in_user.id) %></div>
 
-
   <ul class="events-body-table">
     <% @events.each do |event| %>
       <li class="events-main-table">
 
-        <div class="title">
+      <div class="section group">
+
+
+        <div class="title col span-2-of-8">
           <i class="fa fa-arrow-right"></i>
-          <%= link_to event.title, event %>
+          <%# link_to event.title, event %>
+          <%= event.title %>
         </div>
-        <div class="child">
+
+
+        <div class="date col span-1-of-8">
+          <i class="fa fa-calendar"></i>
+          <%= event.date %>
+        </div>
+
+        <div class="time col span-1-of-8">
+          <i class="fa fa-clock-o">
+          </i><%= event.time.try(:strftime, "%I:%M%P") %>
+        </div>
+
+        <div class="location col span-2-of-8">
+          <i class="fa fa-location-arrow"></i>
+          <%= event.location %>
+        </div>
+
+        <div class="child col span-1-of-8">
           <i class="fa fa-child"></i>
 
           <% if event.child_id %>
           <%= Child.find(event.child_id).first_name %>
           <% end %>
         </div>
-        <div class="date">
-          <i class="fa fa-calendar"></i>
-          <%= event.date %>
-        </div>
-        <div class="time">
-          <i class="fa fa-clock-o">
-          </i><%= event.time.try(:strftime, "%I:%M%P") %>
-        </div>
-        <div class="location">
-          <i class="fa fa-location-arrow"></i>
-          <%= event.location %>
-        </div>
-        <div>
+
+        <div class="approved col span-1-of-8">
           <% if event.has_been_approved? == false %>
             <% if @logged_in_user.id == event.user_id || @logged_in_user.id == event.mediator_id %>
               Pending Approval
@@ -45,6 +56,7 @@
               APPROVED
           <% end %>
         </div>
+
     <% end %>
     <%# will_paginate @events %>
 

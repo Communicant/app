@@ -17,35 +17,37 @@
     <%= f.label :event %>
     <%= f.select("title", @event_titles, {:include_blank => "Please select an event"})%>
   </div>
+
   <div class="field">
     <%= f.label :date, class:"update-date-label" %>
-    <%= f.date_select :date, class:"update-date" %>
+   <%= f.date_field :date, class:"update-date" %>
   </div>
+
   <div class="field">
     <%= f.label :time, class:"update-time-label" %>
-    <%= f.time_select :time, class:"update-time" %>
+    <%= f.time_field :time, class:"update-time" %>
   </div>
+
   <div class="field">
     <%= f.label :location, class:"update-location-label" %>
-    <%= f.select("location", @event_locations, {:include_blank => "Please select a location"}) %>
+    <%= f.select("location", @event_locations, {:include_blank => "Please select a location"}, {class:"update-location-field"}) %>
   </div>
-  <div class="field">
-    <%= f.label :parent_id %>
-    <%= f.collection_select(:parent_id, User.where(id: session[:user_id]), :id, :first_name, {prompt: "Select Parent"}) %>
-  </div>
+  <!-- <div class="field">
+    <%# f.label :parent_id %>
+    <%# f.collection_select(:parent_id, User.where(id: session[:user_id]), :id, :first_name, {prompt: "Select Parent"}) %> -->
+  <!-- </div> -->
+
   <div class="field">
     <%= f.label :child %>
-    <%# for @event.child_id %>
-    <%= collection_select(:event, :child_id, Child.all, :id, :first_name, {:prompt => 'Please select A Child'}) %>
-    <%# end %>
+    <%= collection_select(:event, :child_id, Child.all, :id, :first_name, {:prompt => 'Please select A Child'}, {class: "update-date-label"}) %>
   </div>
     <%= f.hidden_field :user_id, value: params[:user_id] %>
+
+
   <div class="actions">
-    <%= (f.submit class:"update-submit") %>
-  </div>
-
-  <%= link_to 'Details', @event, class:"update-details" %>
+    <%= (f.submit class:"update-create") %>
+  <%# link_to 'Details', @event, class:"update-details" %>
   <%= link_to 'Back', events_path, class:"update-back" %>
-
+ </div>
 <% end %>
 </section>
