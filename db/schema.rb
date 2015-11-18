@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116005050) do
+ActiveRecord::Schema.define(version: 20151118003033) do
 
   create_table "approvals", force: :cascade do |t|
     t.boolean  "parent_approval"
