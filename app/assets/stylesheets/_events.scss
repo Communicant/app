@@ -106,21 +106,21 @@ li.events-main-table{
   }
   div.approved{
     text-align: right;
-    margin-left: -1%;
-    div.pending-approval{
+    //margin-left: -1%;
+    //div.pending-approval{
       //border: 1px solid lightgray;
       //background-color: lightgray;
       //border-radius: 5px;
-      color: #636363;
-    }
-    div.approv{
-      border: 1px solid #004C80;
-      background-color: #004C80;
-      border-radius: 5px;
-      color: white;
-      width: 10%;
-      text-align: center;
-    }
+      //color: #636363;
+    //}
+    //div.approv{
+      // border: 1px solid #004C80;
+      // background-color: #004C80;
+      // border-radius: 5px;
+      // color: white;
+      // width: 10%;
+      // text-align: center;
+    //}
   }
 }
 li:last-child{
@@ -168,20 +168,20 @@ li:last-child{
         width: 80%;
         margin-bottom: 7px;
         text-align: left;
-        margin-left: 1%;
-        div.pending-approval{
+        //margin-left: 1%;
+        //div.pending-approval{
           //border: 1px solid lightgray;
           //background-color: lightgray;
           //border-radius: 5px;
-          color: #636363;
-        }
-        div.approv{
-          border: 1px solid #004C80;
-          background-color: #004C80;
-          border-radius: 5px;
-          color: white;
-          width: 40%;
-        }
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 40%;
+        //}
       }
     }
   }
@@ -217,20 +217,20 @@ li:last-child{
       }
       div.approved{
         text-align: right;
-        margin-left: 1.9%;
-        div.pending-approval{
+        margin-left: -0.5%;
+        //div.pending-approval{
           //border: 1px solid lightgray;
           //background-color: lightgray;
           //border-radius: 5px;
-          color: #636363;
-        }
-        div.approv{
-          border: 1px solid #004C80;
-          background-color: #004C80;
-          border-radius: 5px;
-          color: white;
-          width: 80%;
-        }
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 80%;
+        //}
       }
       .span-1-of-8 {
         	width: 20%;
@@ -346,19 +346,19 @@ li:last-child{
       div.approved{
         text-align: right;
         margin-left: -1%;
-        div.pending-approval{
+        //div.pending-approval{
           //border: 1px solid lightgray;
           //background-color: lightgray;
           //border-radius: 5px;
-          color: #636363;
-        }
-        div.approv{
-          border: 1px solid #004C80;
-          background-color: #004C80;
-          border-radius: 5px;
-          color: white;
-          width: 80%;
-        }
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 80%;
+        //}
         }
       }
   }
