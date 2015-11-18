@@ -14,9 +14,11 @@ class ApplicationController < ActionController::Base
   #   session[:user_id] = User.first.id
   # end
 
-  # skip_before_action :verify_authenticity_token, if: :json_request?
 
 # --------------------------------------------
+
+skip_before_action :verify_authenticity_token, if: :json_request?
+
 
   def require_mediator
     if !User.find(session[:user_id]).is_a?(Mediator)
