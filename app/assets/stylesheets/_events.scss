@@ -24,7 +24,7 @@ div.new-event{
   border-radius: 5px;
   color: white;
   text-align: center;
-  padding: 10px;;
+  padding: 5px;;
   margin-left: 79%;
   font-size: 1.2;
   width: 20%;
@@ -269,9 +269,10 @@ li:last-child{
     border-radius: 5px;
     color: white;
     text-align: center;
-    padding: 10px;;
+    padding: 5px;;
     margin-left: 79%;
-    font-size: 1.2;
+    font-size: 1.3em;
+    font-weight: lighter;
     width: 20%;
    }
   }
@@ -279,7 +280,7 @@ li:last-child{
   ul.events-body-table{
     margin-top: 2%;
     margin-left: 12%;
-    width: 76%;
+    width: 78.5%;
   li.events-main-table{
     list-style: none;
     //padding-top: 3%;
