@@ -11,8 +11,8 @@ h1.events-header{
   font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 2%;
-  margin-bottom: 3%;
+  //margin-top: -5px;
+  //margin-bottom: 1%;
   margin-left: 15%;
 }
 
@@ -28,6 +28,7 @@ div.new-event{
   margin-left: 79%;
   font-size: 1.2;
   width: 20%;
+  margin-top: -3%;
  }
 }
 
@@ -38,11 +39,11 @@ div.new-event{
 
 ul.events-body-table{
   margin-top: 2%;
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 12%;
+  width: 76%;
 li.events-main-table{
   list-style: none;
-  padding-top: 2%;
+  //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
   width: 100%;
@@ -50,7 +51,7 @@ li.events-main-table{
     background-color: #DEEDFA;
     border-radius: 5px;
   	clear: both;
-  	padding: 0px;
+  	padding: 3px;
   	margin: 0px;
     }
     .col {
@@ -255,8 +256,8 @@ li:last-child{
     font-size: 30pt;
     font-weight: lighter;
     color: #004C80;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    //margin-top: 2%;
+    //margin-bottom: 3%;
     margin-left: 15%;
   }
 
@@ -277,11 +278,11 @@ li:last-child{
 
   ul.events-body-table{
     margin-top: 2%;
-    margin-left: 10%;
-    width: 80%;
+    margin-left: 12%;
+    width: 76%;
   li.events-main-table{
     list-style: none;
-    padding-top: 2%;
+    //padding-top: 3%;
     padding-bottom: 2%;
     color: #004C80;
     width: 100%;
@@ -289,7 +290,7 @@ li:last-child{
         background-color: #DEEDFA;
         border-radius: 5px;
       	clear: both;
-      	padding: 0px;
+      	padding: 3px;
       	margin: 0px;
       }
       .col {
