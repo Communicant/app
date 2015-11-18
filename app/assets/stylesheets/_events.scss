@@ -73,8 +73,11 @@ li.events-main-table{
     .group {
         zoom:1; /* For IE 6/7 */
     }
-    .span-1-of-6 {
-      	width: 15.33%;
+    .span-1-of-8 {
+      	width: 11.1%;
+    }
+    .span-2-of-8{
+      width: 23.8%;
     }
 
 
@@ -197,21 +200,24 @@ li:last-child{
       //   width: 30%;
       //   margin-bottom: 7px;
       // }
-      div.date{
+      div.time{
         text-align: right;
       }
       // div.time{
       //   width: 20%;
       // }
-      // div.location{
-      //   width: 35%;
-      // }
+      div.location{
+        margin-left: -0.5%;
+      }
       div.approved{
         text-align: right;
-        margin-left: -1%;
+        margin-left: 1.9%;
       }
-      .span-1-of-6{
-        width: 30%;
+      .span-1-of-8 {
+        	width: 20%;
+      }
+      .span-2-of-8{
+        width: 45%;
       }
     }
   }
@@ -291,10 +297,12 @@ li:last-child{
       .group {
           zoom:1; /* For IE 6/7 */
       }
-      .span-1-of-6 {
-        	width: 15.33%;
+      .span-1-of-8 {
+        	width: 11.1%;
       }
-
+      .span-2-of-8{
+        width: 23.8%;
+      }
 
 
     div.title{
