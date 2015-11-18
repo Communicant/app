@@ -3,9 +3,10 @@
   // background-image: url('divorced-parents-16d53edcbe91f95d77ca4b4ec9f16293f3de8080ca7b16cdbab2618ff01c5b75.jpg');
   // background-size:     100% auto;
   width: 100%;
-  margin-top: -30px;
+  margin-top: -20px;
   height: auto;
   background-repeat:   no-repeat;
+  position: fixed;
 
   // background-position: 70%;
   }
@@ -458,3 +459,13 @@ input.password{
 //     }
 //   }
 // }
+
+div.info-ghost {
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  opacity: .45;
+  width: 96%;
+  margin-left: 2%; margin-top: 7px;
+  height: 84%;
+}
