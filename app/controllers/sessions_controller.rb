@@ -8,21 +8,17 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
         session[:user_id] = user.id
+        username = user.first_name
         if user.is_a?(Parent)
-          redirect_to events_path
+          redirect_to events_path, notice: "Welcome, #{username}."
         elsif user.is_a?(Mediator)
-          redirect_to profiles_path, notice: "You have been successfully logged in."
+          redirect_to profiles_path, notice: "Welcome, #{username}"
         end
       else
         flash[:warning] = 'Wrong email/password combination.'
         redirect_to root_path
       end
   end
-
-  def new
-    redirect_to root_path
-  end
-
 
   def destroy
     session[:user_id] = nil

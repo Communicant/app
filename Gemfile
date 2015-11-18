@@ -41,7 +41,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 # gem 'unicorn'
 gem 'rails-footnotes', '~> 4.0'
 
-
+gem 'will_paginate', '~> 3.0.6'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

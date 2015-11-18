@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   before_action :logged_in_user
   helper_method :grab_child
   helper_method :event_titles
-  helper_method :user_type
+  # helper_method :user_type
   before_action :authenticate_user
 
   # GET /events
