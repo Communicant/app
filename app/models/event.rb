@@ -1,4 +1,4 @@
-require 'will_paginate/array'
+# require 'will_paginate/array'
 
 
 class Event < ActiveRecord::Base
