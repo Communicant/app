@@ -59,7 +59,7 @@ section.tabs-header{
 }
 
 
-@media screen and (max-width: 576px) {           //MOBILE
+@media screen and (max-width: 575px) {           //MOBILE
   section.tabs-header{
     padding-left: 2%;
     a.head-resp{
@@ -87,7 +87,7 @@ section.tabs-header{
  }
 }
 
-@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+@media (max-width: 774px) and (min-width: 576px){      //TABLET
   section.tabs-header{
     padding-left: 2%;
     display: table;
@@ -99,14 +99,75 @@ section.tabs-header{
       text-decoration: none;
       color: black;
       background-color: white;
-      width: 35%;
+      width: 237px;
       margin-bottom: 5px;
       text-align: center;
       margin-left: 10%;
       }
     a:last-child{
-      width: 60%;
+      width: 250px;
+      margin-left: 225px;
+      margin-top: 5px;
+      float: left;
     }
+    a.head-resp:hover{
+      opacity: 1;
+      color: white;
+      background-color: #004C80;
+      }
+    a.head-resp:nth-child(2){
+      margin-left: 4%;
+    }
+    a.head-resp:nth-child(4){
+      margin-left: 4%;
+    }
+
+    // a.head-resp-out{
+    //   display: block;
+    //   width: 50%;
+    //   float: left;
+    // }
+    a.stay-blue{
+      color: white;
+      background-color: #004C80;
+    }
+   }
+}
+@media (max-width: 1024px) and (min-width: 775px){      //TABLET2
+  section.tabs-header{
+    padding-left: 2%;
+    display: table;
+    a.head-resp{
+      display: inline-block;
+      font-size: 1.2em;
+      border-radius: 5px;
+      padding: 5px;
+      text-decoration: none;
+      color: black;
+      background-color: white;
+      width: 240px;
+      margin-bottom: 5px;
+      text-align: center;
+      margin-left: 15%;
+      }
+    a:last-child{
+      width: 260px;
+      margin-left: 270px;
+      margin-top: 5px;
+      float: left;
+    }
+    a.head-resp:hover{
+      opacity: 1;
+      color: white;
+      background-color: #004C80;
+      }
+    a.head-resp:nth-child(2){
+      margin-left: 10%;
+    }
+    a.head-resp:nth-child(4){
+      margin-left: 10%;
+    }
+
     // a.head-resp-out{
     //   display: block;
     //   width: 50%;
@@ -133,6 +194,11 @@ section.tabs-header{
       text-decoration: none;
       color: black;
       background-color: white;
+      }
+      a.header-log-out{
+        float: right;
+        margin-right: 5%;
+        margin-top: -.5%;
       }
   }
 }
