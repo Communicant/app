@@ -68,7 +68,7 @@ li.expenses-item {
 div.expense-type, div.expense-amount {
   color: #636363;
   font-size: 12pt;
-  font-family: Gill Sans;
+  font-family: Helvetica;
 }
 
 div.expense-type {
@@ -82,6 +82,7 @@ div.expense-amount {
   float: right;
   margin-top: 10px;
   text-align: right;
+  font-weight: 600;
 }
 
 div.expense-due {
@@ -89,6 +90,8 @@ div.expense-due {
   display: inline-block;
   font-weight: 600;
   color: #636363;
+  font-family: Helvetica;
+  font-size: 12pt;
 }
 
 ul.payments-listing {
