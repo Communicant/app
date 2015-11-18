@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
 
 # --------------------------------------------
 
+  # Necessary in order for new messages, expenses, and payments to be created through json! 
 skip_before_action :verify_authenticity_token, if: :json_request?
 
 
