@@ -2,8 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   helper_method :grab_child
   helper_method :event_titles
-  # helper_method :user_type
   before_action :authenticate_user
+  before_action :logged_in_user
 
   # GET /events
   # GET /events.json
