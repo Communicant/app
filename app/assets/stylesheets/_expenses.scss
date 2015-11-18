@@ -10,6 +10,10 @@ section.expenses-container {
 
 form.new-expense {
   margin-bottom: 2%;
+
+  label {
+    font-family: Helvetica;
+  }
 }
 
 section.expense-tab {
@@ -89,11 +93,11 @@ div.expense-due {
 
 ul.payments-listing {
   color: #636363;
-  background-color: #FAF2EB;
-  font-family: Lato;
-  font-size: 12pt;
-  padding-bottom: 3px;
-  margin-bottom: -10px;
+  background-color: #DEEDFA;
+  border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
+  font-family: Helvetica;
+  font-size: 11pt;
+  padding-bottom: 3px; padding-left: -5px; padding-right: 3%;
 }
 
 div.payment-paid-by {
@@ -102,8 +106,7 @@ div.payment-paid-by {
 }
 
 li.payments-item {
-  margin-bottom: 8px;
-  border-bottom: .5px solid #636363;
+  margin-bottom: 10px;
 }
 
 div.payment-paid-at {
@@ -125,31 +128,39 @@ form.add-payment-form {
 
   input {
     padding-left: 5px;
+    border: 1px solid gray;
+  }
+
+  label {
+    font-family: Helvetica;
   }
 }
 
 button.submit-payment-button {
   -moz-appearance: none;
   appearance: none;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 1em;
   font-weight: lighter;
   background-color: #004C80;
   color: white;
-  border-top: 1px solid #FAF2EB; border-left: 1px solid #FAF2EB; border-bottom: 1px solid #636363; border-right: 1px solid #636363;
+  border: 0px solid;
   line-height: 1;
   border-radius: 5px;
   float: right;
+  padding-top: 4px;
+  margin-right: 4px;
 }
 
 input.np-amt {
   -moz-appearance: none;
   appearance: none;
   margin-right: 1%;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 1em;
   font-weight: lighter;
   line-height: 1;
+  border: 1px solid gray;
   border-radius: 5px;
 }
 
@@ -158,10 +169,10 @@ label.amt-label {
 }
 
 div.expense-amt-stl-o {
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 12pt;
   text-align: right;
-  margin-bottom: 10px;
+  margin-bottom: 7px; margin-top: 7px;
   padding-top: 3px; padding-bottom: 3px; padding-right: 8px;
   background-color: #FAF2EB;
 }
@@ -196,7 +207,7 @@ select.expense-type {
   appearance: none;
   width: 85%;
   margin-top: 2px;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 15pt;
   font-weight: lighter;
   padding-top: 4px;
@@ -214,10 +225,11 @@ input.amount-due {
   -moz-appearance: none;
   appearance: none;
   margin-right: 1%;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 1.3em;
   font-weight: lighter;
   line-height: 1.5;
+  border: 1px solid gray;
   border-radius: 5px;
 }
 
@@ -225,17 +237,18 @@ input.payment-due-time {
   -moz-appearance: none;
   appearance: none;
   margin-right: 1%;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 1.3em;
   font-weight: lighter;
   line-height: 1.5;
+  border: 1px solid gray;
   border-radius: 5px;
 }
 
 button.submit-button {
   -moz-appearance: none;
   appearance: none;
-  font-family: Lato;
+  font-family: Helvetica;
   font-size: 1.3em;
   font-weight: lighter;
   background-color: #004C80;
@@ -256,6 +269,7 @@ hr.payments-divider {
   height: 1px;
   background: #333;
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin-top: 0px; margin-left: -40px; margin-right: -3%;
 }
 
 .new-e-dropdown {
@@ -267,7 +281,8 @@ hr.payments-divider {
   text-align: center;
   border-radius: 5px;
   font-size: 1.3em;
-  font-family: Lato;
+  font-family: Helvetica;
+  font-weight: lighter;
   display: none;
   margin-left: 39.5%;
 }
@@ -326,6 +341,7 @@ hr.payments-divider {
     padding-top: 10px; padding-bottom: 10px;
 
     label {
+      font-family: Helvetica;
 
       input, select {
         width: 100%;
