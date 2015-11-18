@@ -24,10 +24,9 @@
       <nav class="header-navig">
         <section class="tabs-header">
 
+          <%= link_to 'Events', events_path, class: "header head-resp" %>
             <%= link_to 'Expenses', expenses_path, class: "header head-resp" %>
             <%= link_to 'Inbox', messages_path, class: "header head-resp" %>
-            <%= link_to 'Events', events_path, class: "header head-resp" %>
-
             <%= link_to 'Profile/Dashboard', profiles_path, class: "header head-resp" %>
             <%= link_to 'Log out', session_path(session[:user_id]), method: :delete, class: "header-log-out head-resp" %>
        </section>
