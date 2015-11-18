@@ -66,5 +66,5 @@
 // });
 
 $( '.new-e-dropdown' ).on('click', function(event){
-  $('.new-e-container').toggleClass('active');
+  $('.new-e-container').toggleClass('show-fields');
 });

@@ -43,9 +43,9 @@
           <li class="expenses-item" ng-repeat="expense in expenses">
             <section class="expense-tab" ng-class="{true: 'blue', false: 'red'}[expense.due_at > Date.now()]">
               <input type="checkbox" ng-model="collapse"></input>
-              <div class="expense-type">{{expense.type}}:</div>
-              <div class="expense-due"> Due ({{expense.due_at | date : medium : timezone }})</div>
-              <div class="expense-amount">{{expense.amount | currency}}</div>
+              <div class="expense-type ng-cloak">{{expense.type}}:</div>
+              <div class="expense-due ng-cloak"> Due ({{expense.due_at | date : medium : timezone }})</div>
+              <div class="expense-amount ng-cloak">{{expense.amount | currency}}</div>
             </section>
             <ul class="payments-listing" ng-show="collapse">
               <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)" class="add-payment-form">
@@ -53,12 +53,12 @@
                 <button type="submit" name="submit-expense" class="submit-payment-button">Add Payment</button>
               </form>
               <li class="payments-item slideInDown" ng-repeat="payment in expense.payments">
-                <div class="payment-paid-by">{{payment.paid_by}}</div>
-                <div class="payment-paid-at">Applied on: {{payment.paid_at}}</div>
-                <div class="payment-paid-amount">{{payment.amount | currency}}</div>
+                <div class="payment-paid-by ng-cloak">{{payment.paid_by}}</div>
+                <div class="payment-paid-at ng-cloak">Applied on: {{payment.paid_at}}</div>
+                <div class="payment-paid-amount ng-cloak">{{payment.amount | currency}}</div>
               </li><hr class="payments-divider" />
             </ul>
-            <div class="expense-amt-stl-o"><strong>Total Still Due:</strong> {{expense.amount_still_owed | currency}}</div>
+            <div class="expense-amt-stl-o ng-cloak"><strong>Total Still Due:</strong> {{expense.amount_still_owed | currency}}</div>
           </li>
         </ul>
       </div>
