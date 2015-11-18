@@ -11,8 +11,8 @@ h1.events-header{
   font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 2%;
-  margin-bottom: 3%;
+  //margin-top: -5px;
+  //margin-bottom: 1%;
   margin-left: 15%;
 }
 
@@ -24,10 +24,12 @@ div.new-event{
   border-radius: 5px;
   color: white;
   text-align: center;
-  padding: 10px;;
-  margin-left: 79%;
-  font-size: 1.2;
-  width: 20%;
+  padding: 5px;
+  margin-right: 9.5%;
+  font-size: 1.3em;
+  width: 15%;
+  margin-top: -4%;
+  float: right;
  }
 }
 
@@ -38,11 +40,11 @@ div.new-event{
 
 ul.events-body-table{
   margin-top: 2%;
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 12%;
+  width: 76%;
 li.events-main-table{
   list-style: none;
-  padding-top: 2%;
+  //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
   width: 100%;
@@ -50,7 +52,7 @@ li.events-main-table{
     background-color: #DEEDFA;
     border-radius: 5px;
   	clear: both;
-  	padding: 0px;
+  	padding: 3px;
   	margin: 0px;
     }
     .col {
@@ -106,21 +108,6 @@ li.events-main-table{
   }
   div.approved{
     text-align: right;
-    //margin-left: -1%;
-    //div.pending-approval{
-      //border: 1px solid lightgray;
-      //background-color: lightgray;
-      //border-radius: 5px;
-      //color: #636363;
-    //}
-    //div.approv{
-      // border: 1px solid #004C80;
-      // background-color: #004C80;
-      // border-radius: 5px;
-      // color: white;
-      // width: 10%;
-      // text-align: center;
-    //}
   }
 }
 li:last-child{
@@ -164,28 +151,26 @@ li:last-child{
         margin-bottom: 7px;
         //margin-left: -1px;
       }
-      div.approved{
-        width: 80%;
-        margin-bottom: 7px;
-        text-align: left;
-        //margin-left: 1%;
-        //div.pending-approval{
-          //border: 1px solid lightgray;
-          //background-color: lightgray;
-          //border-radius: 5px;
-          //color: #636363;
-        //}
-        //div.approv{
-          // border: 1px solid #004C80;
-          // background-color: #004C80;
-          // border-radius: 5px;
-          // color: white;
-          // width: 40%;
-        //}
-      }
+
     }
   }
 }
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-right: 9.5%;
+  font-size: 1.3em;
+  width: 75%;
+  margin-top: 1%;
+  //float: right;
+ }
+ }
 } //END OF MOBILE
 
 
@@ -218,19 +203,6 @@ li:last-child{
       div.approved{
         text-align: right;
         margin-left: -0.5%;
-        //div.pending-approval{
-          //border: 1px solid lightgray;
-          //background-color: lightgray;
-          //border-radius: 5px;
-          //color: #636363;
-        //}
-        //div.approv{
-          // border: 1px solid #004C80;
-          // background-color: #004C80;
-          // border-radius: 5px;
-          // color: white;
-          // width: 80%;
-        //}
       }
       .span-1-of-8 {
         	width: 20%;
@@ -241,6 +213,22 @@ li:last-child{
     }
   }
 }
+div.new-event{
+ a{
+  text-decoration: none;
+  border: 1px solid #004C80;
+  background-color: #004C80;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  margin-right: 20%;
+  font-size: 1.3em;
+  width: 70%;
+  margin-top: 1%;
+  //float: right;
+ }
+ }
 } //END OF TABLET
 
 
@@ -255,8 +243,8 @@ li:last-child{
     font-size: 30pt;
     font-weight: lighter;
     color: #004C80;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    //margin-top: 2%;
+    //margin-bottom: 3%;
     margin-left: 15%;
   }
 
@@ -268,20 +256,21 @@ li:last-child{
     border-radius: 5px;
     color: white;
     text-align: center;
-    padding: 10px;;
+    padding: 5px;;
     margin-left: 79%;
-    font-size: 1.2;
+    font-size: 1.3em;
+    font-weight: lighter;
     width: 20%;
    }
   }
 
   ul.events-body-table{
     margin-top: 2%;
-    margin-left: 10%;
-    width: 80%;
+    margin-left: 12%;
+    width: 78.5%;
   li.events-main-table{
     list-style: none;
-    padding-top: 2%;
+    //padding-top: 3%;
     padding-bottom: 2%;
     color: #004C80;
     width: 100%;
@@ -289,7 +278,7 @@ li:last-child{
         background-color: #DEEDFA;
         border-radius: 5px;
       	clear: both;
-      	padding: 0px;
+      	padding: 3px;
       	margin: 0px;
       }
       .col {
@@ -346,19 +335,6 @@ li:last-child{
       div.approved{
         text-align: right;
         margin-left: -1%;
-        //div.pending-approval{
-          //border: 1px solid lightgray;
-          //background-color: lightgray;
-          //border-radius: 5px;
-          //color: #636363;
-        //}
-        //div.approv{
-          // border: 1px solid #004C80;
-          // background-color: #004C80;
-          // border-radius: 5px;
-          // color: white;
-          // width: 80%;
-        //}
         }
       }
   }

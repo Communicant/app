@@ -15,7 +15,7 @@
 
   <div class="field">
     <%= f.label :event %>
-    <%= f.select("title", @event_titles, {:include_blank => "Please select an event"})%>
+    <%= f.select("title", @event_titles, {:include_blank => "Please select an event", class: "new-event-select"}) %>
   </div>
 
   <div class="field">
