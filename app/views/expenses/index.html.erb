@@ -44,14 +44,14 @@
             <section class="expense-tab" ng-class="{true: 'blue', false: 'red'}[expense.due_at > Date.now()]">
               <input type="checkbox" ng-model="collapse"></input>
               <div class="expense-type ng-cloak">{{expense.type}}:</div>
-              <div class="expense-due ng-cloak"> Due ({{expense.due_at | date : medium : timezone }})</div>
+              <div class="expense-due ng-cloak"> Due {{expense.due_at | date : medium : timezone }}</div>
               <div class="expense-amount ng-cloak">{{expense.amount | currency}}</div>
             </section>
             <ul class="payments-listing slideInDown" ng-show="collapse">
               <hr class="payments-divider" />
               <li class="payments-item" ng-repeat="payment in expense.payments">
                 <div class="payment-paid-by ng-cloak">{{payment.paid_by}}</div>
-                <div class="payment-paid-at ng-cloak"><i class="fa fa-calendar"></i> {{payment.paid_at}}</div>
+                <div class="payment-paid-at ng-cloak"><i class="fa fa-calendar"></i> {{payment.paid_at | date : medium : timezone }}</div>
                 <div class="payment-paid-amount ng-cloak">{{payment.amount | currency}}</div>
               </li>
               <form name="new-payment" method="post" ng-submit="submitPayment(expense.id)" class="add-payment-form">
