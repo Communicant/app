@@ -7,11 +7,6 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 
-
-    <% if flash[:notice] %>
-        <div id="notice"><%= flash[:notice] %></div>
-    <% end %>
-
      <% unless request.path == root_path || session[:user_id] == nil %>
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
@@ -32,7 +27,9 @@
        </section>
       </nav>
     </main>
-
+    <% if flash[:notice] %>
+        <div id="notice"><%= flash[:notice] %></div>
+    <% end %>
 <% end %>
 
 <%= yield %>

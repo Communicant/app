@@ -1,6 +1,3 @@
-
-<p id="notice"><%= notice %></p>
-
 <h1 class="events-header">Your Upcoming Events</h1>
 <p id="notice"><%# notice %></p>
 
@@ -14,15 +11,13 @@
 
 
         <div class="title col span-2-of-8">
-          <!-- <i class="fa fa-arrow-right"></i> -->
-          <%# link_to event.title, event %>
           <%= event.title %>
         </div>
 
 
         <div class="date col span-1-of-8">
           <i class="fa fa-calendar"></i>
-          <%= event.date %>
+          <%= event.date.try(:strftime, "%b %e %Y") %>
         </div>
 
         <div class="time col span-1-of-8">
