@@ -29,3 +29,11 @@
 @import "dashboard";
 @import "profileMediator";
 @import "profileDetails";
+
+p#notice{
+  font-family: Helvetica;
+  font-size: 1.3em;
+  font-weight: lighter;
+  text-decoration: none;
+  padding-left: 13%;
+}

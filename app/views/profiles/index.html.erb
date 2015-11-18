@@ -1,30 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-</main>
-<h1 class="events-header">Cases</h1>
-<div class="new-profile">
+<h1 class="profile-header">Cases</h1>
+<span class="new-profile">
 <%= link_to 'New Case', new_profile_path %> <%= link_to 'New Child', new_child_path %>
-</div>
-
-<table class="profile-m-table">
-  <thead class="profile-m-thead">
-    <tr class="profile-m-title-row">
-      <th>Case Number</th>
-      <th>Parent 1 Name</th>
-      <th>Parent 2 Name</th>
-      <th>Children</th>
-    </tr>
-  </thead>
-  <tbody class="profile-m-body-table">
+</span>
+<ul class="events-body-table">
     <% @profiles.each do |profile| %>
-      <tr class="profile-m-main-table">
-        <td class="profile-case"><%= profile.case_number %></td>
-        <td class="profile-name"><%= link_to profile.name, profile %></td>
-        <td class="profile-name"><%= link_to profile.name2, profile %></td>
-        <td class="profile-child"> <% profile.profile_children.each do |child| %>
-                                          <li><%= child %></li>
-                                        <% end %></td>
-      </tr>
+    <li class="events-main-table">
+      <div class="section group profiles">
+        <div class="child col span-2-of-8">
+          <span class="case_number"><b>Case Number:</b><br><%= profile.case_number %></span>
+        </div>
+        <div class="child col span-2-of-8">
+          <b>Parent 1 Name:</b><br> <%= link_to profile.name, profile %>
+        </div>
+        <div class="child col span-2-of-8">
+          <b>Parent 2 Name:</b><br> <%= link_to profile.name2, profile %>
+        </div>
+        <div class="child col span-2-of-8">
+          <b>Children Names:</b><br>
+          <% profile.profile_children.each do |child| %>
+            <%= child %><br>
+          <% end %>
+        </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </li>
+</ul>
