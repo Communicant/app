@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body.page-background{
   background-color: #FAF2EB;
-  font-family: Lato;
+  font-family: Helvetica;
 }
 
 h1.events-header{
@@ -13,7 +13,7 @@ h1.events-header{
   color: #004C80;
   margin-top: 2%;
   margin-bottom: 3%;
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 div.new-event{
@@ -25,10 +25,9 @@ div.new-event{
   color: white;
   text-align: center;
   padding: 10px;;
-  margin-left: 80%;
+  margin-left: 79%;
   font-size: 1.2;
   width: 20%;
-  //margin-bottom: 10%;
  }
 }
 
@@ -40,17 +39,16 @@ div.new-event{
 ul.events-body-table{
   margin-top: 2%;
   margin-left: 10%;
-  border: 3px solid #004C80;
-  border-radius: 5px;
   width: 80%;
 li.events-main-table{
   list-style: none;
-  border-bottom: 1px solid #004C80;
   padding-top: 2%;
   padding-bottom: 2%;
   color: #004C80;
   width: 100%;
     .section {
+    background-color: #DEEDFA;
+    border-radius: 5px;
   	clear: both;
   	padding: 0px;
   	margin: 0px;
@@ -83,14 +81,10 @@ li.events-main-table{
 
 
   div.title{
-    //text-align: left;
-    //margin-left: 10%;
-    // display: inline-block;
-    // width: 20%;
-    a{
+      font-weight: bolder;
       text-decoration: none;
       color: #004C80;
-    }
+      padding-left: 10px;
   }
   div.child{
     i.fa{
@@ -112,7 +106,21 @@ li.events-main-table{
   }
   div.approved{
     text-align: right;
-    margin-left: -1%;
+    //margin-left: -1%;
+    //div.pending-approval{
+      //border: 1px solid lightgray;
+      //background-color: lightgray;
+      //border-radius: 5px;
+      //color: #636363;
+    //}
+    //div.approv{
+      // border: 1px solid #004C80;
+      // background-color: #004C80;
+      // border-radius: 5px;
+      // color: white;
+      // width: 10%;
+      // text-align: center;
+    //}
   }
 }
 li:last-child{
@@ -124,21 +132,17 @@ li:last-child{
 
   div.new-event{
    a{
-    //  text-decoration: none;
-    //  border: 1px solid #004C80;
-    //  background-color: #004C80;
-    //  border-radius: 5px;
-    //  color: white;
-    //  text-align: center;
-    //  padding: 10px;;
-    //  font-size: 1.2;
     margin-bottom: 1%;
-    margin-left: 10%;
+    margin-left: 15%;
     width: 100%;
    }
   }
   ul.events-body-table{
     li.events-main-table{
+      div.section {
+      background-color: #DEEDFA;
+      border-radius: 5px;
+      margin-left: -5%;
       div.title{
         width: 80%;
         margin-bottom: 7px;
@@ -164,26 +168,36 @@ li:last-child{
         width: 80%;
         margin-bottom: 7px;
         text-align: left;
-        margin-left: 1%;
+        //margin-left: 1%;
+        //div.pending-approval{
+          //border: 1px solid lightgray;
+          //background-color: lightgray;
+          //border-radius: 5px;
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 40%;
+        //}
       }
     }
   }
 }
+} //END OF MOBILE
 
 
 
 
 @media (max-width: 1024px) and (min-width: 568px){      //TABLET
+
+  h1.events-header{
+    margin-left: 7%;
+  }
   div.new-event{
    a{
-    //  text-decoration: none;
-    //  border: 1px solid #004C80;
-    //  background-color: #004C80;
-    //  border-radius: 5px;
-    //  color: white;
-    //  text-align: center;
-    //  padding: 10px;;
-    //  font-size: 1.2;
     margin-bottom: 1%;
     margin-left: 10%;
     width: 50%;
@@ -191,27 +205,32 @@ li:last-child{
   }
   ul.events-body-table{
     li.events-main-table{
-      // div.title{
-      //   width: 45%;
-      //   margin-bottom: 7px;
-      // }
-      // div.child{
-      //   text-align: center;
-      //   width: 30%;
-      //   margin-bottom: 7px;
-      // }
+      margin-left: -10%;
+      div.section {
+      background-color: #DEEDFA;
+      border-radius: 5px;
       div.time{
         text-align: right;
       }
-      // div.time{
-      //   width: 20%;
-      // }
       div.location{
-        margin-left: -0.5%;
+        //margin-left: -0.5%;
       }
       div.approved{
         text-align: right;
-        margin-left: 1.9%;
+        margin-left: -0.5%;
+        //div.pending-approval{
+          //border: 1px solid lightgray;
+          //background-color: lightgray;
+          //border-radius: 5px;
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 80%;
+        //}
       }
       .span-1-of-8 {
         	width: 20%;
@@ -222,12 +241,13 @@ li:last-child{
     }
   }
 }
+} //END OF TABLET
 
 
 @media (min-width: 1025px) {            //DESKTOP
   body.page-background{
     background-color: #FAF2EB;
-    font-family: Lato;
+    font-family: Helvetica;
   }
 
   h1.events-header{
@@ -237,7 +257,7 @@ li:last-child{
     color: #004C80;
     margin-top: 2%;
     margin-bottom: 3%;
-    margin-left: 10%;
+    margin-left: 15%;
   }
 
   div.new-event{
@@ -249,42 +269,36 @@ li:last-child{
     color: white;
     text-align: center;
     padding: 10px;;
-    margin-left: 80%;
+    margin-left: 79%;
     font-size: 1.2;
     width: 20%;
-    //margin-bottom: 10%;
    }
   }
-
-
-
-
-
 
   ul.events-body-table{
     margin-top: 2%;
     margin-left: 10%;
-    border: 3px solid #004C80;
-    border-radius: 5px;
     width: 80%;
   li.events-main-table{
     list-style: none;
-    border-bottom: 1px solid #004C80;
     padding-top: 2%;
     padding-bottom: 2%;
     color: #004C80;
     width: 100%;
       .section {
-    	clear: both;
-    	padding: 0px;
-    	margin: 0px;
+        background-color: #DEEDFA;
+        border-radius: 5px;
+      	clear: both;
+      	padding: 0px;
+      	margin: 0px;
       }
       .col {
-    	display: block;
-    	float:left;
-    	margin: 1% 0 1% 1.6%;
+      	display: block;
+      	float:left;
+      	margin: 1% 0 1% 1.6%;
       }
-      .col:first-child { margin-left: 0;
+      .col:first-child {
+        margin-left: 0;
       }
       .group:before,
       .group:after {
@@ -295,53 +309,60 @@ li:last-child{
       	clear:both;
       }
       .group {
-          zoom:1; /* For IE 6/7 */
+        zoom:1; /* For IE 6/7 */
       }
       .span-1-of-8 {
-        	width: 11.1%;
+        width: 11.1%;
       }
       .span-2-of-8{
         width: 23.8%;
       }
 
 
-    div.title{
-      //text-align: left;
-      //margin-left: 10%;
-      // display: inline-block;
-      // width: 20%;
-      a{
+
+      div.title{
+        font-weight: bolder;
         text-decoration: none;
         color: #004C80;
       }
-    }
-    div.child{
-      i.fa{
-        margin-right: 2px;
+      div.child{
+        i.fa{
+          margin-right: 2px;
+        }
       }
-    }
-    div.date{
-    }
-    div.time{
-      i.fa{
-        margin-right: 3px;
+      div.date{
       }
+      div.time{
+        i.fa{
+          margin-right: 3px;
+        }
 
-    }
-    div.location{
-      i.fa{
-        margin-right: 1px;
       }
-    }
-    div.approved{
-      text-align: right;
-      margin-left: -1%;
-    }
+      div.location{
+        i.fa{
+          margin-right: 1px;
+        }
+      }
+      div.approved{
+        text-align: right;
+        margin-left: -1%;
+        //div.pending-approval{
+          //border: 1px solid lightgray;
+          //background-color: lightgray;
+          //border-radius: 5px;
+          //color: #636363;
+        //}
+        //div.approv{
+          // border: 1px solid #004C80;
+          // background-color: #004C80;
+          // border-radius: 5px;
+          // color: white;
+          // width: 80%;
+        //}
+        }
+      }
   }
   li:last-child{
     border-bottom:#FAF2EB;
   }
-  }
-
-
-} //END of DESKTOP
+  }//END of DESKTOP
