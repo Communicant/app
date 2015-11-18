@@ -13,11 +13,22 @@ form.new-expense {
 }
 
 section.expense-tab {
-  background-color: #DEEDFA;
   padding-bottom: 9px; padding-left: 8px; padding-right: 8px;
   border-radius: 5px;
   display: block;
+  background-color: #DEEDFA;
 }
+
+section.blue {
+  background-color: #DEEDFA;
+}
+
+// section.red {
+//   background-color: red;
+//   div {
+//     color: white;
+//   }
+// }
 
 .expenses-label {
   font-family: Gill Sans;
@@ -58,16 +69,22 @@ div.expense-type, div.expense-amount {
 
 div.expense-type {
   font-weight: 600;
-  width: 40%;
   display: inline-block;
   margin-top: 10px; margin-left: 10px;
 }
 
 div.expense-amount {
-  width: 40%;
+  width: 20%;
   float: right;
   margin-top: 10px;
   text-align: right;
+}
+
+div.expense-due {
+  width: 30%;
+  display: inline-block;
+  font-weight: 600;
+  color: #636363;
 }
 
 ul.payments-listing {
@@ -85,7 +102,7 @@ div.payment-paid-by {
 }
 
 li.payments-item {
-  margin-bottom: 3px;
+  margin-bottom: 8px;
   border-bottom: .5px solid #636363;
 }
 
@@ -335,5 +352,9 @@ hr.payments-divider {
     float: left;
     width: 100%;
     font-size: 2em;
+  }
+
+  div.expense-due {
+    width: 50%;
   }
 }

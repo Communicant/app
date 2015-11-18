@@ -39,10 +39,12 @@
 
       <div class="expenses-scroll">
         <ul class="expenses-listing">
+          <i class="fa fa-refresh fa-spin" ng-hide="expenses"></i>
           <li class="expenses-item" ng-repeat="expense in expenses">
-            <section class="expense-tab">
+            <section class="expense-tab" ng-class="{true: 'blue', false: 'red'}[expense.due_at > Date.now()]">
               <input type="checkbox" ng-model="collapse"></input>
-              <div class="expense-type">{{expense.type}}: Due ({{expense.due_at | date : medium : timezone }})</div>
+              <div class="expense-type">{{expense.type}}:</div>
+              <div class="expense-due"> Due ({{expense.due_at | date : medium : timezone }})</div>
               <div class="expense-amount">{{expense.amount | currency}}</div>
             </section>
             <ul class="payments-listing" ng-show="collapse">
