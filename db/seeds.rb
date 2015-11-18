@@ -28,7 +28,7 @@ e = Event.create(
   :date    => Faker::Date.between(2.days.ago, Time.now),
   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
   :location => Faker::Address.street_address,
-  :parent_id => rand(1..2),
+  :user_id => rand(1..2),
   :child_id => rand(1..6),
   :mediator_id => 1
 )
