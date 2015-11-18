@@ -35,10 +35,10 @@
           <div class="message-name ng-cloak"><i class="fa fa-user"></i>
             {{message.name}}</div>
 
-          <div class="message-time ng-cloak" ><i class="fa fa-clock-o"></i>
-            {{message.created_at | date : medium}}</div>
-          <div class="message-date ng-cloak"><i class="fa fa-calendar"></i>
-            {{message.date | date : format : medium}}</div>
+            <div class="message-time ng-cloak" ><i class="fa fa-clock-o"></i>
+              {{message.created_at | date : medium}}</div>
+            <div class="message-date ng-cloak"><i class="fa fa-calendar"></i>
+              {{message.date | date : short}}</div>
           <div class="message-body ng-cloak">{{message.body}}</div>
         </li>
 
