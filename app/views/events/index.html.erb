@@ -14,7 +14,7 @@
 
 
         <div class="title col span-2-of-8">
-          <i class="fa fa-arrow-right"></i>
+          <!-- <i class="fa fa-arrow-right"></i> -->
           <%# link_to event.title, event %>
           <%= event.title %>
         </div>
@@ -46,16 +46,21 @@
         <div class="approved col span-1-of-8">
           <% if event.has_been_approved? == false %>
             <% if @logged_in_user.id == event.user_id || @logged_in_user.id == event.mediator_id %>
-              Pending Approval
+              <div class="pending-approval">
+                Pending Approval
+              </div>
             <% elsif @logged_in_user.id == event.parent_id %>
-              <button type="button"><%= link_to 'Approve', approvals_path(approval:
+              <button class="button-approved" type="button"><%= link_to 'Approve', approvals_path(approval:
               {event_id: event.id, parent_id: @logged_in_user.id, parent_approval: true}), method: :post %>
               </button>
             <% end %>
           <% else %>
-              APPROVED
+              <div class="approv">
+                Approved
+              </div>
           <% end %>
         </div>
+      </div>
 
     <% end %>
     <%# will_paginate @events %>
