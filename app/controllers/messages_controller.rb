@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
   # POST /messages
   def create
     # @parent = Parent.find_by(params[:id])
-    @message = Message.new(user_id: 1, date: Date.today, time: Time.now, body: (params[:message][:body]))
+    @message = Message.new(user_id: logged_in_user.id, date: Date.today, time: Time.now, body: (params[:message][:body]))
 
     if @message.save
       redirect_to @message, notice: 'Message was successfully created.'
