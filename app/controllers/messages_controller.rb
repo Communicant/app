@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
       format.json do
         @messages = @messages.map do |m|
           Time.use_zone("Eastern Time (US & Canada)") do
-            m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%l:%M:%S %p"))
+            m.as_json.merge(name: User.find(m.user_id).first_name, created_at: m.created_at.strftime("%l:%M %p"))
           end
         end
           render json: @messages
