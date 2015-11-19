@@ -7,6 +7,8 @@
 
   <ul class="events-body-table">
     <% @events.each do |event| %>
+    <% if event.date >= Date.today %>
+
       <li class="events-main-table">
 
       <div class="section group">
@@ -19,12 +21,13 @@
 
         <div class="date col span-1-of-8">
           <i class="fa fa-calendar"></i>
-          <%= event.date.try(:strftime, "%b %e %Y") %>
+            <%= event.date.try(:strftime, "%b %e %Y") %>
         </div>
 
         <div class="time col span-1-of-8">
           <i class="fa fa-clock-o">
-          </i><%= event.time.try(:strftime, "%I:%M%P") %>
+          </i>
+            <%= event.time.try(:strftime, "%I:%M%P") %>
         </div>
 
         <div class="location col span-2-of-8">
@@ -54,7 +57,7 @@
           <% end %>
         </div>
       </div>
-
+      <% end %>
     <% end %>
     <%# will_paginate @events %>
 

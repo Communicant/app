@@ -47,7 +47,7 @@
               <div class="expense-due ng-cloak"> Due {{expense.due_at | date : medium : timezone }}</div>
               <div class="expense-amount ng-cloak">{{expense.amount | currency}}</div>
             </section>
-            <ul class="payments-listing slideInDown" ng-show="collapse">
+            <ul class="payments-listing slideInDown" ng-show="collapse" class="animated" class="fadeOutDown">
               <hr class="payments-divider" />
               <li class="payments-item" ng-repeat="payment in expense.payments">
                 <div class="payment-paid-by ng-cloak">{{payment.paid_by}}</div>
