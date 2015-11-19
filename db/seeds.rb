@@ -66,39 +66,36 @@ payment5 = Payment.create!(amount: "35.00", paid_at: Date.new(2015, 11, 6), paid
 
 # Messages
 
-message1 = Message.create!(user_id: 1, body: "Billy thinks he left his toy car at your house. It's his favorite car. Can you look for it, and if you find it, let me know?", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 32, 56))
+message1 = Message.create!(user_id: 1, body: "Emergency happened, the schedule for tomorrow has been changed", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 32, 56))
 
-message2 = Message.create!(user_id: 2, body: "Yeah, I found it. He dropped it outside on his way to the car. I put it on my nightstand. I'll make sure to give it to him.", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 45, 41))
+message2 = Message.create!(user_id: 2, body: "No after school activities today, we need to go to the doctor", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 45, 41))
 
-message3 = Message.create!(user_id: 1, body: "Thanks. Billy would be heartbroken if he couldn't find that.", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
+message3 = Message.create!(user_id: 1, body: "Changed the pick up time for after school, I will take care of pick up", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
 
-message4 = Message.create!(user_id: 1, body: "I get off of work at 7. I'll bring the kids once I get off.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
-
-message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 32, 56))
-
+message4 = Message.create!(user_id: 2, body: "Will be late to drop off, problem with the car", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
 
 # User ---------------------
-10.times do |parent|
-parent = Parent.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..6)
-)
-end
-
-10.times do |mediator|
-mediator = Mediator.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..6)
-)
-end
+# 10.times do |parent|
+# parent = Parent.create!(
+#   :email => Faker::Internet.safe_email,
+#   :password => "123456",
+#   :first_name => Faker::Name.name,
+#   :last_name => Faker::Name.name,
+#   :address => Faker::Address.street_address,
+#   :child_id => rand(1..6)
+# )
+# end
+#
+# 10.times do |mediator|
+# mediator = Mediator.create!(
+#   :email => Faker::Internet.safe_email,
+#   :password => "123456",
+#   :first_name => Faker::Name.name,
+#   :last_name => Faker::Name.name,
+#   :address => Faker::Address.street_address,
+#   :child_id => rand(1..6)
+# )
+# end
 Parent.create!(email: "mamallama@email.com", password: "123456", first_name: "Rosa", last_name: "Anthony", address: "123 123rd st.", child_id: 1)
 Parent.create!(email: "joe.donot@email.com", password: "123456", first_name: "Steve", last_name: "Jasmine", address: "123 123rd st.", child_id: 2)
 # Parent.create!(email: "email4@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 3)

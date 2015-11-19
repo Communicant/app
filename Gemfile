@@ -43,6 +43,7 @@ gem 'rails-footnotes', '~> 4.0'
 
 gem 'will_paginate', '~> 3.0.6'
 
+gem "animate-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

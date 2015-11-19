@@ -1,4 +1,5 @@
 
+
 $(document).ready(function() {
   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
   $('#js-centered-navigation-menu').removeClass("show");
@@ -12,3 +13,12 @@ $(document).ready(function() {
     });
   });
 });
+
+
+
+// $(document).ready(function() {
+//   $('i.fa-bars').on('click', function(){
+//     $('.tabs-header').addClass('show-header').removeClass('tabs-header');
+//     console.log("changing header")
+//   });
+// });
