@@ -48,7 +48,8 @@ li.events-main-table{
   //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
-  width: 100%;
+  margin-left: 15%;
+  width: 75%;
     .section {
     background-color: #DEEDFA;
     border-radius: 5px;
@@ -110,6 +111,9 @@ li.events-main-table{
   div.approved{
     text-align: right;
   }
+  div.pending-approval{
+    text-align: right;
+  }
 }
 li:last-child{
   border-bottom:#FAF2EB;
@@ -152,6 +156,11 @@ li:last-child{
         margin-bottom: 7px;
         //margin-left: -1px;
       }
+      div.pending-approval{
+        width: 80%;
+        text-align: left;
+        //margin-left: -100%;
+      }
 
     }
   }
@@ -186,12 +195,12 @@ div.new-event{
    a{
     margin-bottom: 1%;
     margin-left: 10%;
-    width: 50%;
+    width: 70%;
    }
   }
   ul.events-body-table{
     li.events-main-table{
-      margin-left: -10%;
+      margin-left: 5%;
       div.section {
       background-color: #DEEDFA;
       border-radius: 5px;
@@ -204,6 +213,10 @@ div.new-event{
       div.approved{
         text-align: right;
         margin-left: -0.5%;
+      }
+      div.pending-approval{
+        width: 20%;
+        text-align: right;
       }
       .span-1-of-8 {
         	width: 20%;
@@ -225,7 +238,7 @@ div.new-event{
   padding: 5px;
   margin-right: 20%;
   font-size: 1.3em;
-  width: 70%;
+  width: 75%;
   margin-top: 1%;
   //float: right;
  }
@@ -274,7 +287,7 @@ div.new-event{
     //padding-top: 3%;
     padding-bottom: 2%;
     color: #004C80;
-    width: 100%;
+    width: 75%;
       .section {
         background-color: #DEEDFA;
         border-radius: 5px;
@@ -337,6 +350,10 @@ div.new-event{
         text-align: right;
         margin-left: -1%;
         }
+      div.pending-approval{
+        text-align: right;
+        margin-left: -1%;
+      }
       }
   }
   li:last-child{
