@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require animate
  *= require_tree .
  *= require_self
  */
@@ -29,3 +30,11 @@
 @import "dashboard";
 @import "profileMediator";
 @import "profileDetails";
+
+p#notice{
+  font-family: Helvetica;
+  font-size: 1.3em;
+  font-weight: lighter;
+  text-decoration: none;
+  padding-left: 13%;
+}

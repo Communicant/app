@@ -1,11 +1,17 @@
-h1.profile-m-header{
+h1.profile-header{
   font-style: Gill Sans;
-  font-size: 35pt;
+  font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  margin-top: 1%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-left: 13%;
+  display: inline;
 }
+
+span.case_number{
+  font-size: 14pt;
+}
+
 table.profile-m-table{
   margin-left: 2.5%;
   border: 3px solid #004C80;
@@ -96,15 +102,39 @@ td.profile-m-delete{
   }
 }
 
-div.new-profile{
+span.new-profile{
+margin-left: 52.5%;
+display: inline;
 a{
+font-family: Helvetica;
+font-size: 1.3em;
+font-weight: lighter;
 text-decoration: none;
 border: 1px solid #004C80;
 background-color: #004C80;
 border-radius: 5px;
 color: white;
 text-align: center;
-padding: 7px;;
-margin-left: 90.5%;
+padding: 5px;;
 }
+}
+
+ul.events-body-table{
+  li.events-main-table{
+    div.profiles{
+      padding-left: 10px;
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 720px){
+  span.new-profile {
+    width: 100%;
+    margin-left: 10%;
+    padding-bottom: 10px;
+    float: left;
+  }
+
 }
