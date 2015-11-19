@@ -1,12 +1,12 @@
 .messaging-container{
-
+  font-family: Helvetica;
   h3.message-title{
     font-style: Gill Sans;
     font-size: 35pt;
     font-weight: lighter;
     color: #004C80;
     margin-top: 1%;
-    margin-left: 40%;
+    margin-left: 15%;
     height: auto;
     margin-bottom: 0%;
   }
@@ -20,9 +20,9 @@
    width: 85%;
    margin-top: 2%;
    margin-right: 1%;
-   font-size: 1.3em;
-   padding-top: 2%;
-   padding-bottom: 2%;
+   font-size: 1.5em;
+   padding-top: 2.5%;
+   padding-bottom: 2.5%;
    background-color: #004C80;
    color: white;
    line-height: 1.5;
@@ -32,7 +32,7 @@
    background-color: #004C80;
    color: white;
    border-radius: 5px;
-   //padding: 9px 5px;
+   padding: 2px 5px;
    border: 1px solid #004C80;
    margin-right: 0;
    margin-top: -0.5%;
@@ -50,20 +50,25 @@
   }
 
   ul.messaging-list{
-    width: 70%;
-    border: 3px solid #004C80;
-    border-radius: 5px;
+    width: 73%;
+    //border: 3px solid #004C80;
+    //border-radius: 5px;
     margin-top: 1%;
-    margin-left: 15%;
+    margin-left: 13%;
 
     li.message-display{
       color: #004C80;
-      margin-left: 2%;
+      margin-left: -2%;
       margin-top: 2%;
       margin-bottom: 2%;
-      border-bottom: 2px solid #004C80;
+      background-color: #DEEDFA;
+      margin-bottom: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+      border-radius: 5px;
+      //border-bottom: 2px solid #004C80;
       list-style-type: none;
-      width: 90%;
+      width: 100%;
       div{
         margin-top: 2%;
         margin-bottom: 2%;
@@ -75,22 +80,29 @@
         font-size: 1.1em;
         display: inline-block;
         width: 40%;
+        //padding-top: -2px;
       }
+
       div.message-time{
-        text-align: center;
+        margin-left: 5%;
+        text-align: right;
         display: inline-block;
-        width: 25%;
+        width: 20%;
       }
       div.message-date{
-        text-align: right;
-        margin-left: 8%;
+        text-align: center;
+        margin-left: 13%;
         display: inline-block;
-        width: 25%;
+        width: 20%;
       }
+      div.message-body{
+        padding-bottom: 7px;
+      }
+
     }
-    li:last-child{
-      border-bottom: white;
-    }
+    // li:last-child{
+    //   border-bottom: white;
+    // }
   }
   form.add-message{
     width: 70%;
@@ -99,26 +111,194 @@
 }
 
 
-@media (max-width: 767px) {           //MOBILE
+@media (max-width: 567px) {           //MOBILE
+ .messaging-container{
+   select.select-premessage{
+    //-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 85%;
+    margin-top: 2%;
+    margin-right: 1%;
+    font-size: 1.5em;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background-color: #004C80;
+    color: white;
+    line-height: 1.5;
+   }
+   button.message-send{
+    display: inline-block;
+    margin-top: 1%;
+    width: 85%;
+    background-color: #004C80;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: 1px solid #004C80;
+    margin-right: 0;
+    //margin-top: -0.5%;
+    font-size: 1.2em;
+   }
+   .ng-cloak{
+     display: none !important;
+   }
 
+  ul.messaging-list{
+    width: 73%;
+    //border: 3px solid #004C80;
+    //border-radius: 5px;
+    margin-top: 1%;
+    margin-left: 13%;
+
+    li.message-display{
+      color: #004C80;
+      margin-left: -9%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: #DEEDFA;
+      margin-bottom: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+      border-radius: 5px;
+      //border-bottom: 2px solid #004C80;
+      list-style-type: none;
+      width: 100%;
+      div{
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+
+      div.message-name{
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.1em;
+        //display: inline-block;
+        width: 80%;
+      }
+
+      div.message-time{
+        margin-left: 0%;
+        text-align: left;
+        //display: inline-block;
+        width: 50%;
+      }
+      div.message-date{
+        text-align: left;
+        margin-left: 0%;
+        //display: inline-block;
+        width: 50%;
+      }
+      div.message-body{
+        padding-bottom: 7px;
+      }
+    }
+
+  }
+ }
+ }
+
+
+
+
+
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+  .messaging-container{
+    select.select-premessage{
+     //-webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     width: 85%;
+     margin-top: 2%;
+     margin-right: 1%;
+     font-size: 1.5em;
+     padding-top: 2.5%;
+     padding-bottom: 2.5%;
+     background-color: #004C80;
+     color: white;
+     line-height: 1.5;
+    }
+    button.message-send{
+     width: 12%;
+     background-color: #004C80;
+     color: white;
+     border-radius: 5px;
+     padding: 2px 5px;
+     border: 1px solid #004C80;
+     margin-right: 0;
+     margin-top: -0.5%;
+     font-size: 1.2em;
+    }
+    .ng-cloak{
+      display: none !important;
+    }
+
+  ul.messaging-list{
+    width: 73%;
+    //border: 3px solid #004C80;
+    //border-radius: 5px;
+    margin-top: 1%;
+    margin-left: 13%;
+
+    li.message-display{
+      color: #004C80;
+      margin-left: -5%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: #DEEDFA;
+      margin-bottom: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+      //padding-bottom: 3px;
+      border-radius: 5px;
+      //border-bottom: 2px solid #004C80;
+      list-style-type: none;
+      width: 100%;
+      div{
+        margin-top: 2%;
+        margin-bottom: 2%;
+      }
+
+      div.message-name{
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.1em;
+        display: inline-block;
+        width: 80%;
+      }
+
+      div.message-time{
+        margin-left: 5%;
+        text-align: left;
+        //display: inline-block;
+        width: 25%;
+      }
+      div.message-date{
+        text-align: left;
+        margin-left: 0%;
+        //display: inline-block;
+        width: 28%;
+      }
+      div.message-body{
+        padding-bottom: 7px;
+      }
+    }
+
+  }
 
 }
-
-@media (max-width: 1024px) and (min-width: 768px){      //TABLET
-
-
 }
 
 @media (min-width: 1025px) {            //DESKTOP
   .messaging-container{
-
+    font-family: Helvetica;
     h3.message-title{
       font-style: Gill Sans;
       font-size: 35pt;
       font-weight: lighter;
       color: #004C80;
       margin-top: 1%;
-      margin-left: 40%;
+      margin-left: 15%;
       height: auto;
       margin-bottom: 0%;
     }
@@ -132,9 +312,9 @@
      width: 85%;
      margin-top: 2%;
      margin-right: 1%;
-     font-size: 1.3em;
-     padding-top: 2%;
-     padding-bottom: 2%;
+     font-size: 1.5em;
+     padding-top: 2.5%;
+     padding-bottom: 2.5%;
      background-color: #004C80;
      color: white;
      line-height: 1.5;
@@ -144,7 +324,7 @@
      background-color: #004C80;
      color: white;
      border-radius: 5px;
-     //padding: 9px 5px;
+     padding: 2px 5px;
      border: 1px solid #004C80;
      margin-right: 0;
      margin-top: -0.5%;
@@ -162,20 +342,25 @@
     }
 
     ul.messaging-list{
-      width: 70%;
-      border: 3px solid #004C80;
-      border-radius: 5px;
+      width: 73%;
+      //border: 3px solid #004C80;
+      //border-radius: 5px;
       margin-top: 1%;
-      margin-left: 15%;
+      margin-left: 13%;
 
       li.message-display{
         color: #004C80;
-        margin-left: 2%;
+        margin-left: -2%;
         margin-top: 2%;
         margin-bottom: 2%;
-        border-bottom: 2px solid #004C80;
+        background-color: #DEEDFA;
+        margin-bottom: 2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        border-radius: 5px;
+        //border-bottom: 2px solid #004C80;
         list-style-type: none;
-        width: 90%;
+        width: 100%;
         div{
           margin-top: 2%;
           margin-bottom: 2%;
@@ -188,21 +373,25 @@
           display: inline-block;
           width: 40%;
         }
+
         div.message-time{
-          text-align: center;
+          margin-left: 5%;
+          text-align: right;
           display: inline-block;
-          width: 25%;
+          width: 20%;
         }
         div.message-date{
-          text-align: right;
-          margin-left: 8%;
+          text-align: center;
+          margin-left: 13%;
           display: inline-block;
-          width: 25%;
+          width: 20%;
         }
+        div.message-body{
+          padding-bottom: 7px;
+        }
+
       }
-      li:last-child{
-        border-bottom: white;
-      }
+      
     }
     form.add-message{
       width: 70%;

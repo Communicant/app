@@ -10,11 +10,15 @@
     <select class="select-premessage" ng-model="newMessage.message.body" name="select">
       <option value="">Select an option</option>
       <option>Emergency happened, the schedule for today has been changed</option>
-      <option>We need to go to the Doctor's office today, no after school activities</option>
-      <option>Incident at school, Mom is going to do the pick up</option>
-      <option>Problem with the car, we will be late for the drop off</option>
-      <option>Not be able to follow the schedule for tomorrow</option>
-      <option>Changed the pick up time for after school, Dad will do the pick up</option>
+      <option>Emergency happened, the schedule for tomorrow has been changed</option>
+      <option>No after school activities today, we need to go to the doctor</option>
+      <option>No after school activities today, incident at school</option>
+      <option>Incident at school, I will do the pick up</option>
+      <option>Changed the pick up time for after school, I will take care of pick up</option>
+      <option>Will be late to drop off, problem with the car</option>
+      <option>Will be late to drop off, other reason</option>
+
+
     </select>
     <!-- {{newMessage.body}} -->
     <button class="message-send" type="submit" name="submit-message">Send</button>
@@ -35,10 +39,10 @@
           <div class="message-name ng-cloak"><i class="fa fa-user"></i>
             {{message.name}}</div>
 
-          <div class="message-time ng-cloak" ><i class="fa fa-clock-o"></i>
-            {{message.created_at | date : medium}}</div>
-          <div class="message-date ng-cloak"><i class="fa fa-calendar"></i>
-            {{message.date | date : format : medium}}</div>
+            <div class="message-time ng-cloak" ><i class="fa fa-clock-o"></i>
+              {{message.created_at | date : short}}</div>
+            <div class="message-date ng-cloak"><i class="fa fa-calendar"></i>
+              {{message.date | date : short}}</div>
           <div class="message-body ng-cloak">{{message.body}}</div>
         </li>
 

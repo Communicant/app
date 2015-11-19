@@ -20,23 +20,14 @@
 //= require_tree .
 
 
-//home page login for the drop down login option
 ;(function(){
-  $('a[href="#login"]').on('click', function (){
-    $('#login').toggleClass('active').siblings().removeClass('active');
-  });
-  $('a[href="#rel-pay"]').on('click', function (){
-    $('#rel-pay').toggleClass('active');
-  });
+
 })();
 // END of IIFE JS
 
 
 ;(function(){
-  // $('a.header').on('click', function(){
-  //   console.log('inside click')
-  //   $(this).addClass('stay-blue').siblings().removeClass('stay-blue');
-  // });
+
   console.log("inside js")
 
   $(document).ready(function () {
@@ -54,18 +45,3 @@
 
   })
 })();
-
-
-// $(document).ready(function() {
-//   var menuToggle = $('#js-centered-navigation-mobile-menu').unbind();
-//   $('#js-centered-navigation-menu').removeClass("show");
-//
-//   menuToggle.on('click', function(e) {
-//     e.preventDefault();
-//     $('#js-centered-navigation-menu').slideToggle(function(){
-//       if($('#js-centered-navigation-menu').is(':hidden')) {
-//         $('#js-centered-navigation-menu').removeAttr('style');
-//       }
-//     });
-//   });
-// });

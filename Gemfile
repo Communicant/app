@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# ruby '2.2.2'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -43,6 +43,7 @@ gem 'rails-footnotes', '~> 4.0'
 
 gem 'will_paginate', '~> 3.0.6'
 
+gem "animate-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

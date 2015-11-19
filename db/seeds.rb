@@ -21,21 +21,21 @@
 # cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.new(2015, 11, 30), parent_id: 2, paid: true)
 
 #Events ------------------
-10.times do |e|
+3.times do |e|
 e = Event.create(
-  :title   => ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After School music class",
-      "After School sport practice", "After school other activity", "Play date"].sample,
+  :title   => ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After school music class",
+      "After school sport practice", "After school other activity", "Play date"].sample,
   :date    => Faker::Date.between(2.days.ago, Time.now),
   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
   :location => Faker::Address.street_address,
-  :user_id => rand(1..2),
-  :child_id => rand(1..6),
+  :user_id => rand(2..5),
+  :child_id => rand(1..2),
   :mediator_id => 1
 )
 end
-# event1 = Event.create!(title: "Minecraft Party", date: Date.new(2015, 11, 15), time: Time.new(2015, 11, 15, 14, 0, 0), description: "Mike's birthday party." location: (event.location),
-#           parent_id: 1, child_id: 1)
-# event2 = Event.create!(title: "Softball practice", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: (event.location), parent_id: 1, child_id: 2)
+event1 = Event.create!(title: "Birthday party", date: Date.new(2015, 11, 22), time: Time.new(2015, 11, 15, 14, 0, 0), location: "617 Brighton Ln",
+          parent_id: 1, child_id: 1, user_id: 21)
+event2 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 25), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: "7053 Green Ave", parent_id: 1, child_id: 2, user_id:22)
 # event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", location: (event.location), parent_id: 1, child_id: 1)
 # event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.", location: (event.location), parent_id:  2, child_id: 2)
 
@@ -66,54 +66,51 @@ payment5 = Payment.create!(amount: "35.00", paid_at: Date.new(2015, 11, 6), paid
 
 # Messages
 
-message1 = Message.create!(user_id: 1, body: "Billy thinks he left his toy car at your house. It's his favorite car. Can you look for it, and if you find it, let me know?", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 32, 56))
+message1 = Message.create!(user_id: 1, body: "Emergency happened, the schedule for tomorrow has been changed", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 32, 56))
 
-message2 = Message.create!(user_id: 2, body: "Yeah, I found it. He dropped it outside on his way to the car. I put it on my nightstand. I'll make sure to give it to him.", date: Date.new(2015, 11, 6), time: Time.new(2015, 11, 6, 11, 45, 41))
+message2 = Message.create!(user_id: 2, body: "No after school activities today, we need to go to the doctor", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 45, 41))
 
-message3 = Message.create!(user_id: 1, body: "Thanks. Billy would be heartbroken if he couldn't find that.", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
+message3 = Message.create!(user_id: 1, body: "Changed the pick up time for after school, I will take care of pick up", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
 
-message4 = Message.create!(user_id: 1, body: "I get off of work at 7. I'll bring the kids once I get off.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
-
-message5 = Message.create!(user_id: 2, body: "Okay. I'll be waiting.", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 32, 56))
-
+message4 = Message.create!(user_id: 2, body: "Will be late to drop off, problem with the car", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 16, 32, 56))
 
 # User ---------------------
-10.times do |parent|
-parent = Parent.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..6)
-)
-end
+# 10.times do |parent|
+# parent = Parent.create!(
+#   :email => Faker::Internet.safe_email,
+#   :password => "123456",
+#   :first_name => Faker::Name.name,
+#   :last_name => Faker::Name.name,
+#   :address => Faker::Address.street_address,
+#   :child_id => rand(1..6)
+# )
+# end
+#
+# 10.times do |mediator|
+# mediator = Mediator.create!(
+#   :email => Faker::Internet.safe_email,
+#   :password => "123456",
+#   :first_name => Faker::Name.name,
+#   :last_name => Faker::Name.name,
+#   :address => Faker::Address.street_address,
+#   :child_id => rand(1..6)
+# )
+# end
+Parent.create!(email: "mamallama@email.com", password: "123456", first_name: "Rosa", last_name: "Anthony", address: "123 123rd st.", child_id: 1)
+Parent.create!(email: "joe.donot@email.com", password: "123456", first_name: "Steve", last_name: "Jasmine", address: "123 123rd st.", child_id: 2)
+# Parent.create!(email: "email4@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 3)
+# Parent.create!(email: "email5@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 4)
+# Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 5)
 
-10.times do |mediator|
-mediator = Mediator.create!(
-  :email => Faker::Internet.safe_email,
-  :password => "123456",
-  :first_name => Faker::Name.name,
-  :last_name => Faker::Name.name,
-  :address => Faker::Address.street_address,
-  :child_id => rand(1..6)
-)
-end
-Parent.create!(email: "email1@email.com", password: "123456", first_name: "Mom", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 1)
-Parent.create!(email: "email2@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 2)
-Parent.create!(email: "email4@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 3)
-Parent.create!(email: "email5@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 4)
-Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 5)
-
-Mediator.create!(email: "email3@email.com", password: "123456", first_name: "Mediator", last_name: "Medlast", address: "123 123rd st.")
+Mediator.create!(email: "a.binns@email.com", password: "123456", first_name: "Ashley", last_name: "Binns", address: "123 Main St.")
 
 #Children -------------------
-Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 1)
-Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
-Child.create!(first_name: "Jan", age: 9, parent_id: 1, case_number: 2)
-Child.create!(first_name: "Harry", age: 13, parent_id: 1, case_number: 2)
-Child.create!(first_name: "Calliope", age: 2, parent_id: 1, case_number: 3)
-Child.create!(first_name: "Annalise", age: 16, parent_id: 1, case_number: 3)
+# Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 1)
+# Child.create!(first_name: "Sarah", age: 7, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Jorge", age: 9, parent_id: 1, case_number: 1)
+Child.create!(first_name: "Harry", age: 13, parent_id: 1, case_number: 1)
+# Child.create!(first_name: "Calliope", age: 2, parent_id: 1, case_number: 3)
+# Child.create!(first_name: "Annalise", age: 16, parent_id: 1, case_number: 3)
 
 #Approval -----------------------
 
