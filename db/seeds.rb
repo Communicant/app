@@ -34,8 +34,8 @@ e = Event.create(
 )
 end
 event1 = Event.create!(title: "Birthday party", date: Date.new(2015, 11, 22), time: Time.new(2015, 11, 15, 14, 0, 0), location: "617 Brighton Ln",
-          parent_id: 1, child_id: 1, user_id: 21)
-event2 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 25), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: "7053 Green Ave", parent_id: 1, child_id: 2, user_id:22)
+          parent_id: 2, child_id: 1, user_id: 21)
+event2 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 25), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: "7053 Green Ave", parent_id: 2, child_id: 2, user_id:22)
 # event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", location: (event.location), parent_id: 1, child_id: 1)
 # event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.", location: (event.location), parent_id:  2, child_id: 2)
 
@@ -66,9 +66,9 @@ payment5 = Payment.create!(amount: "35.00", paid_at: Date.new(2015, 11, 6), paid
 
 # Messages
 
-message1 = Message.create!(user_id: 1, body: "Emergency happened, the schedule for tomorrow has been changed", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 32, 56))
+# message1 = Message.create!(user_id: 1, body: "Emergency happened, the schedule for tomorrow has been changed", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 32, 56))
 
-message2 = Message.create!(user_id: 2, body: "No after school activities today, we need to go to the doctor", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 45, 41))
+# message2 = Message.create!(user_id: 2, body: "No after school activities today, we need to go to the doctor", date: Date.new(2015, 11, 10), time: Time.new(2015, 11, 6, 11, 45, 41))
 
 message3 = Message.create!(user_id: 1, body: "Changed the pick up time for after school, I will take care of pick up", date: Date.new(2015, 11, 06), time: Time.new(2015, 11, 6, 12, 01, 56))
 
@@ -96,13 +96,13 @@ message4 = Message.create!(user_id: 2, body: "Will be late to drop off, problem 
 #   :child_id => rand(1..6)
 # )
 # end
-Parent.create!(email: "mamallama@email.com", password: "123456", first_name: "Rosa", last_name: "Anthony", address: "123 123rd st.", child_id: 1)
-Parent.create!(email: "joe.donot@email.com", password: "123456", first_name: "Steve", last_name: "Jasmine", address: "123 123rd st.", child_id: 2)
+Parent.create!(email: "rosa@email.com", password: "123456", first_name: "Rosa", last_name: "Anthony", address: "123 123rd st.", child_id: 1)
+Parent.create!(email: "steve@email.com", password: "123456", first_name: "Steve", last_name: "Jasmine", address: "123 123rd st.", child_id: 2)
 # Parent.create!(email: "email4@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 3)
 # Parent.create!(email: "email5@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 4)
 # Parent.create!(email: "email6@email.com", password: "123456", first_name: "Dad", last_name: "Parent Last Name", address: "123 123rd st.", child_id: 5)
 
-Mediator.create!(email: "a.binns@email.com", password: "123456", first_name: "Ashley", last_name: "Binns", address: "123 Main St.")
+Mediator.create!(email: "mediator@email.com", password: "123456", first_name: "Ashley", last_name: "Binns", address: "123 Main St.")
 
 #Children -------------------
 # Child.create!(first_name: "Mike", age: 10, parent_id: 1, case_number: 1)
