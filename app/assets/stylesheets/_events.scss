@@ -156,10 +156,13 @@ li:last-child{
         margin-bottom: 7px;
         //margin-left: -1px;
       }
-      div.pending-approval{
+      div.approved{
         width: 80%;
         text-align: left;
         //margin-left: -100%;
+        .pending-approval{
+          float: left;
+        }
       }
 
     }
@@ -214,10 +217,7 @@ div.new-event{
         text-align: right;
         margin-left: -0.5%;
       }
-      div.pending-approval{
-        width: 20%;
-        text-align: right;
-      }
+      
       .span-1-of-8 {
         	width: 20%;
       }
