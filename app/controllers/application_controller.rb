@@ -6,18 +6,7 @@ class ApplicationController < ActionController::Base
   layout "application", except: [:index, :home]
 
 
-#FOR TESTING PURPOSES: -----------------------
-
-  # before_filter :log_parent_in
-
-  # def log_parent_in
-  #   session[:user_id] = User.first.id
-  # end
-
-
-# --------------------------------------------
-
-  # Necessary in order for new messages, expenses, and payments to be created through json! 
+  # Necessary in order for new messages, expenses, and payments to be created through json!
 skip_before_action :verify_authenticity_token, if: :json_request?
 
 
@@ -30,6 +19,7 @@ skip_before_action :verify_authenticity_token, if: :json_request?
   def logged_in_user
     @logged_in_user = User.find(session[:user_id])
   end
+
 
   def json_request?
     request.format.json?
