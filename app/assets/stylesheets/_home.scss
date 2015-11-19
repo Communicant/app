@@ -39,10 +39,10 @@ section.home-info-box {
   margin-top: -350px;
 
   div.col-1-3 {
-    width: 33.33%;
+    width: 100% * (1/3);
     display: table-cell;
     border-right: .5px solid #333;
-    height: 350px;
+    height: 352px;
     text-align: center;
     background: linear-gradient(#8ACDD1, #BCE0E3);
     border-right: 1px solid #FFFDF7;
@@ -83,8 +83,12 @@ section.home-info-box {
   }
 }
 
-
-
+svg {
+  width: 30%;
+  display: table-cell;
+  margin-top: 0px; margin-bottom: 0px;
+  height: auto;
+}
 
 //
 //
