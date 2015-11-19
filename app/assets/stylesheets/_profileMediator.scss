@@ -4,7 +4,7 @@ h1.profile-header{
   font-weight: lighter;
   color: #004C80;
   margin-top: 2%;
-  margin-left: 13%;
+  // margin-left: 13%;
   display: inline;
 }
 
@@ -12,120 +12,130 @@ span.case_number{
   font-size: 14pt;
 }
 
-table.profile-m-table{
-  margin-left: 2.5%;
-  border: 3px solid #004C80;
-  border-radius: 5px;
-  width: 95%;
-  margin-top: 2%;
-}
-thead.profile-m-thead{
-  border-bottom: 1px solid #004C80;
-  tr.profile-m-title-row{
-    border-bottom: 1px solid #004C80;
-    th{
-      padding-top: 2%;
-      padding-bottom: 1%;
-      font-size: 1.5em;
-      margin-right: 2%;
-      color: #004C80;
-      font-style: arial;
-    }
-  }
-}
-tbody.profile-m-body-table{
-tr.profile-m-main-table{
-  margin-top: 5%;
-  text-align: center;
-  margin-bottom: 5%;
-  border-bottom: 1px solid #004C80;
-  }
-}
-td{
-  padding: 20px 5px 20px 5px;
-}
-
-td.profile-name{
-  width:20%;
-  a{
-    text-decoration: none;
-  }
-}
-td.profile-email{
-  width: 20%;
-}
-td.profile-phone{
-  width: 5%;
-}
-td.profile-child{
-  width: 20%;
-}
-td.profile-case{
-  width: 5%;
-}
-td.profile-mediator{
-  width: 20%;
-  margin-right: 5%;
-}
-
-td.profile-m-show{
- a{
-  text-decoration: none;
-  border: 1px solid #004C80;
-  background-color: #004C80;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  padding: 5%;
- }
-}
-td.profile-m-edit{
- a{
-  text-decoration: none;
-  border: 1px solid #004C80;
-  background-color: #004C80;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  padding: 5%;
-  }
-}
-td.profile-m-delete{
- a{
-  text-decoration: none;
-  border: 1px solid #004C80;
-  background-color: #004C80;
-  border-radius: 5px;
-  color: white;
-  text-align: center;
-  padding: 3%;
-  }
-}
+// table.profile-m-table{
+//   border: 3px solid #004C80;
+//   border-radius: 5px;
+//   width: 95%;
+//   margin-top: 2%;
+// }
+// thead.profile-m-thead{
+//   border-bottom: 1px solid #004C80;
+//   tr.profile-m-title-row{
+//     border-bottom: 1px solid #004C80;
+//     th{
+//       padding-top: 2%;
+//       padding-bottom: 1%;
+//       font-size: 1.5em;
+//       margin-right: 2%;
+//       color: #004C80;
+//       font-style: arial;
+//     }
+//   }
+// }
+// tbody.profile-m-body-table{
+// tr.profile-m-main-table{
+//   margin-top: 5%;
+//   text-align: center;
+//   margin-bottom: 5%;
+//   border-bottom: 1px solid #004C80;
+//   }
+// }
+// td{
+//   padding: 20px 5px 20px 5px;
+// }
+//
+// td.profile-name{
+//   width:20%;
+//   a{
+//     text-decoration: none;
+//   }
+// }
+// td.profile-email{
+//   width: 20%;
+// }
+// td.profile-phone{
+//   width: 5%;
+// }
+// td.profile-child{
+//   width: 20%;
+// }
+// td.profile-case{
+//   width: 5%;
+// }
+// td.profile-mediator{
+//   width: 20%;
+//   margin-right: 5%;
+// }
+//
+// td.profile-m-show{
+//  a{
+//   text-decoration: none;
+//   border: 1px solid #004C80;
+//   background-color: #004C80;
+//   border-radius: 5px;
+//   color: white;
+//   text-align: center;
+//   padding: 5%;
+//  }
+// }
+// td.profile-m-edit{
+//  a{
+//   text-decoration: none;
+//   border: 1px solid #004C80;
+//   background-color: #004C80;
+//   border-radius: 5px;
+//   color: white;
+//   text-align: center;
+//   padding: 5%;
+//   }
+// }
+// td.profile-m-delete{
+//  a{
+//   text-decoration: none;
+//   border: 1px solid #004C80;
+//   background-color: #004C80;
+//   border-radius: 5px;
+//   color: white;
+//   text-align: center;
+//   padding: 3%;
+//   }
+// }
 
 span.new-profile{
 margin-left: 52.5%;
 display: inline;
-a{
-font-family: Helvetica;
-font-size: 1.3em;
-font-weight: lighter;
-text-decoration: none;
-border: 1px solid #004C80;
-background-color: #004C80;
-border-radius: 5px;
-color: white;
-text-align: center;
-padding: 5px;;
-}
+  a{
+    font-family: Helvetica;
+    font-size: 1.3em;
+    font-weight: lighter;
+    text-decoration: none;
+    border: 1px solid #004C80;
+    background-color: #004C80;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    float: right;
+    margin-left: 10px; margin-top: 5px;
+  }
 }
 
 ul.events-body-table{
+  width: 100%;
+  margin-left: 0px;
+  padding-left: 0px;
   li.events-main-table{
+    padding-left: 0px;
     div.profiles{
       padding-left: 10px;
 
     }
   }
+}
+
+section.cases-label-container {
+  width: 70%;
+  margin-left: 15%;
 }
 
 

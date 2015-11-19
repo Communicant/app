@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="profile-header">Cases</h1>
-<span class="new-profile">
-<%= link_to 'New Case', new_profile_path %> <%= link_to 'New Child', new_child_path %>
-</span>
-<ul class="events-body-table">
-    <% @profiles.each do |profile| %>
-    <li class="events-main-table">
-      <div class="section group profiles">
-        <div class="child col span-2-of-8">
-          <span class="case_number"><b>Case Number:</b><br><%= profile.case_number %></span>
-        </div>
-        <div class="child col span-2-of-8">
-          <b>Parent 1 Name:</b><br> <%= link_to profile.name, profile %>
-        </div>
-        <div class="child col span-2-of-8">
-          <b>Parent 2 Name:</b><br> <%= link_to profile.name2, profile %>
-        </div>
-        <div class="child col span-2-of-8">
-          <b>Children Names:</b><br>
-          <% profile.profile_children.each do |child| %>
-            <%= child %><br>
-          <% end %>
-        </div>
-    </div>
-    <% end %>
-  </li>
-</ul>
+<section class="cases-label-container">
+  <h1 class="profile-header">Cases</h1>
+  <span class="new-profile">
+  <%= link_to 'New Case', new_profile_path %> <%= link_to 'New Child', new_child_path %>
+  </span>
+
+  <ul class="events-body-table">
+      <% @profiles.each do |profile| %>
+      <li class="events-main-table">
+        <div class="section group profiles">
+          <div class="child col span-2-of-8">
+            <span class="case_number"><b>Case Number:</b><br><%= profile.case_number %></span>
+          </div>
+          <div class="child col span-2-of-8">
+            <b>Parent 1 Name:</b><br> <%= link_to profile.name, profile %>
+          </div>
+          <div class="child col span-2-of-8">
+            <b>Parent 2 Name:</b><br> <%= link_to profile.name2, profile %>
+          </div>
+          <div class="child col span-2-of-8">
+            <b>Children Names:</b><br>
+            <% profile.profile_children.each do |child| %>
+              <%= child %><br>
+            <% end %>
+          </div>
+      </div>
+      <% end %>
+    </li>
+  </ul>
+</section>
