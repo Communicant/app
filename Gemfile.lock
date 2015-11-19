@@ -36,6 +36,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    animate-rails (1.0.9)
+      rails
     arel (6.0.3)
     autoprefixer-rails (6.0.3)
       execjs
@@ -159,6 +161,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3, >= 3.3.5.1)
   bourbon
