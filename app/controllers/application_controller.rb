@@ -5,24 +5,6 @@ class ApplicationController < ActionController::Base
 
   layout "application", except: [:index, :home]
 
-<<<<<<< 25e2ec3dab73712c038b36e1027051217c954774
-=======
-  # before_filter :log_parent_in
->>>>>>> Login fix
-
-#FOR TESTING PURPOSES: -----------------------
-
-  # before_filter :log_parent_in
-
-  # def log_parent_in
-  #   session[:user_id] = User.first.id
-  # end
-  #
-  # def log_parent_in
-  #   session[:user_id] = User.first.id
-  # end
-  #
-  # skip_before_action :verify_authenticity_token, if: :json_request?
 
   # Necessary in order for new messages, expenses, and payments to be created through json!
 skip_before_action :verify_authenticity_token, if: :json_request?
