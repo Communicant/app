@@ -17,6 +17,8 @@
         <h2>Communicant</h2>
       </header>
       <nav class="header-navig">
+        <i class="fa fa-bars"></i>
+
         <section class="tabs-header">
 
           <%= link_to 'Events', events_path, class: "header head-resp" %>
@@ -26,6 +28,12 @@
             <%= link_to 'Log out', session_path(session[:user_id]), method: :delete, class: "header-log-out head-resp" %>
        </section>
       </nav>
+      <script>
+        $('i.fa-bars').on('click', function(){
+          $('.tabs-header').addClass('show-header').removeClass('tabs-header');
+          console.log("changing header")
+        });
+      </script>
     </main>
 
 <% end %>
