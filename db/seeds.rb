@@ -21,21 +21,21 @@
 # cost6 = Cost.create!(title: "Child Support Due!", amount: "111.00", due: Date.new(2015, 11, 30), parent_id: 2, paid: true)
 
 #Events ------------------
-# 10.times do |e|
-# e = Event.create(
-#   :title   => ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After school music class",
-#       "After school sport practice", "After school other activity", "Play date"].sample,
-#   :date    => Faker::Date.between(2.days.ago, Time.now),
-#   :time    => Faker::Time.between(2.days.ago, Time.now, :day),
-#   :location => Faker::Address.street_address,
-#   :user_id => rand(1..2),
-#   :child_id => rand(1..6),
-#   :mediator_id => 1
-# )
-# end
+3.times do |e|
+e = Event.create(
+  :title   => ["Birthday party", "Doctor's appointment", "Dentist's appointment", "After school music class",
+      "After school sport practice", "After school other activity", "Play date"].sample,
+  :date    => Faker::Date.between(2.days.ago, Time.now),
+  :time    => Faker::Time.between(2.days.ago, Time.now, :day),
+  :location => Faker::Address.street_address,
+  :user_id => rand(2..5),
+  :child_id => rand(1..2),
+  :mediator_id => 1
+)
+end
 event1 = Event.create!(title: "Birthday party", date: Date.new(2015, 11, 22), time: Time.new(2015, 11, 15, 14, 0, 0), location: "617 Brighton Ln",
-          parent_id: 1, child_id: 1, user_id: 1)
-event2 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 25), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: "7053 Green Ave", parent_id: 1, child_id: 2, user_id:2)
+          parent_id: 1, child_id: 1, user_id: 21)
+event2 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 25), time: Time.new(2015, 11, 10, 16, 0, 0), description: "Jane has softball practice at a new time today.", location: "7053 Green Ave", parent_id: 1, child_id: 2, user_id:22)
 # event3 = Event.create!(title: "Soccer game", date: Date.new(2015, 11, 12), time: Time.new(2015, 11, 12, 15, 0, 0), description: "Sarah's soccer game.", location: (event.location), parent_id: 1, child_id: 1)
 # event4 = Event.create!(title: "Doctor's appointment", date: Date.new(2015, 11, 9), time: Time.new(2015, 11, 9, 17, 0, 0), description: "Charlie doctor's appointment.", location: (event.location), parent_id:  2, child_id: 2)
 
