@@ -51,8 +51,6 @@
 
   ul.messaging-list{
     width: 73%;
-    //border: 3px solid #004C80;
-    //border-radius: 5px;
     margin-top: 1%;
     margin-left: 13%;
 
@@ -66,7 +64,6 @@
       padding-left: 3%;
       padding-right: 3%;
       border-radius: 5px;
-      //border-bottom: 2px solid #004C80;
       list-style-type: none;
       width: 100%;
       div{
@@ -80,7 +77,6 @@
         font-size: 1.1em;
         display: inline-block;
         width: 40%;
-        //padding-top: -2px;
       }
 
       div.message-time{
@@ -97,6 +93,8 @@
       }
       div.message-body{
         padding-bottom: 7px;
+        font-size: 1.1em;
+        margin-top: -3px;
       }
 
     }
@@ -161,7 +159,6 @@
       padding-left: 3%;
       padding-right: 3%;
       border-radius: 5px;
-      //border-bottom: 2px solid #004C80;
       list-style-type: none;
       width: 100%;
       div{
@@ -191,6 +188,7 @@
       }
       div.message-body{
         padding-bottom: 7px;
+        font-size: 1.1em;
       }
     }
 
@@ -281,6 +279,7 @@
       }
       div.message-body{
         padding-bottom: 7px;
+        font-size: 1.1em;
       }
     }
 
@@ -388,10 +387,11 @@
         }
         div.message-body{
           padding-bottom: 7px;
+          font-size: 1.1em;
         }
 
       }
-      
+
     }
     form.add-message{
       width: 70%;
