@@ -64,8 +64,8 @@ section.tabs-header{
 @media screen and (max-width: 575px) {           //MOBILE
   i.fa-bars{
     color: #004C80;
-    font-size: 5em;
-    margin-left: 1%;
+    font-size: 1.5em;
+    margin-left: 90%;
   }
   section.tabs-header{
     display: none;
@@ -75,7 +75,7 @@ section.tabs-header{
     position: relative;
     padding-left: 2%;
     display: table;
-    margin-top: -12%;
+    margin-top: -10%;
     a.head-resp{
       display: inline-block;
       font-size: 1.2em;
@@ -105,8 +105,8 @@ section.tabs-header{
 @media (max-width: 774px) and (min-width: 576px){      //TABLET
   i.fa-bars{
     color: #004C80;
-    font-size: 5em;
-    margin-left: 1%;
+    font-size: 1.5em;
+    margin-left: 90%;
   }
   section.tabs-header{
     display: none;
@@ -160,8 +160,8 @@ section.tabs-header{
 @media (max-width: 1024px) and (min-width: 775px){      //TABLET2
 i.fa-bars{
   color: #004C80;
-  font-size: 5em;
-  margin-left: 1%;
+  font-size: 1.5em;
+  margin-left: 90%;
 
 }
   section.tabs-header{
