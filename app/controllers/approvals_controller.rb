@@ -24,7 +24,7 @@ class ApprovalsController < ApplicationController
     @approval = Approval.new(approval_params)
 
     if @approval.save
-      redirect_to @approval, notice: 'Approval was successfully created.'
+      redirect_to events_path, notice: 'Approval was successfully created.'
     else
       render :new
     end
