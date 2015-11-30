@@ -104,7 +104,7 @@
 }
 
 
-@media (max-width: 567px) {           //MOBILE
+@media (max-width: 767px) {           //MOBILE
  .messaging-container{
    select.select-premessage{
     -moz-appearance: none;
@@ -188,7 +188,7 @@
 
 
 
-@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+@media (max-width: 1024px) and (min-width: 768px){      //TABLET
   .messaging-container{
     select.select-premessage{
      -moz-appearance: none;

@@ -91,7 +91,7 @@ section.update-event-container{
   font-size: 1.3em;
 }
 }
-@media (max-width: 567px) {           //MOBILE
+@media (max-width: 767px) {           //MOBILE
   section.update-event-container{
   #event_title{
     width: 80%;
@@ -121,7 +121,7 @@ section.update-event-container{
 
 
 
-@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+@media (max-width: 1024px) and (min-width: 768px){      //TABLET
   section.update-event-container{
     #event_child_id{
       margin-left: 7%;

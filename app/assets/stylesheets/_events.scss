@@ -117,7 +117,7 @@ li:last-child{
 }
 }
 
-@media (max-width: 567px) {           //MOBILE
+@media (max-width: 767px) {           //MOBILE
 
   div.new-event{
    a{
@@ -183,7 +183,7 @@ div.new-event{
 
 
 
-@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+@media (max-width: 1024px) and (min-width: 768px){      //TABLET
 
   h1.events-header{
     margin-left: 7%;
