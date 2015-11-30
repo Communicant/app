@@ -20,13 +20,8 @@
 //= require_tree .
 
 
-;(function(){
 
-})();
-// END of IIFE JS
-
-
-;(function(){
+;(function(){ //TO KEEP THE TABS IN NAV STAYING IN BLUE WHILE WE ARE IN THE PAGE
 
   console.log("inside js")
 
@@ -44,4 +39,4 @@
     tabHeader2.addClass('stay-blue').siblings().removeClass('stay-blue');
 
   })
-})();
+})();//END IIFE FOR TABS

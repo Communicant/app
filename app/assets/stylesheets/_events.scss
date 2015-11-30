@@ -11,8 +11,6 @@ h1.events-header{
   font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  //margin-top: -5px;
-  //margin-bottom: 1%;
   margin-left: 15%;
 }
 
@@ -45,7 +43,6 @@ ul.events-body-table{
   width: 76%;
 li.events-main-table{
   list-style: none;
-  //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
   margin-left: 15%;
@@ -154,12 +151,10 @@ li:last-child{
       div.location{
         width: 80%;
         margin-bottom: 7px;
-        //margin-left: -1px;
       }
       div.approved{
         width: 80%;
         text-align: left;
-        //margin-left: -100%;
         .pending-approval{
           float: left;
         }
@@ -181,7 +176,6 @@ div.new-event{
   font-size: 1.3em;
   width: 75%;
   margin-top: 1%;
-  //float: right;
  }
  }
 } //END OF MOBILE
@@ -211,13 +205,12 @@ div.new-event{
         text-align: right;
       }
       div.location{
-        //margin-left: -0.5%;
       }
       div.approved{
         text-align: right;
         margin-left: -0.5%;
       }
-      
+
       .span-1-of-8 {
         	width: 20%;
       }
@@ -240,7 +233,6 @@ div.new-event{
   font-size: 1.3em;
   width: 75%;
   margin-top: 1%;
-  //float: right;
  }
  }
 } //END OF TABLET
@@ -257,8 +249,6 @@ div.new-event{
     font-size: 30pt;
     font-weight: lighter;
     color: #004C80;
-    //margin-top: 2%;
-    //margin-bottom: 3%;
     margin-left: 15%;
   }
 
@@ -284,7 +274,6 @@ div.new-event{
     width: 78.5%;
   li.events-main-table{
     list-style: none;
-    //padding-top: 3%;
     padding-bottom: 2%;
     color: #004C80;
     width: 75%;
@@ -320,9 +309,6 @@ div.new-event{
       .span-2-of-8{
         width: 23.8%;
       }
-
-
-
       div.title{
         font-weight: bolder;
         text-decoration: none;

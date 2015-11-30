@@ -14,7 +14,6 @@
     margin-left: 8%;
   }
   select.select-premessage{
-   //-webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
    width: 85%;
@@ -96,11 +95,7 @@
         font-size: 1.1em;
         margin-top: -3px;
       }
-
     }
-    // li:last-child{
-    //   border-bottom: white;
-    // }
   }
   form.add-message{
     width: 70%;
@@ -112,7 +107,6 @@
 @media (max-width: 567px) {           //MOBILE
  .messaging-container{
    select.select-premessage{
-    //-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 85%;
@@ -135,7 +129,6 @@
     padding: 2px 5px;
     border: 1px solid #004C80;
     margin-right: 0;
-    //margin-top: -0.5%;
     font-size: 1.2em;
    }
    .ng-cloak{
@@ -144,8 +137,6 @@
 
   ul.messaging-list{
     width: 73%;
-    //border: 3px solid #004C80;
-    //border-radius: 5px;
     margin-top: 1%;
     margin-left: 13%;
 
@@ -170,20 +161,17 @@
         text-align: left;
         font-weight: bold;
         font-size: 1.1em;
-        //display: inline-block;
         width: 80%;
       }
 
       div.message-time{
         margin-left: 0%;
         text-align: left;
-        //display: inline-block;
         width: 50%;
       }
       div.message-date{
         text-align: left;
         margin-left: 0%;
-        //display: inline-block;
         width: 50%;
       }
       div.message-body{
@@ -203,7 +191,6 @@
 @media (max-width: 1024px) and (min-width: 568px){      //TABLET
   .messaging-container{
     select.select-premessage{
-     //-webkit-appearance: none;
      -moz-appearance: none;
      appearance: none;
      width: 85%;
@@ -233,8 +220,6 @@
 
   ul.messaging-list{
     width: 73%;
-    //border: 3px solid #004C80;
-    //border-radius: 5px;
     margin-top: 1%;
     margin-left: 13%;
 
@@ -247,9 +232,7 @@
       margin-bottom: 2%;
       padding-left: 3%;
       padding-right: 3%;
-      //padding-bottom: 3px;
       border-radius: 5px;
-      //border-bottom: 2px solid #004C80;
       list-style-type: none;
       width: 100%;
       div{
@@ -268,13 +251,11 @@
       div.message-time{
         margin-left: 5%;
         text-align: left;
-        //display: inline-block;
         width: 25%;
       }
       div.message-date{
         text-align: left;
         margin-left: 0%;
-        //display: inline-block;
         width: 28%;
       }
       div.message-body{
@@ -305,7 +286,6 @@
       margin-left: 8%;
     }
     select.select-premessage{
-     //-webkit-appearance: none;
      -moz-appearance: none;
      appearance: none;
      width: 85%;
@@ -342,8 +322,6 @@
 
     ul.messaging-list{
       width: 73%;
-      //border: 3px solid #004C80;
-      //border-radius: 5px;
       margin-top: 1%;
       margin-left: 13%;
 
@@ -357,7 +335,6 @@
         padding-left: 3%;
         padding-right: 3%;
         border-radius: 5px;
-        //border-bottom: 2px solid #004C80;
         list-style-type: none;
         width: 100%;
         div{

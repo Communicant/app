@@ -1,37 +1,33 @@
 ;(function(){
 
   var app = angular.module('Communicant', ['ngRoute']);
-  console.log("inside angular")
-
-  app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$timeout', '$interval', function($scope, $http, $routeParams, $timeout, $interval){
+//getting data from messages.json
+  app.controller('ListOfMessagesController', ['$scope', '$http', '$routeParams', '$interval', function($scope, $http, $routeParams, $interval){
 
      function updateMessages(){
       return $http.get("/messages.json")
         .then(function(response){
           $scope.messages = response.data
           })
-          console.log("inside ListOfMessagesController")
-          console.log(response.data.length)
+          //console.log("inside ListOfMessagesController")
      }
 
-
+// update the messages page every 2 seconds for new messages
      $interval(function(){
         $http.get("/messages.json")
         .then(function(response){
         $scope.messages = response.data;
-        console.log("probando timeout")
-        //console.log("inside the get after the post, just trying to update the list of messages")
+        //console.log("probando timeout")
         })
       }, 2000);
 
 
    }]);//END of ListOfMessagesController
 
-
-  app.controller('NewMessageController', ['$scope', '$http', '$timeout', '$interval',  function($scope, $http, $timeout, $interval){
+//posting new message in the json
+  app.controller('NewMessageController', ['$scope', '$http'  function($scope, $http){
     console.log("inside NewMessageController")
     $scope.newMessage = {
-      //body: "select_option"
     };
     $scope.submit = function(){
       console.log("after submit")
@@ -39,7 +35,6 @@
         .then(function(response){
           $scope.newMessage = { };
           console.log("post works")
-          // TODO: What's in response? do i need that?
           // FIXME: API should return me the message I just created _as JSON_
           // $scope.messages.push(response.data)
 
@@ -106,28 +101,7 @@
 
   }]); // END ListExpensesController
 
-  // app.controller('ListPaymentsController', ['$scope', '$http', function($scope, $http){
-  //   // console.log('Yo');
-  //   $http.get("/expenses.json")
-  //   .then(function(response){
-  //     $scope.expenses.payments = response.data;
-  //   })
-  // }]); // END ListPaymentsController
 
-  // app.controller('NewExpenseController', ['$scope', '$http', function($scope, $http){
-  //   // console.log("Hello?");
-  //   $scope.newExpense = { };
-  //   $scope.submitExpense = function(){
-  //     $http.post("/expenses.json", $scope.newExpense);
-  //     $scope.newExpense = { };
-  //   };
-  //
-  //
-  //   $http.get("/expenses.json")
-  //   .then(function(response){
-  //     $scope.expenses = response.data;
-  //   })
-  // }]); // END NewExpenseController
 
 })(); // END IIFE
 
