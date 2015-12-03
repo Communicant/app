@@ -3,7 +3,8 @@
 <section class="cases-label-container">
   <h1 class="profile-header">Cases</h1>
   <span class="new-profile">
-  <%= link_to 'New Case', new_profile_path %> <%= link_to 'New Child', new_child_path %>
+  <%= link_to 'New Case', new_profile_path, class: "profile-case" %>
+  <%= link_to 'New Child', new_child_path, class: "profile-child" %>
   </span>
 
   <ul class="events-body-table">

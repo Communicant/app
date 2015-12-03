@@ -21,7 +21,10 @@
 
 
 ;(function(){
-
+  // $('i.fa-bars').on('click', function(){
+  //   $('.tabs-header').addClass('show-header').removeClass('tabs-header');
+  //   console.log("changing header")
+  // });
 })();
 // END of IIFE JS
 
@@ -44,4 +47,5 @@
     tabHeader2.addClass('stay-blue').siblings().removeClass('stay-blue');
 
   })
+
 })();
