@@ -50,18 +50,17 @@ ul.events-body-table{
 section.cases-label-container {
   width: 100%;
 }
+@media (max-width: 567px) {           //MOBILE
 
 
-@media only screen and (max-width: 720px){
-  span.new-profile {
-    width: 100%;
-    margin-left: 15%;
-    padding-bottom: 10px;
-    float: left;
-    a.profile-case{
-      margin-right: 20%;
-    }
+}
 
-  }
+@media (max-width: 1024px) and (min-width: 568px){      //TABLET
+  
+
+}
+
+@media (min-width: 1025px) {            //DESKTOP
+
 
 }
