@@ -13,4 +13,8 @@ Let Communicant be your mediator without the expense.
 
 http://communicant-app.herokuapp.com/
 
-Sign in as a parent with rosa@email.com  password 123456
+Sign in as a parent A with rosa@email.com password 123456. 
+
+Sign in as a parent B with steve@email.com password 123456. 
+
+Sign in as a mediator with mediator@email.com password 123456.
