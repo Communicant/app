@@ -1,5 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/Communicant/app.png?label=ready&title=Ready)](http://waffle.io/Communicant/app)
-
 # Communicant
 
 Communicant is the cost-free application that helps anyone who is having trouble communicating, whether it is because of a separation, divorce, or if they are unable to be on speaking terms.
