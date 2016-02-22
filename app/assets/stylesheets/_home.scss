@@ -1,3 +1,97 @@
+//New home page
+
+$bluehome: #AEDADE;
+$whitehome: #F8F8F8;
+$darkblue: #1A5D8B;
+
+body{
+  background-color: $bluehome;
+  font-family: Gill Sans;
+}
+.header-home-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.header-home-title h2{
+  width: 25%;
+  font-size: 45px;
+  color: $darkblue;
+  margin-left: 2%;
+}
+.header-buttons{
+  padding-top: 35px;
+  //width: 20%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 20px 10px 20px;
+  button{
+    background-color: $darkblue;
+    color: white;
+    border-radius: 5px;
+    border: $darkblue solid 1px;
+    margin: 0 10px 5px 10px;
+    width: 90px;
+    font-size: 15px;
+  }
+}
+.central-home{
+  background-image: url('baby2.png');
+  width: 100%;
+  height: 549px;
+  //@extend .clearfix;
+  content: " "; /* 1 */
+  display: table; /* 2 */
+  clear: both;
+
+}
+
+.text-1-3{
+  width: 22%;
+  //@extend .clearfix;
+  content: " "; /* 1 */
+  display: table; /* 2 */
+  clear: both;
+  float: left;
+  position: absolute;
+  background: rgba(255,255,255,0.4);
+  color: $darkblue;
+  height: 549px;
+  padding: 10px 10px 10px 10px;
+
+}
+.text-3-3{
+  width: 22%;
+  //@extend .clearfix;
+  content: " "; /* 1 */
+  display: table; /* 2 */
+  clear: both;
+  float: right;
+  background: rgba(255,255,255,0.4);
+  color: $darkblue;
+  height: 549px;
+  padding: 10px 10px 10px 10px;
+
+
+}
+.img-2-3{
+  width: 100%;
+  img{
+    width: 100%;
+    height: 750px;
+  }
+}
+
+
+.part1 img{
+  width: 10%;
+  border-radius: 10px;
+}
+//END OF NEW HOME PAGE
+
+
+
 .back-img {
   background-image: url('divorced-parents.jpg');
   // background-image: url('divorced-parents-16d53edcbe91f95d77ca4b4ec9f16293f3de8080ca7b16cdbab2618ff01c5b75.jpg');
