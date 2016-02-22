@@ -19,13 +19,15 @@ body{
   font-size: 45px;
   color: $darkblue;
   margin-left: 2%;
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 .header-buttons{
-  padding-top: 35px;
+  //padding-top: 35px;
   //width: 20%;
   display: flex;
   flex-direction: row;
-  margin: 0 20px 10px 20px;
+  margin: 15px 20px 0px 20px;
   button{
     background-color: $darkblue;
     color: white;
@@ -33,6 +35,7 @@ body{
     border: $darkblue solid 1px;
     margin: 0 10px 5px 10px;
     width: 90px;
+    height: 35px;
     font-size: 15px;
   }
 }
@@ -59,7 +62,6 @@ body{
   color: $darkblue;
   height: 549px;
   padding: 10px 10px 10px 10px;
-
 }
 .text-3-3{
   width: 22%;
@@ -72,9 +74,19 @@ body{
   color: $darkblue;
   height: 549px;
   padding: 10px 10px 10px 10px;
-
-
 }
+.text-1-3 p,.text-3-3 p{
+  font-size: 17px;
+  width: 75%;
+  margin-top: 40px;
+  margin-left: 5%;
+}
+.text-1-3 h3,.text-3-3 h3{
+  margin-left: 5%;
+  margin-top: 45px;
+}
+
+
 .img-2-3{
   width: 100%;
   img{
