@@ -1,14 +1,206 @@
-.back-img {
-  background-image: url('divorced-parents.jpg');
-  // background-image: url('divorced-parents-16d53edcbe91f95d77ca4b4ec9f16293f3de8080ca7b16cdbab2618ff01c5b75.jpg');
-  // background-size:     100% auto;
-  width: 100%;
-  height: auto;
-  background-repeat:   no-repeat;
-  margin-top: -10%;
+//New home page
 
-  // background-position: 70%;
+$bluehome: #AEDADE;
+$whitehome: #F8F8F8;
+$darkblue: #1A5D8B;
+
+body{
+  background-color: $bluehome;
+  font-family: Gill Sans;
+}
+.header-home-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.header-home-title img{
+  width: 29%;
+  height: 65px;
+  margin: 10px 0 10px 2%;
+}
+.header-buttons{
+  display: flex;
+  flex-direction: row;
+  button{
+    background-color: $bluehome;
+    color: $darkblue;
+    border: $bluehome solid 1px;
+    font-size: 25px;
+    margin-right: 35px;
+    outline: 0;
   }
+}
+.central-home{
+  background-image: url('baby2.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 549px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text-1-3{
+  width: 290px;
+  background: rgba(255,255,255,0.4);
+  color: $darkblue;
+}
+.text-3-3{
+  width: 290px;
+  background: rgba(255,255,255,0.4);
+  color: $darkblue;
+}
+.text-1-3 p,.text-3-3 p{
+  font-size: 17px;
+  width: 75%;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+.text-1-3 h3,.text-3-3 h3{
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
+
+.bottom-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+
+}
+
+.personal-contact{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 10px 10px 10px 10px;
+  justify-content: center;
+}
+.personal-contact span{
+  font-size: 17px;
+  color: $darkblue;
+  text-align: center;
+
+}
+.personal-contact a{
+  display: flex;
+  justify-content: center;
+}
+.personal-contact img{
+  margin: 10px 40px 10px 40px;
+  height: 83px;
+  border-radius: 50%;
+}
+.personal-links .fa{
+  color: $darkblue;
+  font-size: 1.2em;
+}
+.personal-links a{
+  text-decoration: none;
+}
+
+.personal-links{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  & a{
+    margin: 5px 5px 5px 5px;
+  }
+}
+.legal-logo{
+  margin-top: 55px;
+}
+.logo-communicant{
+  display: flex;
+  justify-content: center;
+  p{
+    color: $darkblue;
+  }
+}
+
+//TABLET VIEW
+@media (max-width: 774px) and (min-width: 491px){
+  .header-home-title img{
+    width: 55%;
+  }
+  .central-home{
+    background-image: url('baby-tablet.png');
+    background-size: 780px 800px;
+  }
+  .bottom-home{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personal-contact{
+    width: 40%;
+    span{
+      font-size: 20px;
+    }
+    img{
+      height: 100px
+    }
+    .fa{
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+}
+
+ //MOBILE VIEW
+@media screen and (max-width: 490px) {
+  .header-home-title img{
+    width: 65%;
+  }
+
+  .central-home{
+    background-image: url('baby-mobile.png');
+    background-size: 500px 800px;
+  }
+
+  .text-1-3{
+    display: block;
+    width: 100%;
+    position: static;
+    height: 300px;
+    p{
+      font-size: 25px;
+      height: 275px;
+      margin-top: 5px;
+    }
+  }
+  .no-mobile{
+    display: none;
+  }
+
+  .text-3-3{
+    width: 0%;
+    display: none;
+  }
+
+  .bottom-home{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personal-contact{
+    width: 90%;
+    span{
+      font-size: 25px;
+    }
+    img{
+      height: 140px
+    }
+    .fa{
+      font-size: 1.7em;
+      margin-right: 10px;
+    }
+  }
+}
+
+//END OF NEW HOME PAGE
+
+
 
 //STYLE FOR THE FORM IN THE HOME PAGE (LOG IN)
 
@@ -89,424 +281,3 @@ svg {
   margin-top: 0px; margin-bottom: 0px;
   height: auto;
 }
-
-//
-//
-// .main-header {
-//   // background-color: #004C80;
-//   // opacity: 0.9;
-//   // margin-left: -8px; margin-right: -8px;
-//   // padding-bottom: 1px;
-//   background-color: #004C80;
-//   opacity: 0.9;
-//   width: 101.2%;
-//   padding-top: 70px;
-//   //padding-bottom: 1px;
-//   margin-top: -10px; margin-bottom: 10px; margin-left: -.6%;
-//   height: 10em;
-// }
-//
-// h1 {
-//   text-align: center;
-//   font-size: 60pt;
-//   letter-spacing: 3px;
-//   margin-top: -8px; margin-bottom: 5px;
-//   padding-top: 10px; padding-bottom: 10px;
-//   color: white;
-//   font-family: Asenine;
-// }
-//
-// .home-nav {
-//   width: 100%;
-//   float: right;
-//   margin-top: 95px;
-//   padding-top: 8px; padding-bottom: 8px;
-//   background-color: white;
-//   opacity: 0.8;
-// }
-
-// Renee playing around
-
-// .image-gradient-dynamic {
-//   $image-gradient-color-top: red;
-//   $transparency-top: 0.9;
-//   $image-gradient-color-bottom: green;
-//   $transparency-bottom: 0.6;
-//   $vertical-angle: 0deg;
-//   $image-gradient-color-left: teal;
-//   $transparency-left: 0.8;
-//   $image-gradient-color-right: yellow;
-//   $transparency-right: 0.8;
-//   $horizontal-angle: 90deg;
-//
-//   line-height: 0;
-//   position: relative;
-//   width: 100%;
-//
-//   img {
-//    height: auto;
-//    left: 0;
-//    position: relative;
-//    top: 0;
-//    width: 100%;
-//   }
-//
-//   .copy {
-//     @include transform(translate(-50%, -50%));
-//     left: 50%;
-//     margin: auto;
-//     position: absolute;
-//     text-align: center;
-//     top: 50%;
-//     z-index: 999;
-//
-//     p {
-//       color: white;
-//       line-height: 1.5em;
-//       padding: 1em 2em;
-//       position: relative;
-//     }
-//   }
-//
-//   .overlay {
-//     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-//       transparentize($image-gradient-color-bottom, $transparency-bottom));
-//     display: block;
-//     @include position(absolute, 0px 0px 0px 0px);
-//
-//     &:after {
-//       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
-//         transparentize($image-gradient-color-right, $transparency-right));
-//       @include position(absolute, 0px 0px 0px 0px);
-//       content: '';
-//       display: block;
-//     }
-//   }
-// }
-//
-
-// main.main-container{
-//   background:url("../images/divorced-parents.jpg");
-//   background-repeat: no-repeat;
-// }
-// .centered-navigation {
-//   $base-border-radius: 3px !default;
-//   $dark-gray: #333 !default;
-//   $large-screen: em(860) !default;
-//   $base-font-color: $dark-gray !default;
-//   $centered-navigation-padding: 1em;
-//   $centered-navigation-logo-height: 2em;
-//   $centered-navigation-background: #E7F1EC;
-//   $centered-navigation-color: transparentize($base-font-color, 0.3);
-//   $centered-navigation-color-hover: $base-font-color;
-//   $centered-navigation-height: 60px;
-//   $centered-navigation-item-padding: 1em;
-//   $centered-navigation-submenu-padding: 1em;
-//   $centered-navigation-submenu-width: 12em;
-//   $centered-navigation-item-nudge: 2.2em;
-//   $horizontal-bar-mode: $large-screen;
-//
-//   background-color: $centered-navigation-background;
-//   border-bottom: 1px solid darken($centered-navigation-background, 6%);
-//   min-height: $centered-navigation-height;
-//   width: 100%;
-//   z-index: 9999;
-//
-//   // Mobile view
-//
-//   .mobile-logo {
-//     display: inline;
-//     float: left;
-//     max-height: $centered-navigation-height;
-//     padding-left: $centered-navigation-padding;
-//
-//     img {
-//       max-height: $centered-navigation-height;
-//       opacity: .6;
-//       padding: .8em 0;
-//     }
-//
-//     @include media($horizontal-bar-mode) {
-//       display: none;
-//     }
-//   }
-//
-//   .centered-navigation-mobile-menu {
-//     color: $centered-navigation-color;
-//     display: block;
-//     float: right;
-//     line-height: $centered-navigation-height;
-//     margin: 0;
-//     padding-right: $centered-navigation-submenu-padding;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//
-//     @include media ($horizontal-bar-mode) {
-//       display: none;
-//     }
-//
-//     &:focus,
-//     &:hover {
-//       color: $centered-navigation-color-hover;
-//     }
-//   }
-//
-//   // Nav menu
-//
-//   .centered-navigation-wrapper {
-//     @include outer-container;
-//     @include clearfix;
-//     position: relative;
-//     z-index: 999;
-//   }
-//
-//   ul.centered-navigation-menu {
-//     -webkit-transform-style: preserve-3d; // stop webkit flicker
-//     clear: both;
-//     display: none;
-//     margin: 0 auto;
-//     overflow: visible;
-//     padding: 0;
-//     width: 100%;
-//     z-index: 99999;
-//
-//     &.show {
-//       display: block;
-//     }
-//
-//     @include media ($horizontal-bar-mode) {
-//       display: block;
-//       text-align: center;
-//     }
-//   }
-//
-//   // The nav items
-//
-//   .nav-link:first-child {
-//     @include media($horizontal-bar-mode) {
-//       margin-left: $centered-navigation-item-nudge;
-//     }
-//   }
-//
-//   ul li.nav-link {
-//     background: $centered-navigation-background;
-//     display: block;
-//     line-height: $centered-navigation-height;
-//     overflow: hidden;
-//     padding-right: $centered-navigation-submenu-padding;
-//     text-align: right;
-//     width: 100%;
-//     z-index: 9999;
-//
-//     a {
-//       color: $centered-navigation-color;
-//       display: inline-block;
-//       outline: none;
-//       text-decoration: none;
-//
-//       &:focus,
-//       &:hover {
-//         color: $centered-navigation-color-hover;
-//       }
-//     }
-//
-//     @include media($horizontal-bar-mode) {
-//       background: transparent;
-//       display: inline;
-//       line-height: $centered-navigation-height;
-//
-//       a {
-//         padding-right: $centered-navigation-item-padding;
-//       }
-//     }
-//   }
-//
-//   li.logo.nav-link {
-//     display: none;
-//     line-height: 0;
-//
-//     @include media($large-screen) {
-//       display: inline;
-//     }
-//   }
-//
-//   .logo img {
-//     margin-bottom: -$centered-navigation-logo-height / 3;
-//     max-height: $centered-navigation-logo-height;
-//     opacity: 0.6;
-//   }
-//
-//   // Sub menus
-//
-//   li.more.nav-link {
-//     padding-right: 0;
-//
-//     @include media($large-screen) {
-//       padding-right: $centered-navigation-submenu-padding;
-//     }
-//
-//     > ul > li:first-child a  {
-//       padding-top: 1em;
-//     }
-//
-//     a {
-//       margin-right: $centered-navigation-submenu-padding;
-//     }
-//
-//     > a {
-//       padding-right: 0.6em;
-//     }
-//
-//     > a:after {
-//       @include position(absolute, auto -0.4em auto auto);
-//       color: $centered-navigation-color;
-//       content: "\25BE";
-//     }
-//   }
-//
-//   li.more {
-//     overflow: visible;
-//     padding-right: 0;
-//
-//     a {
-//       padding-right: $centered-navigation-submenu-padding;
-//     }
-//
-//     > a {
-//       padding-right: 1.6em;
-//       position: relative;
-//
-//       @include media($large-screen) {
-//         margin-right: $centered-navigation-submenu-padding;
-//       }
-//
-//       &:after {
-//         content: "›";
-//         font-size: 1.2em;
-//         position: absolute;
-//         right: $centered-navigation-submenu-padding / 2;
-//       }
-//     }
-//
-//     &:focus > .submenu,
-//     &:hover > .submenu {
-//       display: block;
-//     }
-//
-//     @include media($horizontal-bar-mode) {
-//       padding-right: $centered-navigation-submenu-padding;
-//       position: relative;
-//     }
-//   }
-//
-//   ul.submenu {
-//     display: none;
-//     padding-left: 0;
-//
-//     @include media($horizontal-bar-mode) {
-//       left: -$centered-navigation-submenu-padding;
-//       position: absolute;
-//       top: 1.5em;
-//     }
-//
-//     .submenu {
-//       @include media($horizontal-bar-mode) {
-//         left: $centered-navigation-submenu-width - 0.2em;
-//         top: 0;
-//       }
-//     }
-//
-//     li {
-//       display: block;
-//       padding-right: 0;
-//
-//       @include media($horizontal-bar-mode) {
-//         line-height: $centered-navigation-height / 1.3;
-//
-//         &:first-child > a {
-//           border-top-left-radius: $base-border-radius;
-//           border-top-right-radius: $base-border-radius;
-//         }
-//
-//         &:last-child > a {
-//           border-bottom-left-radius: $base-border-radius;
-//           border-bottom-right-radius: $base-border-radius;
-//           padding-bottom: .7em;
-//         }
-//       }
-//
-//       a {
-//         background-color: darken($centered-navigation-background, 3%);
-//         display: inline-block;
-//         text-align: right;
-//         text-decoration: none;
-//         width: 100%;
-//
-//         @include media($horizontal-bar-mode) {
-//           background-color: $centered-navigation-background;
-//           padding-left: $centered-navigation-submenu-padding;
-//           text-align: left;
-//           width: $centered-navigation-submenu-width;
-//         }
-//       }
-//     }
-//   }
-// }
-
-
-// .image-gradient-dynamic {
-//   $image-gradient-color-top: red;
-//   $transparency-top: 0.9;
-//   $image-gradient-color-bottom: green;
-//   $transparency-bottom: 0.6;
-//   $vertical-angle: 0deg;
-//   $image-gradient-color-left: teal;
-//   $transparency-left: 0.8;
-//   $image-gradient-color-right: yellow;
-//   $transparency-right: 0.8;
-//   $horizontal-angle: 90deg;
-//
-//   line-height: 0;
-//   position: relative;
-//   width: 100%;
-//
-//   img {
-//    height: auto;
-//    left: 0;
-//    position: relative;
-//    top: 0;
-//    width: 100%;
-//   }
-//
-//   .copy {
-//     @include transform(translate(-50%, -50%));
-//     left: 50%;
-//     margin: auto;
-//     position: absolute;
-//     text-align: center;
-//     top: 50%;
-//     z-index: 999;
-//
-//     p {
-//       color: white;
-//       line-height: 1.5em;
-//       padding: 1em 2em;
-//       position: relative;
-//     }
-//   }
-//
-//   .overlay {
-//     @include linear-gradient($vertical-angle, transparentize($image-gradient-color-top, $transparency-top),
-//       transparentize($image-gradient-color-bottom, $transparency-bottom));
-//     display: block;
-//     @include position(absolute, 0px 0px 0px 0px);
-//
-//     &:after {
-//       @include linear-gradient($horizontal-angle, transparentize($image-gradient-color-left, $transparency-left),
-//         transparentize($image-gradient-color-right, $transparency-right));
-//       @include position(absolute, 0px 0px 0px 0px);
-//       content: '';
-//       display: block;
-//     }
-//   }
-// }
