@@ -120,36 +120,11 @@ body{
   }
 }
 
-//TABLET VIEW
-@media (max-width: 774px) and (min-width: 491px){
-  .header-home-title img{
-    width: 55%;
-  }
-  .central-home{
-    background-image: url('baby-tablet.png');
-    background-size: 780px 800px;
-  }
-  .bottom-home{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .personal-contact{
-    width: 40%;
-    span{
-      font-size: 20px;
-    }
-    img{
-      height: 100px
-    }
-    .fa{
-      font-size: 1.5em;
-      margin-right: 10px;
-    }
-  }
-}
 
  //MOBILE VIEW
-@media screen and (max-width: 490px) {
+//@media (max-width: 490px) {
+@media (max-width: 490px){
+
   .header-home-title img{
     width: 65%;
   }
@@ -197,6 +172,35 @@ body{
     }
   }
 }
+
+//TABLET VIEW
+@media (max-width: 1024px) and (min-width: 491px){
+  .header-home-title img{
+    width: 55%;
+  }
+  .central-home{
+    background-image: url('baby-tablet.png');
+    background-size: 780px 800px;
+  }
+  .bottom-home{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personal-contact{
+    width: 40%;
+    span{
+      font-size: 20px;
+    }
+    img{
+      height: 100px
+    }
+    .fa{
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+}
+
 
 //END OF NEW HOME PAGE
 
