@@ -122,11 +122,13 @@ body{
 
 
  //MOBILE VIEW
-//@media (max-width: 490px) {
 @media (max-width: 490px){
 
   .header-home-title img{
     width: 65%;
+  }
+  .header-buttons button{
+    margin-right: 20px;
   }
 
   .central-home{
@@ -140,6 +142,7 @@ body{
     position: static;
     height: 300px;
     p{
+      width: 95%;
       font-size: 25px;
       height: 275px;
       margin-top: 5px;
@@ -178,6 +181,7 @@ body{
   .header-home-title img{
     width: 55%;
   }
+
   .central-home{
     background-image: url('baby-tablet.png');
     background-size: 780px 800px;
