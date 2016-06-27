@@ -25,6 +25,11 @@ nav.header-navig{
   background-color: white;
   opacity: 0.8;
 }
+
+i.fa-bars{
+  display: none;
+}
+
 section.tabs-header{
   padding-left: 2%;
   a{
@@ -63,6 +68,7 @@ section.tabs-header{
 
 @media screen and (max-width: 575px) {           //MOBILE
   i.fa-bars{
+    display: block;
     color: #004C80;
     font-size: 1.5em;
     margin-left: 90%;
@@ -104,6 +110,7 @@ section.tabs-header{
 
 @media (max-width: 774px) and (min-width: 576px){      //TABLET
   i.fa-bars{
+    display: block;
     color: #004C80;
     font-size: 1.5em;
     margin-left: 90%;
@@ -146,11 +153,6 @@ section.tabs-header{
       margin-left: 4%;
     }
 
-    // a.head-resp-out{
-    //   display: block;
-    //   width: 50%;
-    //   float: left;
-    // }
     a.stay-blue{
       color: white;
       background-color: #004C80;
@@ -206,46 +208,4 @@ i.fa-bars{
       background-color: #004C80;
     }
    }
-}
-
-
-@media (min-width: 1025px) {            //DESKTOP
- i.fa-bars{
-   display: none;
- }
- section.tabs-header{
-   padding-left: 2%;
-   a{
-     font-size: 1.2em;
-     border-radius: 5px;
-     padding: 5px;
-     margin-left: 5px;
-     margin-right: 10px;
-     text-decoration: none;
-     color: black;
-     background-color: white;
-     }
-
-   a:hover{
-     opacity: 1;
-     color: white;
-     background-color: #004C80;
-     }
-   a.head-resp:hover{
-     opacity: 1;
-     color: white;
-     background-color: #004C80;
-     }
-
-   a.header-log-out{
-     float: right;
-     margin-right: 5%;
-     margin-top: -.5%;
-   }
-   a.stay-blue{
-     color: white;
-     background-color: #004C80;
-   }
- }
-
 }
