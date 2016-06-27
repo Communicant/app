@@ -11,8 +11,6 @@ h1.events-header{
   font-size: 30pt;
   font-weight: lighter;
   color: #004C80;
-  //margin-top: -5px;
-  //margin-bottom: 1%;
   margin-left: 15%;
 }
 
@@ -45,7 +43,6 @@ ul.events-body-table{
   width: 76%;
 li.events-main-table{
   list-style: none;
-  //padding-top: 3%;
   padding-bottom: 2%;
   color: #004C80;
   margin-left: 15%;
@@ -154,12 +151,10 @@ li:last-child{
       div.location{
         width: 80%;
         margin-bottom: 7px;
-        //margin-left: -1px;
       }
       div.pending-approval{
         width: 80%;
         text-align: left;
-        //margin-left: -100%;
       }
 
     }
@@ -178,7 +173,6 @@ div.new-event{
   font-size: 1.3em;
   width: 75%;
   margin-top: 1%;
-  //float: right;
  }
  }
 } //END OF MOBILE
@@ -208,7 +202,6 @@ div.new-event{
         text-align: right;
       }
       div.location{
-        //margin-left: -0.5%;
       }
       div.approved{
         text-align: right;
@@ -240,123 +233,6 @@ div.new-event{
   font-size: 1.3em;
   width: 75%;
   margin-top: 1%;
-  //float: right;
  }
  }
 } //END OF TABLET
-
-
-@media (min-width: 1025px) {            //DESKTOP
-  body.page-background{
-    background-color: #FAF2EB;
-    font-family: Helvetica;
-  }
-
-  h1.events-header{
-    font-style: Gill Sans;
-    font-size: 30pt;
-    font-weight: lighter;
-    color: #004C80;
-    //margin-top: 2%;
-    //margin-bottom: 3%;
-    margin-left: 15%;
-  }
-
-  div.new-event{
-   a{
-    text-decoration: none;
-    border: 1px solid #004C80;
-    background-color: #004C80;
-    border-radius: 5px;
-    color: white;
-    text-align: center;
-    padding: 5px;;
-    margin-left: 79%;
-    font-size: 1.3em;
-    font-weight: lighter;
-    width: 20%;
-   }
-  }
-
-  ul.events-body-table{
-    margin-top: 2%;
-    margin-left: 12%;
-    width: 78.5%;
-  li.events-main-table{
-    list-style: none;
-    //padding-top: 3%;
-    padding-bottom: 2%;
-    color: #004C80;
-    width: 75%;
-      .section {
-        background-color: #DEEDFA;
-        border-radius: 5px;
-      	clear: both;
-      	padding: 3px;
-      	margin: 0px;
-      }
-      .col {
-      	display: block;
-      	float:left;
-      	margin: 1% 0 1% 1.6%;
-      }
-      .col:first-child {
-        margin-left: 0;
-      }
-      .group:before,
-      .group:after {
-      	content:"";
-      	display:table;
-      }
-      .group:after {
-      	clear:both;
-      }
-      .group {
-        zoom:1; /* For IE 6/7 */
-      }
-      .span-1-of-8 {
-        width: 11.1%;
-      }
-      .span-2-of-8{
-        width: 23.8%;
-      }
-
-
-
-      div.title{
-        font-weight: bolder;
-        text-decoration: none;
-        color: #004C80;
-      }
-      div.child{
-        i.fa{
-          margin-right: 2px;
-        }
-      }
-      div.date{
-      }
-      div.time{
-        i.fa{
-          margin-right: 3px;
-        }
-
-      }
-      div.location{
-        i.fa{
-          margin-right: 1px;
-        }
-      }
-      div.approved{
-        text-align: right;
-        margin-left: -1%;
-        }
-      div.pending-approval{
-        text-align: right;
-        margin-left: -1%;
-      }
-      }
-  }
-  li:last-child{
-    border-bottom:#FAF2EB;
-  }
-  }//END of DESKTOP
