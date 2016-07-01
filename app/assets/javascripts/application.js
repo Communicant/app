@@ -28,8 +28,6 @@
 
 ;(function(){
 
-  console.log("inside js")
-
   $(document).ready(function () {
     var url = window.location
 
